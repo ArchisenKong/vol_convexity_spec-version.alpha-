@@ -1,0 +1,10 @@
+基线（未篡改）退出码 = 0
+数值篡改：L05 base per_unit.delta 0.341701→0.9（续2q增强后基准值）       退出码=1  检出
+输出形态封闭：新增未声明顶层键 _shadow_output                             退出码=1  检出
+输出形态封闭：静默删声明键 time_shift_revaluation                       退出码=1  检出
+路由身份篡改：L04 futures 路由改标为欧式闭式（续2改名后route_id）                退出码=1  检出
+被测实现源码注入：entity/engine.py d1中 (r−q) 符号翻转为 (r+q)（注入位在被测实现，覆盖q增量面，不重跑下游产物） 退出码=1  检出
+  案例5失败断言（真实断言流水线取得，非硬编码）：['A10 产物新鲜度：engine.py/input_data.json/independent_recompute.py三份源码-输入与harness_output.json/independent_expected.json/regression_q0_output.json三份产物之当前SHA256均与build_provenance.json钉定值一致（源变而产物未随动，或产物遭直接篡改，即此处失配——D-4/E-1封堵）']
+  案例5复原核验：entity/engine.py 复原后与注入前逐字节一致 = True
+复原后退出码 = 0
+自查结论：检出力成立（产物侧4/4检出 ＋ 被测实现侧1/1检出，乙-4补齐）

@@ -1,0 +1,226 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_recompute": "verify/independent_recompute.py（函数式/生成器风格，独立路径，未import harness）",
+  "wings": {
+    "put": [
+      {
+        "t": 1,
+        "moneyness_band_position": "below",
+        "stressed_vega": "63/5",
+        "stressed_gamma": "66/5",
+        "vega_response_ratio": "3/5",
+        "gamma_response_ratio": "11/20",
+        "combined_response_ratio": "11/20",
+        "below_floor": true,
+        "consecutive_below_count": 1,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 2,
+        "moneyness_band_position": "within",
+        "stressed_vega": "21/2",
+        "stressed_gamma": "78/5",
+        "vega_response_ratio": "1/2",
+        "gamma_response_ratio": "13/20",
+        "combined_response_ratio": "1/2",
+        "below_floor": true,
+        "consecutive_below_count": 2,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 3,
+        "moneyness_band_position": "within",
+        "stressed_vega": "63/4",
+        "stressed_gamma": "72/5",
+        "vega_response_ratio": "3/4",
+        "gamma_response_ratio": "3/5",
+        "combined_response_ratio": "3/5",
+        "below_floor": true,
+        "consecutive_below_count": 3,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 4,
+        "moneyness_band_position": "within",
+        "stressed_vega": "189/20",
+        "stressed_gamma": "96/5",
+        "vega_response_ratio": "9/20",
+        "gamma_response_ratio": "4/5",
+        "combined_response_ratio": "9/20",
+        "below_floor": true,
+        "consecutive_below_count": 4,
+        "wing_dullness_triggered": true
+      },
+      {
+        "t": 5,
+        "moneyness_band_position": "within",
+        "stressed_vega": "357/20",
+        "stressed_gamma": "108/5",
+        "vega_response_ratio": "17/20",
+        "gamma_response_ratio": "9/10",
+        "combined_response_ratio": "17/20",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 6,
+        "moneyness_band_position": "within",
+        "stressed_vega": "273/20",
+        "stressed_gamma": "18",
+        "vega_response_ratio": "13/20",
+        "gamma_response_ratio": "3/4",
+        "combined_response_ratio": "13/20",
+        "below_floor": true,
+        "consecutive_below_count": 1,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 7,
+        "moneyness_band_position": "within",
+        "stressed_vega": "63/5",
+        "stressed_gamma": "102/5",
+        "vega_response_ratio": "3/5",
+        "gamma_response_ratio": "17/20",
+        "combined_response_ratio": "3/5",
+        "below_floor": true,
+        "consecutive_below_count": 2,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 8,
+        "moneyness_band_position": "above",
+        "stressed_vega": "84/5",
+        "stressed_gamma": "66/5",
+        "vega_response_ratio": "4/5",
+        "gamma_response_ratio": "11/20",
+        "combined_response_ratio": "11/20",
+        "below_floor": true,
+        "consecutive_below_count": 3,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 9,
+        "moneyness_band_position": "within",
+        "stressed_vega": "399/20",
+        "stressed_gamma": "18",
+        "vega_response_ratio": "19/20",
+        "gamma_response_ratio": "3/4",
+        "combined_response_ratio": "3/4",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      }
+    ],
+    "call": [
+      {
+        "t": 1,
+        "moneyness_band_position": "below",
+        "stressed_vega": "84/5",
+        "stressed_gamma": "102/5",
+        "vega_response_ratio": "4/5",
+        "gamma_response_ratio": "17/20",
+        "combined_response_ratio": "4/5",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 2,
+        "moneyness_band_position": "within",
+        "stressed_vega": "63/4",
+        "stressed_gamma": "84/5",
+        "vega_response_ratio": "3/4",
+        "gamma_response_ratio": "7/10",
+        "combined_response_ratio": "7/10",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 3,
+        "moneyness_band_position": "within",
+        "stressed_vega": "273/20",
+        "stressed_gamma": "114/5",
+        "vega_response_ratio": "13/20",
+        "gamma_response_ratio": "19/20",
+        "combined_response_ratio": "13/20",
+        "below_floor": true,
+        "consecutive_below_count": 1,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 4,
+        "moneyness_band_position": "within",
+        "stressed_vega": "189/10",
+        "stressed_gamma": "72/5",
+        "vega_response_ratio": "9/10",
+        "gamma_response_ratio": "3/5",
+        "combined_response_ratio": "3/5",
+        "below_floor": true,
+        "consecutive_below_count": 2,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 5,
+        "moneyness_band_position": "within",
+        "stressed_vega": "357/20",
+        "stressed_gamma": "96/5",
+        "vega_response_ratio": "17/20",
+        "gamma_response_ratio": "4/5",
+        "combined_response_ratio": "4/5",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 6,
+        "moneyness_band_position": "within",
+        "stressed_vega": "21",
+        "stressed_gamma": "24",
+        "vega_response_ratio": "1",
+        "gamma_response_ratio": "1",
+        "combined_response_ratio": "1",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 7,
+        "moneyness_band_position": "within",
+        "stressed_vega": "147/10",
+        "stressed_gamma": "84/5",
+        "vega_response_ratio": "7/10",
+        "gamma_response_ratio": "7/10",
+        "combined_response_ratio": "7/10",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 8,
+        "moneyness_band_position": "within",
+        "stressed_vega": "63/4",
+        "stressed_gamma": "78/5",
+        "vega_response_ratio": "3/4",
+        "gamma_response_ratio": "13/20",
+        "combined_response_ratio": "13/20",
+        "below_floor": true,
+        "consecutive_below_count": 1,
+        "wing_dullness_triggered": false
+      },
+      {
+        "t": 9,
+        "moneyness_band_position": "within",
+        "stressed_vega": "84/5",
+        "stressed_gamma": "102/5",
+        "vega_response_ratio": "4/5",
+        "gamma_response_ratio": "17/20",
+        "combined_response_ratio": "4/5",
+        "below_floor": false,
+        "consecutive_below_count": 0,
+        "wing_dullness_triggered": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+# assert_check 运行开始（日志已清空；逐断言即时写出）
+PASS  step0(i) input 为人造构造  | _data_source='synthetic_hand_constructed'
+PASS  step0(i-b) 输出承载人造标记
+PASS  step0(ii) 剥离注释/docstring后零数据源接入命中（扫描面＝全部交付脚本7件）  | 剥离后={'entity/engine.py': [], 'entity/harness.py': [], 'verify/independent_recompute.py': [], 'verify/assert_check.py': [], 'verify/negative_control.py': [], 'verify/regression_check.py': [], 'verify/build_provenance.py': []}；剥离前留痕={}
+PASS  step0(ii-b) 外置数据件指纹＝§8.1声明面钉定值（含scan_patterns.json与baseline_v1_1_reference.json两件，续2续修复F-5双钉补齐，D-3封堵；检测器/判据基线锚均不可被静默削弱或改写）  | verify/scan_patterns.json sha256=f17de0f5544f377daba514e690aa347a6a37f5c20c12746f507f9a0555ebc74c；verify/baseline_v1_1_reference.json sha256=bf743fd95072ad55e62cfc3707978a77b7425e16c6b5d39be2805da5348bc055
+PASS  step0(iii) 独立复算未import被测模块、未读harness产物  | 剥离前 'harness' 字样命中1处（均落在docstring独立性自述内）
+PASS  A1 输出顶层键集＝declaration声明集  | 多出=[]；缺失=[]
+PASS  A1-b 每条记录键集＝RECORD_KEY_DECLARATION
+PASS  A1-c per_unit/per_lot 分量键集＝COMPONENT_KEY_DECLARATION
+PASS  A2 契约①分量声明＝5全集＋V(t)
+PASS  A2-b 全部分量为实产数值（非占位null）
+PASS  A3 路由声明覆盖缺口原文六品种域  | 声明=['american_option', 'european_option', 'futures', 'index', 'spot', 'spot_etf']
+PASS  A3-b 输出 route_table 覆盖六品种域（未静默收窄）
+PASS  A3-b2 route_table 逐路由值层与ROUTE_DECLARATION对表（三字段）  | 不符=无
+PASS  A3-c 逐笔 route_id 与路由声明一致（路由身份可辨识）
+PASS  A3-d 逐笔可算性标注与未言明维度标注与声明一致（降格标注在场）
+PASS  A3-e 人造input实跑覆盖全部六品种  | 实跑=['american_option', 'european_option', 'futures', 'index', 'spot', 'spot_etf']
+PASS  A3-f 四条互异求值路径在场
+PASS  A4 45-B1条款措辞逐字载于 input_schema.md
+PASS  A4-b 45-B1条款措辞逐字载于 engine.py
+PASS  A4-c 求值消费字段集＝schema §2声明面（程序化解析非写死集合；M22封堵，D-5②）  | engine消费=['dividend_yield', 'expiry', 'implied_vol', 'instrument_class', 'lot_id', 'multiplier', 'option_type', 'quantity', 'risk_free_rate', 'side', 'spot', 'strike', 'valuation_date']；schema声明=['dividend_yield', 'expiry', 'implied_vol', 'instrument_class', 'lot_id', 'multiplier', 'option_type', 'quantity', 'risk_free_rate', 'side', 'spot', 'strike', 'valuation_date']
+PASS  A4-d 坐标/保留字段未进入求值路径
+PASS  A11〔续2续修复，57-5，C07口径〕路由dividend_carry标注与_DISPATCH链源级q消费实况一致（源级消费q者不得仍标该维度未言明）  | 不符=无
+PASS  A12〔续2续修复，57-5，C08口径〕closed_on_stated_face标注以零unstated_dimensions_hit为前提（不得宣称闭合而遗留未言明维度，含day_count_convention）  | 不符=无
+PASS  A5 输入面与vendor派生量键名集之交为空  | 输入键=['dividend_yield', 'expiry', 'implied_vol', 'instrument_class', 'leg_type', 'lot_id', 'multiplier', 'open_interest', 'option_type', 'quantity', 'risk_free_rate', 'side', 'spot', 'strike', 'underlying']
+PASS  A6 措辞审计：零肯定式真理源/获利合法性宣称  | 否定语境命中9处（留痕）；肯定式=[]；扫描排除件=['verify/scan_patterns.json']
+PASS  A7 全量分量比对（288项：(a)144 ／ (b)144）  | 越限0项；(b)类最大相对diff=7.46628e-15
+PASS  A7-b 量纲否定式判别：产出非 vega/100、theta/日、rho/100 缩放形态
+PASS  A8 三容器逐笔齐备（情景重估／时点推移覆盖全部lot）  | {'base_valuation': 8, 'scenario_revaluation': 8, 'time_shift_revaluation': 8}
+PASS  A8-b 引擎签名未因重估需求增参  | evaluate_lot(lot)
+PASS  A8-c 时点推移使期权估值变动（T-24 V(t0)/V(t1) 消费面可用）
+PASS  A9-a〔C1〕day count 分母：engine.py／independent_recompute.py 双侧＝声明值  | 声明=365；engine=365；independent=365
+PASS  A9-b〔C4〕per_lot 缩放因子集：双侧 scale 表达式含全部声明因子['multiplier', 'quantity', 'side_sign']  | 缺失=无；engine: int(lot["multiplier"]) * int(lot["quantity"]) * _side_sign(lot["side"])；independent: int(lot["multiplier"]) * int(lot["quantity"]) * sign
+PASS  A9-1〔C1+rho量纲〕rho＝T·(S·δ−V) 双侧成立，且由产出反解之 day count 分母＝声明值365  | 恒等式越限=无；分母不符=无
+PASS  A9-2〔C7〕vega＝γ·S²·σ·T 双侧成立（vega_unit＝per_1.0_sigma，非 per 1% 缩放）  | 越限=无
+PASS  A9-3〔C8b〕BS-PDE 残差双侧为零（含q推广形态；theta_unit＝per_year，非按日计）  | 越限=无
+PASS  A9-6〔续2〕q承接位（dividend_yield）双侧源码消费在场（声明-实现一致性，源级）  | engine=True；independent=True
+PASS  A9-4〔C2〕per_lot 逐分量＝per_unit×multiplier×quantity×side_sign 双侧成立（side_sign: long=1／short=-1，含 V(t)）  | 不符=无
+PASS  A9-5〔C10〕线性/期货桩路由零持有成本（futures_stub_carry＝none）：双侧 per_unit＝(spot,1,0,0,0,0)  | 不符=无
+PASS  A10前置：verify/build_provenance.json 在场（产物新鲜度钉定件）
+PASS  A10 产物新鲜度：engine.py/input_data.json/independent_recompute.py三份源码-输入与harness_output.json/independent_expected.json/regression_q0_output.json三份产物之当前SHA256均与build_provenance.json钉定值一致（源变而产物未随动，或产物遭直接篡改，即此处失配——D-4/E-1封堵）  | 失配=无
+PASS  S-1 前置：regression_check.py 产出件与回归基准参照件均在场  | q0产出=True；基准参照=True
+PASS  S-1a q=0退化回归：强制q=0之增强引擎产出与v1.1原始产出逐字节一致  | 不符=无
+PASS  S-1b 变更面封闭：非期权路由（spot/spot_etf/index/futures）与baseline v1.1零变动  | 不符=无
+PASS  S-1c 底版-增强版diff面清单件已产出（人工可核验件，见 baseline_diff_table.tsv）
+
+失败项：无
+# assert_check 运行结束（断言数=44，失败=0）

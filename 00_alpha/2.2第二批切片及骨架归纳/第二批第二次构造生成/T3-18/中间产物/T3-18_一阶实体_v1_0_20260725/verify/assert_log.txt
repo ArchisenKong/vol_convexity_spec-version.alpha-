@@ -1,0 +1,15 @@
+=== T3-18 断言执行日志（模板三D段：step0前置 + 独立数值比对 + 附加断言） ===
+[PASS] step0(i)_input_synthetic :: _data_source='synthetic_hand_constructed'
+[PASS] step0(ii)_no_data_source_static_scan :: 剥离后import命中=[] 剥离后keyword命中=[] 留痕=[]
+[PASS] step0(iii)_independent_recompute_no_harness_reuse :: 剥离后imports_harness=False 剥离后reads_harness_output_json=False 留痕=['harness_output.json字样(仅见于剥离前/注释docstring内·留痕非否决)']
+[PASS] source_anchor_T3_line609_programmatic_parse :: missing_terms=[] line_len=426
+[PASS] harness_real_run :: returncode=0 stdout='harness: wrote /sessions/rcw-01wk4yieatjsvda2r3awlvcb/mnt/version_gamma/entity/harness_output.json' stderr=''
+[PASS] independent_recompute_run :: 独立复算脚本真跑成功
+[PASS] numeric_compare_gap_series_bit_exact_a0 :: harness=[20, 5, -10, -25, -40, -50, -55, -55, -50, -40, -25, -10] indep=[20, 5, -10, -25, -40, -50, -55, -55, -50, -40, -25, -10]
+[PASS] numeric_compare_cum_gap_bit_exact_a0 :: harness={'10': -200, '11': -170, '12': -125, '4': -10, '5': -70, '6': -125, '7': -170, '8': -200, '9': -210} indep={'10': -200, '11': -170, '12': -125, '4': -10, '5': -70, '6': -125, '7': -170, '8': -200, '9': -210}
+[PASS] numeric_compare_shape_evaluation_bit_exact_a0 :: harness={'10': {'delta': 0, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '11': {'delta': 40, 'destructive_form': False, 'persistent_negative': True, 'slope_nonconvergent': False}, '12': {'delta': 75, 'destructive_form': False, 'persistent_negative': True, 'slope_nonconvergent': False}, '4': None, '5': None, '6': {'delta': -115, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '7': {'delta': -100, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '8': {'delta': -75, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '9': {'delta': -40, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}} indep={'10': {'delta': 0, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '11': {'delta': 40, 'destructive_form': False, 'persistent_negative': True, 'slope_nonconvergent': False}, '12': {'delta': 75, 'destructive_form': False, 'persistent_negative': True, 'slope_nonconvergent': False}, '4': None, '5': None, '6': {'delta': -115, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '7': {'delta': -100, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '8': {'delta': -75, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}, '9': {'delta': -40, 'destructive_form': True, 'persistent_negative': True, 'slope_nonconvergent': True}}
+[PASS] branch_coverage_insufficient_history_trigger_nontrigger :: has_insufficient_history=True has_destructive_true=True has_destructive_false=True
+[PASS] entity_carries_C6_PB_reference_and_data_source_field :: has_C6标记=True has_P_B要件4引用=True has_data_source字段声明=True
+--- 合计 11/11 项断言通过 ---
+整体判定：合格（step0前置合规 + 断言基线程序化解析源文 + D段②独立数值比对bit-exact + D段③附加断言 全部通过）
+EXIT_CODE=0

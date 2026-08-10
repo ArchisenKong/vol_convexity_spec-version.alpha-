@@ -1,0 +1,55 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_construction_note": "全部数值手工构造有理数（字符串分数形态，供 fractions.Fraction 精确解析），无任何数据源接入。T3-22 状态时序为本切片人造代理（T3-22 对象本身未构造，此处仅覆盖 T3-17 Q4 判据所需最小字段）。",
+
+  "scenario": {
+    "_note": "情景幅度值＝数据（input构造自由度，裁决17口径，沿用T3-03数值以保持跨切片可比，非强制标准）；响应系数＝作用规则成分（桩，C4纪律），vega系数沿用T3-03 §3.4声明值，gamma系数为本根新声明（T3-03未覆盖gamma stub）",
+    "delta_S_dollar": "-5",
+    "delta_IV_vol_pts": "3",
+    "vega_sensitivity_coef_per_vol_pt": "2/100",
+    "gamma_sensitivity_coef_per_vol_pt": "3/100"
+  },
+
+  "slots": {
+    "_note": "类三阶段B校准项（首批骨架v1.0程序：阶段A仍须跑一个具体版本，标注候选之一，待B证伪，不留白）。取值为本根人造声明，不外推。",
+    "wing_responsiveness_floor": "3/5",
+    "wing_dullness_window": "2"
+  },
+
+  "wings": {
+    "put": {
+      "_role": "long put，左尾保护翼",
+      "target_activation_band": ["4/5", "9/10"],
+      "target_response_level": {
+        "_note": "建仓时声明的目标响应水平，本根声明＝t1情景压力下的响应值（人造构造选择，非派生）",
+        "vega": "477/5",
+        "gamma": "327/2000"
+      },
+      "timeseries": [
+        {"t": 1, "moneyness": "17/20",  "raw_vega": "90", "raw_gamma": "3/20"},
+        {"t": 2, "moneyness": "41/50",  "raw_vega": "85", "raw_gamma": "7/50"},
+        {"t": 3, "moneyness": "18/25",  "raw_vega": "40", "raw_gamma": "1/20"},
+        {"t": 4, "moneyness": "17/25",  "raw_vega": "35", "raw_gamma": "9/200"},
+        {"t": 5, "moneyness": "13/20",  "raw_vega": "30", "raw_gamma": "1/25"},
+        {"t": 6, "moneyness": "83/100", "raw_vega": "85", "raw_gamma": "13/100"}
+      ]
+    },
+    "call": {
+      "_role": "long call，右尾参与翼",
+      "target_activation_band": ["11/10", "6/5"],
+      "target_response_level": {
+        "_note": "建仓时声明的目标响应水平，本根声明＝t1情景压力下的响应值（人造构造选择，非派生）",
+        "vega": "371/5",
+        "gamma": "763/20000"
+      },
+      "timeseries": [
+        {"t": 1, "moneyness": "23/20",  "raw_vega": "70", "raw_gamma": "7/200"},
+        {"t": 2, "moneyness": "113/100","raw_vega": "68", "raw_gamma": "17/500"},
+        {"t": 3, "moneyness": "29/25",  "raw_vega": "72", "raw_gamma": "9/250"},
+        {"t": 4, "moneyness": "28/25",  "raw_vega": "65", "raw_gamma": "33/1000"},
+        {"t": 5, "moneyness": "57/50",  "raw_vega": "69", "raw_gamma": "69/2000"},
+        {"t": 6, "moneyness": "23/20",  "raw_vega": "71", "raw_gamma": "71/2000"}
+      ]
+    }
+  }
+}

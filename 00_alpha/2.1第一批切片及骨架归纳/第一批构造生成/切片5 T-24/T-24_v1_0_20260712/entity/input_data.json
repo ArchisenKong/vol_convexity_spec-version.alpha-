@@ -1,0 +1,45 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "object_id": "T-24",
+  "schema_version": "1.0",
+  "position": {
+    "description": "长端 wing protection 持仓（两腿，均为买入/long）：long put wing + long call wing",
+    "legs": [
+      {
+        "leg_id": "W1",
+        "option_type": "put",
+        "side": "long",
+        "strike": 90,
+        "quantity_contracts": 10,
+        "contract_multiplier": 100
+      },
+      {
+        "leg_id": "W2",
+        "option_type": "call",
+        "side": "long",
+        "strike": 115,
+        "quantity_contracts": 10,
+        "contract_multiplier": 100
+      }
+    ]
+  },
+  "market_params": {
+    "spot": 100,
+    "volatility_annual": 0.22,
+    "risk_free_rate_annual": 0.04,
+    "held_constant_t0_to_t1": true,
+    "note": "S/σ/r 在 t0→t1 间保持不变——数据层构造裁定（人造input构造自由度，任务包§3层③），非机制系数；孤立呈现纯 theta 时间衰减效应，见 entity/input_schema.md §4③"
+  },
+  "time_points": {
+    "tau0_days_to_expiry": 150,
+    "tau1_days_to_expiry": 129,
+    "day_count_basis": 365,
+    "elapsed_days": 21,
+    "note": "tau0/tau1 为两次估值时点各自距到期剩余日数，直接给定（非经任何固定响应系数/衰减规则推得，任务包§3末段自查项）；elapsed_days = tau0_days - tau1_days = 21，供交叉核验一致性"
+  },
+  "income_side_reference": {
+    "status": "synthetic_input_carried_not_consumed",
+    "short_end_30D_premium_income_placeholder": 3500,
+    "note": "T-23（short-end OTM premium income，Step1淘汰节点）语义引用；依赖披露§1处置——income侧以人造input承担，不因该边重新引入T-23为切片元素；本根 bleed 计算不消费此值，仅按分账约束随行携带"
+  }
+}

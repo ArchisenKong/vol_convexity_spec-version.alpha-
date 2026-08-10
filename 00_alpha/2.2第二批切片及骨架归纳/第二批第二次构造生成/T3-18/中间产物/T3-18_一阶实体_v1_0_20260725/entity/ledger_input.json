@@ -1,0 +1,34 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_object_id": "T3-18",
+  "_note": "人造账本时间序列（裁决1：不接任何数据源）。覆盖Q4判据所需最小输入：短端premium income／长端premium bleed／roll cost 逐期账本值。本切片消费 income/bleed/roll_cost 为账本数值（数据/机制刀口，值消费不登记），不重新推导其定价来源；bleed端口径随行指针见 entity/input_schema.md（TPL3-T24-01，open）。单位＝账本整数记账单位（cents，抽象最小充分构造，非真实美元量级声明）。",
+  "slots": {
+    "funding_gap_window": {
+      "value": 4,
+      "unit": "periods",
+      "status": "parameter_slot_candidate（T3§5.5行609），本根桩值，非校准值"
+    },
+    "funding_gap_persistence_shape": {
+      "status": "类三候选（计算成分三分判别受控文本§4），待Phase B证伪，不外推为规范；本根实现候选之一，不留白",
+      "persistence_periods": 3,
+      "baseline_cents": 0,
+      "baseline_choice": "账本口径零轴（候选之一，本根选用）；历史分布为另一候选，本根未实现——基准选择本身为parameter_slot_candidate（T3§5.5行609原文）",
+      "slope_threshold_cents": 0,
+      "slope_rule": "secant_delta_over_persistence_window_le_threshold（割线斜率经交叉相乘消去除法，避免非精确有理运算，见entity/input_schema.md §4）"
+    }
+  },
+  "periods": [
+    {"t": 1, "income_cents": 100, "bleed_cents": 60,  "roll_cost_cents": 20},
+    {"t": 2, "income_cents": 100, "bleed_cents": 75,  "roll_cost_cents": 20},
+    {"t": 3, "income_cents": 100, "bleed_cents": 90,  "roll_cost_cents": 20},
+    {"t": 4, "income_cents": 100, "bleed_cents": 105, "roll_cost_cents": 20},
+    {"t": 5, "income_cents": 100, "bleed_cents": 120, "roll_cost_cents": 20},
+    {"t": 6, "income_cents": 100, "bleed_cents": 130, "roll_cost_cents": 20},
+    {"t": 7, "income_cents": 100, "bleed_cents": 135, "roll_cost_cents": 20},
+    {"t": 8, "income_cents": 100, "bleed_cents": 135, "roll_cost_cents": 20},
+    {"t": 9, "income_cents": 100, "bleed_cents": 130, "roll_cost_cents": 20},
+    {"t": 10, "income_cents": 100, "bleed_cents": 120, "roll_cost_cents": 20},
+    {"t": 11, "income_cents": 100, "bleed_cents": 105, "roll_cost_cents": 20},
+    {"t": 12, "income_cents": 100, "bleed_cents": 90,  "roll_cost_cents": 20}
+  ]
+}

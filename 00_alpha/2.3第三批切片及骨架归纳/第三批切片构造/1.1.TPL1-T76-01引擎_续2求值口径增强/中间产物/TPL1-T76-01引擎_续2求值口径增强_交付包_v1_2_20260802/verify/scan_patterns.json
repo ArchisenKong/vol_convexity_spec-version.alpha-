@@ -1,0 +1,15 @@
+{
+  "_note": "本文件为纯模式数据件。其自身按构造被排除于扫描面之外（否则模式表逐条自命中），排除事实在 assert_check_log.txt 中留痕。",
+  "forbidden_datasource_keywords": [
+    "IBKR", "ibkr", "QuantConnect", "quantconnect", "yfinance", "ib_insync",
+    "ibapi", "pandas_datareader", "alpha_vantage", "quandl", "polygon.io",
+    "http://", "https://", "socket", "requests.get", "urlopen"
+  ],
+  "forbidden_import_regex": "^\\s*(?:import|from)\\s+(requests|urllib|socket|http|yfinance|ibapi|ib_insync|pandas_datareader|alpha_vantage|quandl)\\b",
+  "truth_claim_patterns": [
+    "真理源", "定价真理", "应然价格", "正确定价", "正确价格",
+    "公允价值真相", "获利合法性", "truth source", "true price"
+  ],
+  "negation_markers": ["不", "非", "零", "禁", "未", "无"],
+  "negation_window_chars": 12
+}

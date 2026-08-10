@@ -1,0 +1,152 @@
+=== 全流水线重跑（修复后）· 2026-08-08T14:34:13Z ===
+--- 1/6 entity/harness.py ---
+GL-09 正Carry时间占比 = 31/38 (0.8157894737)
+对照诊断·正Theta读数时间占比 = 12/19
+--- 2/6 verify/independent_recompute.py ---
+independent 正Carry时间占比 = 31/38
+--- 3/6 verify/generate_comparison_table.py ---
+comparison_table.tsv 产出：§A 期级 9 行；§B 逐项 385 行（非零 diff 168 项，max rel diff=6.475663e-13 at P8.legs_at_t_end.P8_S_PUT.value_unit）
+--- 4/6 verify/build_provenance.py ---
+钉定 14 件（自指排除：build_provenance.json）
+--- 5/6 verify/assert_check.py ---
+GL-09 assert_check · 断言 24 项
+PASS  A1_synthetic_input_declared            人造input声明核证：ledger/harness_output 双侧在场；9期持仓时序齐备
+PASS  A2_no_datasource_static_scan           全包域数据源静态扫描 clean：扫描 7 件 .py × 12 模式；检测器自排除清单＝[]（空集为显式声明，71-7）
+PASS  A3_independent_path_isolation          独立复算路径隔离：零 import engine／零引用 harness 产物／读取面＝LEDGER_PATH 单件
+PASS  A4_numeric_crosscheck_subcaliber_b     连续解析层比对 385 项全过（非零 diff 168 项，逐项记录见 verify/comparison_table.tsv）；max rel diff=6.475663e-13 at P8.legs_at_t_end.P8_S_PUT.value_unit（子口径(b) ≤ 1e-12）
+PASS  A5_share_exact_equality_subcaliber_a   离散不变量层 bit-exact：占比量 31/38、对照量 12/19，两路径 0 差异（子口径(a)＝0）
+PASS  A6_sign_vector_exact_equality          符号向量（Carry 9期／Theta读数 9期）两路径逐期精确一致，零容差
+PASS  A7_strict_positive_boundary            严格 >0 边界语义成立：P5 Carry 精确 0.0 且判非正；分类器四点边界核证通过
+PASS  A8_duration_face_and_weighting         时长面核证：9期声明时长≡日期序差（两独立日期算法一致）；时长谱 [1, 2, 3, 4, 7, 9]；时长加权 31/38 ≠ 等权期数 2/3，加权形态在可击落射程内
+PASS  A9_sign_margin                         符号裕度诊断：非边界期最小裕度 2.082e-03（P4），高于子口径(b)上限约 9 个数量级
+PASS  A10_itm_extraction_effective           宪-ST-06 ITM 时间价值成分提取非空转：命中期 ['P3', 'P4', 'P8']，逐腿 ev_unit≠value_unit 且两路径一致
+PASS  A11_caliber_separation                 口径分离核证：Carry 31/38（time_value_cashflow）vs Theta读数 12/19（greeks_instantaneous），无跨口径合成量；源文行513可算实例＝期 ['P9']；§1 三锚短语在场
+PASS  A12_instrument_reading_tag             仪表读数身份标注在场（输出侧＋schema §8）；逐腿 68 行 route_id/computability_status/unstated_dimensions_hit **取值精确比对**通过（['bs_dividend_yield_closed_form']／['computed_with_open_dimensions']／[('day_count_convention',)]），三项均与 schema §3 声明面双向绑定
+PASS  A13_f4_strict_declaration              F-4 严格声明块：22 键逐键精确比对通过（含三件外置/复用件指纹、连续解析层实测上界之当场重算绑定 6.475663e-13 @ P8.legs_at_t_end.P8_S_PUT.value_unit）
+PASS  A14_engine_verbatim_reuse              F-12 逐字复用机械核证：entity/engine.py 整文件 SHA256 ≡ 声明值 ≡ 引擎续2 v1.2 指纹列；契约⑥原文随件携带
+PASS  A15_freshness_double_pin               F-8 新鲜度双钉：14 件全包域钉定件指纹一致；自指排除件＝build_provenance.json（防线声明在场）
+PASS  A16_scan_face_closure                  F-7/24-A7 封闭：全包域发现 7 件 .py，与声明清单双向比对 检缺0/检多0；目录结构 entity/+verify/ 成立
+PASS  A17_external_artifact_double_pin       F-5 双钉：scan_patterns.json / nc_payload.txt 指纹断言＋schema §11 声明面 双面在场；免疫射程声明在场
+PASS  A18_threshold_decoupling               判据面纯净性自扫描通过：合格判定链**不消费参考锚**，`9/10`／`0.9` 字面零出现于判定路径（16 处引用全在本项之事实记录段内）。【事实记录·不入断言】实测占比 31/38，参考锚 9/10，share<anchor=True，share_meets_reference_threshold=False——本行仅为输出面事实登记，其取值与本切片合格与否无关
+PASS  A24_no_cross_caliber_composite_scan    宪-ST-06 口径同源实质检测：harness.py AST 算术 BinOp 17 处 ＋ 产物键名 885 个全深度扫描，跨口径合成量 0 例；比较型（非同一性核证）按甲-9 裁定不入射程；`no_cross_caliber_composite` 自报布尔由本项承载实质检验
+PASS  A19_negative_statement_section_present F-13 反面陈述段在场（7条，含任务包§2.5要求之四条锚）；非信号声明输出侧载体在场
+PASS  A20_source_anchor_check                28-B(i) 源文锚：QQQAI杠铃结构交流_20260718-20250101_.md 行511–515 程序化实读，锚定词4项在场（『90%』仅作在场锚定词，不作阈值判据）
+PASS  A21_c6_flag_absent                     C-6 核证：Step3 判定『不标记』与产物一致（无证伪触发器字段、无 P_B 消费）
+PASS  A22_applicability_notes                F-5 适用（双钉在场）／F-6 不适用／F-11 不命中 —— 三项适用性显式注记在场，非默认省略
+PASS  A23_expected_pin_match                 乙-2 钉表核证：9项期望值与实跑逐项相符（含离散形态项：边界恰零／口径背离／负Carry期集／ITM期集）；乙-7 增补：carry_sign_margin 逐期 9 值 bit-exact 相符
+VERDICT: PASS — 24/24 断言全过
+assert_check EXIT=0
+--- 6/6 verify/negative_control.py ---
+GL-09 negative_control · 案例 10 例（NC-0 基线 ＋ 变异 9 例）
+NC-0  基线 exit=0 失败断言=[] → PASS
+NC-1  [计算面] 被测侧计算面：_is_positive_carry 之 `> 0.0` 误写为 `>= 0.0`（边界语义翻转）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A13_f4_strict_declaration', 'A23_expected_pin_match', 'A5_share_exact_equality_subcaliber_a', 'A6_sign_vector_exact_equality', 'A7_strict_positive_boundary'] → 击落
+NC-2  [计算面] 被测侧计算面：时长加权退化为等权期数计数（分子/分母改取期计数）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A13_f4_strict_declaration', 'A23_expected_pin_match', 'A5_share_exact_equality_subcaliber_a', 'A8_duration_face_and_weighting'] → 击落
+NC-3  [计算面] 被测侧计算面：删除宪-ST-06 之 ITM 时间价值成分提取（ev_unit 直取 value_unit）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A10_itm_extraction_effective', 'A13_f4_strict_declaration', 'A23_expected_pin_match', 'A4_numeric_crosscheck_subcaliber_b'] → 击落
+NC-4  [封闭面/扫描面] 封闭面注入：向包内写入未声明之 .py 交付件（载荷＝nc_payload.txt，含数据源接入）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A16_scan_face_closure', 'A2_no_datasource_static_scan'] → 击落
+NC-5  [声明一致性＋新鲜度] 被测侧来源面：篡改 entity/engine.py（逐字复用件）且不重跑下游产物
+      流水线重跑=否（刻意）；assert_check exit=1；实际失败断言=['A13_f4_strict_declaration', 'A14_engine_verbatim_reuse', 'A15_freshness_double_pin'] → 击落
+NC-6  [声明一致性] 被测侧声明面：route_id 覆写为伪路由（X2/X3 逃逸形态之复现）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A12_instrument_reading_tag'] → 击落
+NC-7  [口径同源面] 被测侧输出面：注入跨口径合成量 pos_dur / theta_pos_dur（X7 逃逸形态之复现）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A24_no_cross_caliber_composite_scan'] → 击落
+NC-8  [计算面] 被测侧计算面：carry_sign_margin 公式常数化为 1.0（X1 逃逸形态之复现）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A23_expected_pin_match'] → 击落
+NC-9  [声明一致性] 被测侧声明面：§12 连续解析层实测上界单向漂移（X8 逃逸形态之复现）
+      流水线重跑=是；assert_check exit=1；实际失败断言=['A13_f4_strict_declaration'] → 击落
+
+F-9 核证：计算面击落例＝['NC-1', 'NC-2', 'NC-3', 'NC-8']
+注入位核证：NC-1/2/3/6/7/8 → entity/harness.py（被测实现）；NC-5 → entity/engine.py（被测侧逐字复用件）；NC-9 → entity/input_schema.md（被测侧声明面）；NC-4 → 包封闭面。比对器侧（independent_recompute.py／assert_check.py 比对逻辑）零改动。
+新增断言之可击落载体核证（修复会话开启文本 §3）：乙-3〔A12 取值精确比对〕→ NC-6；乙-6〔A24 跨口径合成量扫描〕→ NC-7；乙-7〔A23 符号裕度钉表〕→ NC-8；乙-4〔A13 上界声明绑定〕→ NC-9。
+隔离性核证：全部注入于临时副本树进行，交付工作区零写入。
+VERDICT: PASS — 基线通过且全部变异被击落
+negative_control EXIT=0
+--- 幂等门 build_provenance.py --verify ---
+PASS: 重生成幂等门通过，14 件指纹一致
+idempotence EXIT=0
+
+==================================================================
+=== §3 不变量验收条件 · 逐项核证留痕（invariant_check.py） ===
+==================================================================
+====================================================================================================
+§3 不变量验收条件 · 逐项核证（修复后）
+====================================================================================================
+OK   state_quantity.positive_carry_time_share.exact_fraction 实测=31/38                                                              钉定=31/38
+OK   .decimal                                       实测=0.8157894736842105                                                 钉定=0.8157894736842105
+OK   对照诊断 positive_theta_reading_time_share.exact_fraction 实测=12/19                                                              钉定=12/19
+OK   等权期数占比                                         实测=2/3                                                                钉定=2/3
+OK   P5 Carry（精确）                                   实测=0.0                                                                钉定=0.0
+OK   P9 Carry                                       实测=132.2959579434                                                     钉定=132.2959579434
+OK   P9 期初 Theta 读数                                 实测=-3386.689445087                                                    钉定=-3386.689445087
+OK   A4 连续解析层 max rel diff                          实测=6.475663e-13                                                       钉定=6.475663e-13
+OK   A4 命中位                                         实测=P8.legs_at_t_end.P8_S_PUT.value_unit                               钉定=P8.legs_at_t_end.P8_S_PUT.value_unit
+OK   非边界期最小符号裕度                                     实测=2.082e-03                                                          钉定=2.082e-03
+OK   最小裕度命中期                                        实测=P4                                                                 钉定=P4
+OK   entity/engine.py SHA256                        实测=e31fbcfeacebeb196f7e1d63f41089e7e0a7deb3cc9a9a8b44941af31e194e99   钉定=e31fbcfeacebeb196f7e1d63f41089e7e0a7deb3cc9a9a8b44941af31e194e99
+----------------------------------------------------------------------------------------------------
+不符项 = 0 / 12
+invariant_check EXIT=0
+
+==================================================================
+=== 修复靶标逐项对照核证留痕（target_check.py） ===
+==================================================================
+==============================================================================================================
+修复靶标逐项对照核证表（开启文本 §4.4）—— 零遗漏零超范围
+==============================================================================================================
+靶标           实际改动位置                                 核证方式                                           结果
+--------------------------------------------------------------------------------------------------------------
+甲-1          entity/input_schema.md §1              三口径表在场＋口径(iii)三性质（时间价值成分／两侧同源／不依赖定价模型）         OK
+甲-2          entity/input_schema.md §2              期切分未定义面之如实声明在场                                 OK
+甲-3①         entity/input_schema.md §3              engine._dte_days 调用点入消费面枚举                     OK
+甲-3②         entity/input_schema.md §3③             TPL1-T7601-04 标闭合、open 零残留                     OK
+甲-4          entity/input_schema.md §4③④            六槽位表 6 行＋三附注＋④联动注记＋#7/#12 双指针                  OK
+甲-5          entity/input_schema.md §7 防线1          宪-ST-06 不变量之参数位／非 L1 判据组成                      OK
+甲-6          entity/input_schema.md §7 防线4          合格判定链不消费参考锚                                    OK
+甲-7          entity/input_schema.md §12             层上界 6.475663e-13＋命中位＋九字段面分列                    OK
+甲-8          撞墙清单 观察-3                              改写为槽位组合敏感性三行表                                  OK
+甲-9          撞墙清单 TPL2-GL09-01                      状态闭合＋读法(i) 成立＋断言与字段保留不动                        OK
+甲-10         撞墙清单 TPL3-GL09-01                      四槽位族→六槽位族＋#7/#12 双指针                           OK
+甲-11         切片记录 裁定登记#3                            引擎供给形态＝调用之 KD 追认＋GL-06 分歧留档                    OK
+甲-12         切片记录 裁定登记#8                            day count 指针状态改闭合                              OK
+D-7 改判留痕     切片记录 专节                                改判＝不成立＋不补第四条＋入 74-3 复盘素材                       OK
+乙-1          entity/ledger_input.json slots         三槽位在场且 carry_coordinate_regime 值不变             OK
+乙-2          entity/harness.py → harness_output     _caliber 两键＋state_quantity 两键                  OK
+乙-3          verify/assert_check.py A12             route_id／computability_status／unstated_dimensions_hit 取值精确比对 OK
+乙-4          verify/assert_check.py A13 ＋ §14       F4 块 26 键／A13 严格比对面 22 键                       OK
+乙-5          verify/assert_check.py A18             阈值断言零残留，事实降为日志                                 OK
+乙-6          verify/assert_check.py A24             跨口径合成量实质扫描（AST＋键名）                             OK
+乙-7          ledger expected_pin ＋ A23              逐期 9 值钉表并入 A23 射程                              OK
+乙-8          verify/generate_comparison_table.py    §B 逐项 385 行、非零 diff 168 项全在表                   OK
+乙-9          verify/build_provenance.json           全包域重钉 14 件                                     OK
+乙-10         切片记录 指纹列                               17 行逐行与实测 SHA256 一致                            OK
+--------------------------------------------------------------------------------------------------------------
+对照项 24，不通过 0
+target_check EXIT=0
+
+==================================================================
+=== 打包形态核证留痕（§5.3） ===
+==================================================================
+zip 条目数 = 17
+   entity/engine.py
+   entity/harness.py
+   entity/harness_output.json
+   entity/input_schema.md
+   entity/ledger_input.json
+   verify/assert_check.py
+   verify/assert_check_log.txt
+   verify/build_provenance.json
+   verify/build_provenance.py
+   verify/comparison_table.tsv
+   verify/generate_comparison_table.py
+   verify/independent_expected.json
+   verify/independent_recompute.py
+   verify/nc_payload.txt
+   verify/negative_control.py
+   verify/negative_control_log.txt
+   verify/scan_patterns.json
+无目录前缀之条目 = []
+双子目录层级保留 = 成立（entity/ 5 件；verify/ 12 件）
+zip SHA256 = f4bfdcce0e05df74ee8ee973486e87f516a67413938180aa498f7d71f1d0d296

@@ -1,0 +1,50 @@
+{
+  "object_id": "T-24",
+  "field": "long_end_premium_bleed_theta_decay_cost",
+  "value": 544.2395615441383,
+  "unit": "currency",
+  "valuation": {
+    "t0": {
+      "tau_days": 150,
+      "portfolio_value": 2997.853717805686
+    },
+    "t1": {
+      "tau_days": 129,
+      "portfolio_value": 2453.6141562615476
+    }
+  },
+  "legs": [
+    {
+      "leg_id": "W1",
+      "option_type": "put",
+      "strike": 90,
+      "price_t0": 1.4218162861499586,
+      "price_t1": 1.2050702296184426,
+      "notional_value_t0": 1421.8162861499586,
+      "notional_value_t1": 1205.0702296184427
+    },
+    {
+      "leg_id": "W2",
+      "option_type": "call",
+      "strike": 115,
+      "price_t0": 1.5760374316557275,
+      "price_t1": 1.248543926643105,
+      "notional_value_t0": 1576.0374316557275,
+      "notional_value_t1": 1248.5439266431051
+    }
+  ],
+  "caliber_annotation": {
+    "text": "可以作为长端凸性成本表达；不得与短端 premium income 混账。",
+    "pointer": "T2/00A §4 行86 第三列"
+  },
+  "income_side_reference": {
+    "status": "synthetic_input_carried_not_consumed",
+    "short_end_30D_premium_income_placeholder": 3500,
+    "note": "T-23（short-end OTM premium income，Step1淘汰节点）语义引用；依赖披露§1处置——income侧以人造input承担，不因该边重新引入T-23为切片元素；本根 bleed 计算不消费此值，仅按分账约束随行携带"
+  },
+  "pricing_model_stub": {
+    "type": "BSM_no_dividend_closed_form",
+    "status": "占位桩（确定性、可复算、最简，不承诺逼真）",
+    "supply_side_gap": "TPL1-T76-01（缺实现型，引用不重登，裁决14模式）"
+  }
+}

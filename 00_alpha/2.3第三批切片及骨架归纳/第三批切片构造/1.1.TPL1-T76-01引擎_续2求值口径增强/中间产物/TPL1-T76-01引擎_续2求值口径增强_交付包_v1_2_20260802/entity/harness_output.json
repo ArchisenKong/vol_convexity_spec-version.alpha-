@@ -1,0 +1,638 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_declaration_ref": "entity/input_schema.md §5 OUTPUT_TOPLEVEL_DECLARATION",
+  "route_table": {
+    "spot": {
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": []
+    },
+    "spot_etf": {
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": []
+    },
+    "futures": {
+      "route_id": "linear_underlying_futures_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "futures_settlement_form",
+        "dividend_carry"
+      ]
+    },
+    "index": {
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": []
+    },
+    "european_option": {
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ]
+    },
+    "american_option": {
+      "route_id": "american_via_european_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "early_exercise",
+        "day_count_convention"
+      ]
+    }
+  },
+  "base_valuation": [
+    {
+      "lot_id": "L01",
+      "instrument_class": "spot",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 100.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 100000.0,
+        "delta": 1000.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L02",
+      "instrument_class": "spot_etf",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 50.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 10000.0,
+        "delta": 200.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L03",
+      "instrument_class": "index",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 4000.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 40000.0,
+        "delta": 10.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L04",
+      "instrument_class": "futures",
+      "route_id": "linear_underlying_futures_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "futures_settlement_form",
+        "dividend_carry"
+      ],
+      "per_unit": {
+        "value": 4000.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": -800000.0,
+        "delta": -200.0,
+        "gamma": -0.0,
+        "vega": -0.0,
+        "theta": -0.0,
+        "rho": -0.0
+      }
+    },
+    {
+      "lot_id": "L05",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 2.1477444228747657,
+        "delta": 0.3417006551118077,
+        "gamma": 0.03687995856765656,
+        "vega": 18.187376827885423,
+        "theta": -7.824110363512778,
+        "rho": 7.895914788897369
+      },
+      "per_lot": {
+        "value": 1073.872211437383,
+        "delta": 170.85032755590385,
+        "gamma": 18.43997928382828,
+        "vega": 9093.688413942711,
+        "theta": -3912.055181756389,
+        "rho": 3947.9573944486847
+      }
+    },
+    {
+      "lot_id": "L06",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 1.4257977073029018,
+        "delta": -0.25759823216443317,
+        "gamma": 0.036741960506304475,
+        "vega": 11.324576868381516,
+        "theta": -11.052691378754412,
+        "rho": -3.351651894708437
+      },
+      "per_lot": {
+        "value": -1140.6381658423215,
+        "delta": 206.07858573154653,
+        "gamma": -29.39356840504358,
+        "vega": -9059.661494705213,
+        "theta": 8842.15310300353,
+        "rho": 2681.3215157667496
+      }
+    },
+    {
+      "lot_id": "L07",
+      "instrument_class": "american_option",
+      "route_id": "american_via_european_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "early_exercise",
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 14.033266970540723,
+        "delta": -0.6172311392937918,
+        "gamma": 0.017863032306723512,
+        "vega": 26.574319294659905,
+        "theta": -6.691519819968669,
+        "rho": -37.566862857220556
+      },
+      "per_lot": {
+        "value": 4209.980091162217,
+        "delta": -185.16934178813753,
+        "gamma": 5.358909692017054,
+        "vega": 7972.295788397972,
+        "theta": -2007.4559459906009,
+        "rho": -11270.058857166166
+      }
+    },
+    {
+      "lot_id": "L08",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 2.6308938371646686,
+        "delta": 0.2842356209603052,
+        "gamma": 0.019151844930957507,
+        "vega": 16.75786431458782,
+        "theta": -2.9673936883220504,
+        "rho": 11.58088721085059
+      },
+      "per_lot": {
+        "value": -526.1787674329337,
+        "delta": -56.84712419206104,
+        "gamma": -3.8303689861915013,
+        "vega": -3351.572862917564,
+        "theta": 593.4787376644101,
+        "rho": -2316.177442170118
+      }
+    }
+  ],
+  "scenario_revaluation": [
+    {
+      "lot_id": "L01",
+      "instrument_class": "spot",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 95.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 95000.0,
+        "delta": 1000.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L02",
+      "instrument_class": "spot_etf",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 47.5,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 9500.0,
+        "delta": 200.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L03",
+      "instrument_class": "index",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 3800.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 38000.0,
+        "delta": 10.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L04",
+      "instrument_class": "futures",
+      "route_id": "linear_underlying_futures_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "futures_settlement_form",
+        "dividend_carry"
+      ],
+      "per_unit": {
+        "value": 3800.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": -760000.0,
+        "delta": -200.0,
+        "gamma": -0.0,
+        "vega": -0.0,
+        "theta": -0.0,
+        "rho": -0.0
+      }
+    },
+    {
+      "lot_id": "L05",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 1.2599080378623597,
+        "delta": 0.21489603952661837,
+        "gamma": 0.026880865473390497,
+        "vega": 13.758400234452408,
+        "theta": -6.685194613424447,
+        "rho": 4.723203875465684
+      },
+      "per_lot": {
+        "value": 629.9540189311799,
+        "delta": 107.44801976330919,
+        "gamma": 13.440432736695248,
+        "vega": 6879.2001172262035,
+        "theta": -3342.5973067122236,
+        "rho": 2361.601937732842
+      }
+    },
+    {
+      "lot_id": "L06",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 3.6273157868420256,
+        "delta": -0.4720320226983654,
+        "gamma": 0.042536556476393976,
+        "vega": 13.252176766337374,
+        "theta": -14.267117844268231,
+        "rho": -5.975797554639461
+      },
+      "per_lot": {
+        "value": -2901.8526294736203,
+        "delta": 377.6256181586923,
+        "gamma": -34.02924518111518,
+        "vega": -10601.7414130699,
+        "theta": 11413.694275414586,
+        "rho": 4780.638043711569
+      }
+    },
+    {
+      "lot_id": "L07",
+      "instrument_class": "american_option",
+      "route_id": "american_via_european_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "early_exercise",
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 18.035124033821276,
+        "delta": -0.6802545238746224,
+        "gamma": 0.0159647201296933,
+        "vega": 23.578065530007915,
+        "theta": -6.334826657296769,
+        "rho": -40.98995613190625
+      },
+      "per_lot": {
+        "value": 5410.537210146383,
+        "delta": -204.0763571623867,
+        "gamma": 4.78941603890799,
+        "vega": 7073.419659002375,
+        "theta": -1900.4479971890305,
+        "rho": -12296.986839571875
+      }
+    },
+    {
+      "lot_id": "L08",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 2.4280382600346897,
+        "delta": 0.2636240742444352,
+        "gamma": 0.017902685496438645,
+        "vega": 15.349314977509085,
+        "theta": -2.9437058461385712,
+        "rho": 10.094105266575983
+      },
+      "per_lot": {
+        "value": -485.60765200693794,
+        "delta": -52.724814848887036,
+        "gamma": -3.5805370992877292,
+        "vega": -3069.862995501817,
+        "theta": 588.7411692277143,
+        "rho": -2018.8210533151967
+      }
+    }
+  ],
+  "time_shift_revaluation": [
+    {
+      "lot_id": "L01",
+      "instrument_class": "spot",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 100.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 100000.0,
+        "delta": 1000.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L02",
+      "instrument_class": "spot_etf",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 50.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 10000.0,
+        "delta": 200.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L03",
+      "instrument_class": "index",
+      "route_id": "linear_underlying",
+      "computability_status": "closed_on_stated_face",
+      "unstated_dimensions_hit": [],
+      "per_unit": {
+        "value": 4000.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": 40000.0,
+        "delta": 10.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      }
+    },
+    {
+      "lot_id": "L04",
+      "instrument_class": "futures",
+      "route_id": "linear_underlying_futures_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "futures_settlement_form",
+        "dividend_carry"
+      ],
+      "per_unit": {
+        "value": 4000.0,
+        "delta": 1.0,
+        "gamma": 0.0,
+        "vega": 0.0,
+        "theta": 0.0,
+        "rho": 0.0
+      },
+      "per_lot": {
+        "value": -800000.0,
+        "delta": -200.0,
+        "gamma": -0.0,
+        "vega": -0.0,
+        "theta": -0.0,
+        "rho": -0.0
+      }
+    },
+    {
+      "lot_id": "L05",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 1.9290268493551253,
+        "delta": 0.3291922317811837,
+        "gamma": 0.03856347684748492,
+        "vega": 16.904537796157765,
+        "theta": -8.148612911688103,
+        "rho": 6.792371798085093
+      },
+      "per_lot": {
+        "value": 964.5134246775626,
+        "delta": 164.59611589059185,
+        "gamma": 19.28173842374246,
+        "vega": 8452.268898078883,
+        "theta": -4074.3064558440515,
+        "rho": 3396.1858990425467
+      }
+    },
+    {
+      "lot_id": "L06",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 1.1100678806433208,
+        "delta": -0.23546688613826613,
+        "gamma": 0.03971299665982546,
+        "vega": 9.520238925300623,
+        "theta": -12.023809090568756,
+        "rho": -2.364346513168349
+      },
+      "per_lot": {
+        "value": -888.0543045146567,
+        "delta": 188.3735089106129,
+        "gamma": -31.770397327860366,
+        "vega": -7616.1911402404985,
+        "theta": 9619.047272455005,
+        "rho": 1891.4772105346792
+      }
+    },
+    {
+      "lot_id": "L07",
+      "instrument_class": "american_option",
+      "route_id": "american_via_european_stub",
+      "computability_status": "placeholder_stub",
+      "unstated_dimensions_hit": [
+        "early_exercise",
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 13.847414334233306,
+        "delta": -0.6238668537379692,
+        "gamma": 0.018286398177518898,
+        "vega": 25.701156890595055,
+        "theta": -6.877656469249552,
+        "rho": -35.7151535618443
+      },
+      "per_lot": {
+        "value": 4154.2243002699915,
+        "delta": -187.16005612139077,
+        "gamma": 5.485919453255669,
+        "vega": 7710.347067178516,
+        "theta": -2063.2969407748656,
+        "rho": -10714.54606855329
+      }
+    },
+    {
+      "lot_id": "L08",
+      "instrument_class": "european_option",
+      "route_id": "bs_dividend_yield_closed_form",
+      "computability_status": "computed_with_open_dimensions",
+      "unstated_dimensions_hit": [
+        "day_count_convention"
+      ],
+      "per_unit": {
+        "value": 2.5492981725870365,
+        "delta": 0.2799918675208324,
+        "gamma": 0.019288585502211936,
+        "vega": 16.41511471677968,
+        "theta": -2.9890824568569254,
+        "rho": 11.136588485551716
+      },
+      "per_lot": {
+        "value": -509.8596345174073,
+        "delta": -55.99837350416648,
+        "gamma": -3.857717100442387,
+        "vega": -3283.022943355936,
+        "theta": 597.816491371385,
+        "rho": -2227.317697110343
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+=== step0 前置合规断言 ===
+(i) input人造: True
+(ii) harness.py 扫描（剥离后命中）: [] -> clean=True
+(ii) harness.py 扫描（剥离前留痕，非判定依据）: []
+(iii) independent_recompute.py 无harness耦合: True, 耦合命中=[]
+(iii) 剥离前'harness'字样人工grep核验行号: []
+step0 通过: True
+
+=== step1-2 数值比对（裁决13子口径(b)既有锚定值，REL_TOL=1e-15）===
+W1.price_t0: harness=1.4218162861499586 indep=1.421816286149955 abs_diff=3.552714e-15 rel_diff=2.498715e-15 within_1e-15=False
+W1.price_t1: harness=1.2050702296184426 indep=1.205070229618439 abs_diff=3.552714e-15 rel_diff=2.948138e-15 within_1e-15=False
+W2.price_t0: harness=1.5760374316557275 indep=1.5760374316557275 abs_diff=0.000000e+00 rel_diff=0.000000e+00 within_1e-15=True
+W2.price_t1: harness=1.248543926643105 indep=1.2485439266431086 abs_diff=3.552714e-15 rel_diff=2.845486e-15 within_1e-15=False
+V_t0: harness=2997.853717805686 indep=2997.853717805682 abs_diff=3.637979e-12 rel_diff=1.213528e-15 within_1e-15=False
+V_t1: harness=2453.6141562615476 indep=2453.6141562615476 abs_diff=0.000000e+00 rel_diff=0.000000e+00 within_1e-15=True
+bleed: harness=544.2395615441383 indep=544.2395615441346 abs_diff=3.637979e-12 rel_diff=6.684517e-15 within_1e-15=False
+2/7 项限内（≤1e-15），5 项越限
+数值比对整体是否全部限内: False
+
+=== step3 附加断言 ===
+a1_scalar_and_field: True
+a2_recompute_ledger_consistent: False
+a3_caliber_annotation_present_and_anchored: True
+a3_canonical_text_from_source: 可以作为长端凸性成本表达；不得与短端 premium income 混账。
+a3_ledger_text: 可以作为长端凸性成本表达；不得与短端 premium income 混账。
+
+=== 合格判定（依裁决13(b)既有锚定值1e-15字面适用）===
+不通过（数值比对项越限，非step0/附加断言缺陷）

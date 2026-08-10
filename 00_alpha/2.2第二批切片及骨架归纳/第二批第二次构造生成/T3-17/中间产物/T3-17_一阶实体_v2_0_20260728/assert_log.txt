@@ -1,0 +1,57 @@
+T3-17 v2.0 assert_check.py 运行日志
+通过项（52）：
+  [PASS] step0(i) _data_source字段值
+  [PASS] step0(ii) 硬性扫描（../entity/harness.py）
+  [PASS] step0(ii) 硬性扫描（independent_recompute.py）
+  [PASS] step0(ii)-额外自查（assert_check.py，非硬性判据，主动扩展避免T3-18 O1同型缺口）
+  [PASS] step0(iii) 复算未import harness模块（剥离后）
+  [PASS] step0(iii) 复算未读取harness_output.json（剥离后）
+  [PASS] D1修复 程序化定位判据一段落（正则：判据一｜...至判据二｜）
+  [PASS] D1修复 判据一段落锚定关键词全部在场（程序化解析，非人工转录）
+  [PASS] D1修复 input声明槽位名与判据一段落锚定槽位名集合一致
+  [PASS] 数值比对 全量162项bit-exact（diff=0）
+  [PASS] 附加断言(a) 两翼在场
+  [PASS] 附加断言(b) put翼期数=9
+  [PASS] 附加断言(b) put翼t=1字段齐备
+  [PASS] 附加断言(b) put翼t=2字段齐备
+  [PASS] 附加断言(b) put翼t=3字段齐备
+  [PASS] 附加断言(b) put翼t=4字段齐备
+  [PASS] 附加断言(b) put翼t=5字段齐备
+  [PASS] 附加断言(b) put翼t=6字段齐备
+  [PASS] 附加断言(b) put翼t=7字段齐备
+  [PASS] 附加断言(b) put翼t=8字段齐备
+  [PASS] 附加断言(b) put翼t=9字段齐备
+  [PASS] 附加断言(c) put翼band枚举合规
+  [PASS] 附加断言(d) put翼期望band序列钉点
+  [PASS] 附加断言(e) put翼期望below_floor序列钉点
+  [PASS] 附加断言(f) put翼期望count序列钉点
+  [PASS] 附加断言(g) put翼期望triggered序列钉点
+  [PASS] 附加断言(h) put翼min()合成方向钉点（双方向覆盖核验）
+  [PASS] 附加断言(b) call翼期数=9
+  [PASS] 附加断言(b) call翼t=1字段齐备
+  [PASS] 附加断言(b) call翼t=2字段齐备
+  [PASS] 附加断言(b) call翼t=3字段齐备
+  [PASS] 附加断言(b) call翼t=4字段齐备
+  [PASS] 附加断言(b) call翼t=5字段齐备
+  [PASS] 附加断言(b) call翼t=6字段齐备
+  [PASS] 附加断言(b) call翼t=7字段齐备
+  [PASS] 附加断言(b) call翼t=8字段齐备
+  [PASS] 附加断言(b) call翼t=9字段齐备
+  [PASS] 附加断言(c) call翼band枚举合规
+  [PASS] 附加断言(d) call翼期望band序列钉点
+  [PASS] 附加断言(e) call翼期望below_floor序列钉点
+  [PASS] 附加断言(f) call翼期望count序列钉点
+  [PASS] 附加断言(g) call翼期望triggered序列钉点
+  [PASS] 附加断言(h) call翼min()合成方向钉点（双方向覆盖核验）
+  [PASS] 附加断言(i) O3(a)修复：put t1首期即below_floor
+  [PASS] 附加断言(j) O3(b)修复：above分支至少出现一次
+  [PASS] 附加断言(k) floor严格边界：call t2 combined恰=floor且below_floor=False（'低于'非'不高于'）
+  [PASS] 附加断言(k) floor严格边界：call t7 combined恰=floor且below_floor=False
+  [PASS] 附加断言(l) window严格边界：put t3 count==window(3且未触发，非'达到即触发'的>=粘滞误读)
+  [PASS] 附加断言(l) window严格边界：put t4 count==window+1(4)触发
+  [PASS] 附加断言(m) 非粘滞：put t4触发后，t5恢复即count清零/triggered回落
+  [PASS] 附加断言(n) call翼负例：全程9期均未触发（健康翼不应被误判dullness）
+  [PASS] 附加断言(o) min()相等分支核验：call t6 vega_ratio==gamma_ratio==1
+失败项（0）：
+
+总判定：通过（PASS）

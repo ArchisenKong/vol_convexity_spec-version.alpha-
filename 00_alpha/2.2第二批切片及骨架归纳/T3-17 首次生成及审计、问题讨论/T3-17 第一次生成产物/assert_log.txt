@@ -1,0 +1,3 @@
+T3-17 wing effectiveness 断言运行日志
+总判定：合格 PASS
+全部断言 PASS，无失败项。

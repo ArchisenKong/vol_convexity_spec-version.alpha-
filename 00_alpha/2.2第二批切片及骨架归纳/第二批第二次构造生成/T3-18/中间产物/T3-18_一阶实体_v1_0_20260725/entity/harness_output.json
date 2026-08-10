@@ -1,0 +1,74 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "cum_gap_cents": {
+    "10": -200,
+    "11": -170,
+    "12": -125,
+    "4": -10,
+    "5": -70,
+    "6": -125,
+    "7": -170,
+    "8": -200,
+    "9": -210
+  },
+  "gap_series_cents": [
+    20,
+    5,
+    -10,
+    -25,
+    -40,
+    -50,
+    -55,
+    -55,
+    -50,
+    -40,
+    -25,
+    -10
+  ],
+  "shape_evaluation": {
+    "10": {
+      "delta": 0,
+      "destructive_form": true,
+      "persistent_negative": true,
+      "slope_nonconvergent": true
+    },
+    "11": {
+      "delta": 40,
+      "destructive_form": false,
+      "persistent_negative": true,
+      "slope_nonconvergent": false
+    },
+    "12": {
+      "delta": 75,
+      "destructive_form": false,
+      "persistent_negative": true,
+      "slope_nonconvergent": false
+    },
+    "4": null,
+    "5": null,
+    "6": {
+      "delta": -115,
+      "destructive_form": true,
+      "persistent_negative": true,
+      "slope_nonconvergent": true
+    },
+    "7": {
+      "delta": -100,
+      "destructive_form": true,
+      "persistent_negative": true,
+      "slope_nonconvergent": true
+    },
+    "8": {
+      "delta": -75,
+      "destructive_form": true,
+      "persistent_negative": true,
+      "slope_nonconvergent": true
+    },
+    "9": {
+      "delta": -40,
+      "destructive_form": true,
+      "persistent_negative": true,
+      "slope_nonconvergent": true
+    }
+  }
+}

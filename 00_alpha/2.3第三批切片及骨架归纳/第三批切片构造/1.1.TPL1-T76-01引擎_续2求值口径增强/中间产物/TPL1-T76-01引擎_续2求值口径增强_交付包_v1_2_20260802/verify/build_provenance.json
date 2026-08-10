@@ -1,0 +1,9 @@
+{
+  "engine_py_sha256": "e31fbcfeacebeb196f7e1d63f41089e7e0a7deb3cc9a9a8b44941af31e194e99",
+  "input_data_sha256": "46bcff3b08f2dd2245c6ed60164536a0d79ffbc86a8ae259490d9c761e18849f",
+  "independent_recompute_py_sha256": "0d5e5b8365cbfec7859e5b64db2bb511e2caf8c00c9e91cba83dfa8127747864",
+  "harness_output_sha256": "b871be922d17503150f50677a7c4c6beaf6a45d5efc0cb29d4f36e4a66605711",
+  "independent_expected_sha256": "591ddbe615b3a2f1e6a5e42cd2ec3ce10c31c269139a295a0b79d30ad3605f43",
+  "regression_q0_output_sha256": "cc989fd4452b2c2f4770a173c1c6052ca7f93d6b0a581fe55de935ec6d99c013",
+  "_note": "产物新鲜度钉定（D-4/E-1封堵）：本文件记录生成时点各源码/输入/产物之SHA256。assert_check.py A10断言核验当前值与此钉定值一致——任一失配即表明对应产物非当前源码/输入之产出（陈旧产物通道），或该产物/源码本身遭直接篡改。engine_py/input_data 锚定 harness_output 与 regression_q0_output 两件（均经import engine产出）；independent_recompute_py/input_data 锚定independent_expected（不import engine，锚取自身生成脚本，维持D段②独立性）。"
+}

@@ -1,0 +1,156 @@
+{
+  "wings": {
+    "put": {
+      "periods": [
+        {
+          "t": 1,
+          "moneyness_band_position": "within",
+          "stressed_vega": "477/5",
+          "stressed_gamma": "327/2000",
+          "vega_response_ratio": "1",
+          "gamma_response_ratio": "1",
+          "combined_response_ratio": "1",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 2,
+          "moneyness_band_position": "within",
+          "stressed_vega": "901/10",
+          "stressed_gamma": "763/5000",
+          "vega_response_ratio": "17/18",
+          "gamma_response_ratio": "14/15",
+          "combined_response_ratio": "14/15",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 3,
+          "moneyness_band_position": "below",
+          "stressed_vega": "212/5",
+          "stressed_gamma": "109/2000",
+          "vega_response_ratio": "4/9",
+          "gamma_response_ratio": "1/3",
+          "combined_response_ratio": "1/3",
+          "below_floor": true,
+          "consecutive_below_count": 1,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 4,
+          "moneyness_band_position": "below",
+          "stressed_vega": "371/10",
+          "stressed_gamma": "981/20000",
+          "vega_response_ratio": "7/18",
+          "gamma_response_ratio": "3/10",
+          "combined_response_ratio": "3/10",
+          "below_floor": true,
+          "consecutive_below_count": 2,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 5,
+          "moneyness_band_position": "below",
+          "stressed_vega": "159/5",
+          "stressed_gamma": "109/2500",
+          "vega_response_ratio": "1/3",
+          "gamma_response_ratio": "4/15",
+          "combined_response_ratio": "4/15",
+          "below_floor": true,
+          "consecutive_below_count": 3,
+          "wing_dullness_triggered": true
+        },
+        {
+          "t": 6,
+          "moneyness_band_position": "within",
+          "stressed_vega": "901/10",
+          "stressed_gamma": "1417/10000",
+          "vega_response_ratio": "17/18",
+          "gamma_response_ratio": "13/15",
+          "combined_response_ratio": "13/15",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        }
+      ]
+    },
+    "call": {
+      "periods": [
+        {
+          "t": 1,
+          "moneyness_band_position": "within",
+          "stressed_vega": "371/5",
+          "stressed_gamma": "763/20000",
+          "vega_response_ratio": "1",
+          "gamma_response_ratio": "1",
+          "combined_response_ratio": "1",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 2,
+          "moneyness_band_position": "within",
+          "stressed_vega": "1802/25",
+          "stressed_gamma": "1853/50000",
+          "vega_response_ratio": "34/35",
+          "gamma_response_ratio": "34/35",
+          "combined_response_ratio": "34/35",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 3,
+          "moneyness_band_position": "within",
+          "stressed_vega": "1908/25",
+          "stressed_gamma": "981/25000",
+          "vega_response_ratio": "36/35",
+          "gamma_response_ratio": "36/35",
+          "combined_response_ratio": "36/35",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 4,
+          "moneyness_band_position": "within",
+          "stressed_vega": "689/10",
+          "stressed_gamma": "3597/100000",
+          "vega_response_ratio": "13/14",
+          "gamma_response_ratio": "33/35",
+          "combined_response_ratio": "13/14",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 5,
+          "moneyness_band_position": "within",
+          "stressed_vega": "3657/50",
+          "stressed_gamma": "7521/200000",
+          "vega_response_ratio": "69/70",
+          "gamma_response_ratio": "69/70",
+          "combined_response_ratio": "69/70",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        },
+        {
+          "t": 6,
+          "moneyness_band_position": "within",
+          "stressed_vega": "3763/50",
+          "stressed_gamma": "7739/200000",
+          "vega_response_ratio": "71/70",
+          "gamma_response_ratio": "71/70",
+          "combined_response_ratio": "71/70",
+          "below_floor": false,
+          "consecutive_below_count": 0,
+          "wing_dullness_triggered": false
+        }
+      ]
+    }
+  }
+}

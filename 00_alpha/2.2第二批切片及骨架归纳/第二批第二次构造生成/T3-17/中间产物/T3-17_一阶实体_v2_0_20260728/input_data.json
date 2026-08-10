@@ -1,0 +1,57 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_object": "T3-17 wing effectiveness \u2014 slot#1\u5360\u7528\u80051\u5019\u9009\u5b9e\u73b0\u4e4b\u9a8c\u8bc1\u8f7d\u4f53",
+  "_construction_note": "\u5168\u90e8\u6570\u503c\u4ee5 num/den \u5b57\u7b26\u4e32\u5f62\u5f0f\u58f0\u660e\uff0char ness/verify \u5747\u4ee5 fractions.Fraction \u89e3\u6790\uff0c\u4e0d\u7ecf\u8fc7\u4efb\u4f55 float \u8f6c\u6362\u3002",
+  "scenario_shock": {
+    "_comment": "TPL1-T76-01\u60c5\u666f\u91cd\u4f30\u6869\uff08C4\u6869\u7eaa\u5f8b\uff09\uff1a\u7ebf\u6027\u4e58\u6570\u6869\uff0c\u672c\u6839\u65b0\u58f0\u660e\u7cfb\u6570\uff0c\u4e0d\u6cbf\u7528v1.0\u65e7\u503c\uff0c\u5de5\u7a0b\u88c1\u5b9a\u4e0d\u5916\u63a8\u3002\u4e24\u7fc5\u5171\u4eab\u540c\u4e00\u60c5\u666f\u51b2\u51fb\u7cfb\u6570\uff08\u5355\u4e00\u58f0\u660e\u60c5\u666f\uff0c\u975e\u6bcf\u7fc5\u72ec\u7acb\u53d8\u91cf\uff09\u3002",
+    "vega_mult": "21/20",
+    "gamma_mult": "6/5"
+  },
+  "slots": {
+    "_comment": "\u7c7b\u4e09\u9636\u6bb5A\u5019\u9009\u503c\uff0c\u5f85Phase B\u8bc1\u4f2a\uff1b\u4e0d\u767b\u8bb0\u6a21\u677f\u4e00/\u4e8c\uff08\u88c1\u51b324-A5\uff0c\u5148\u4f8bT-76 H1/GK-14 w_\u03c4\uff09\u3002\u4e24\u7fc5\u5171\u4eab\u540c\u4e00floor/window\uff0c\u6784\u9020\u7b80\u5316\u4e0d\u5916\u63a8\u3002",
+    "wing_responsiveness_floor": "7/10",
+    "wing_dullness_window": "3"
+  },
+  "wings": {
+    "put": {
+      "declared_basis": {
+        "_comment": "\u5efa\u4ed3/roll\u540e\u58f0\u660e\u57fa\u51c6\uff0c\u4e0a\u6e38\u58f0\u660e\u8f93\u5165\uff0c\u975e\u672c\u6839\u8ba1\u7b97\u5bf9\u8c61",
+        "target_activation_band_low": "17/20",
+        "target_activation_band_high": "19/20",
+        "target_vega_response_level": "21",
+        "target_gamma_response_level": "24"
+      },
+      "periods": [
+        {"t": 1, "moneyness": "4/5",  "raw_vega": "12", "raw_gamma": "11"},
+        {"t": 2, "moneyness": "22/25","raw_vega": "10", "raw_gamma": "13"},
+        {"t": 3, "moneyness": "9/10", "raw_vega": "15", "raw_gamma": "12"},
+        {"t": 4, "moneyness": "9/10", "raw_vega": "9",  "raw_gamma": "16"},
+        {"t": 5, "moneyness": "9/10", "raw_vega": "17", "raw_gamma": "18"},
+        {"t": 6, "moneyness": "9/10", "raw_vega": "13", "raw_gamma": "15"},
+        {"t": 7, "moneyness": "9/10", "raw_vega": "12", "raw_gamma": "17"},
+        {"t": 8, "moneyness": "24/25","raw_vega": "16", "raw_gamma": "11"},
+        {"t": 9, "moneyness": "9/10", "raw_vega": "19", "raw_gamma": "15"}
+      ]
+    },
+    "call": {
+      "declared_basis": {
+        "_comment": "\u5efa\u4ed3/roll\u540e\u58f0\u660e\u57fa\u51c6\uff0c\u4e0a\u6e38\u58f0\u660e\u8f93\u5165\uff0c\u975e\u672c\u6839\u8ba1\u7b97\u5bf9\u8c61",
+        "target_activation_band_low": "11/10",
+        "target_activation_band_high": "13/10",
+        "target_vega_response_level": "21",
+        "target_gamma_response_level": "24"
+      },
+      "periods": [
+        {"t": 1, "moneyness": "21/20","raw_vega": "16", "raw_gamma": "17"},
+        {"t": 2, "moneyness": "23/20","raw_vega": "15", "raw_gamma": "14"},
+        {"t": 3, "moneyness": "6/5",  "raw_vega": "13", "raw_gamma": "19"},
+        {"t": 4, "moneyness": "6/5",  "raw_vega": "18", "raw_gamma": "12"},
+        {"t": 5, "moneyness": "6/5",  "raw_vega": "17", "raw_gamma": "16"},
+        {"t": 6, "moneyness": "6/5",  "raw_vega": "20", "raw_gamma": "20"},
+        {"t": 7, "moneyness": "6/5",  "raw_vega": "14", "raw_gamma": "14"},
+        {"t": 8, "moneyness": "6/5",  "raw_vega": "15", "raw_gamma": "13"},
+        {"t": 9, "moneyness": "6/5",  "raw_vega": "16", "raw_gamma": "17"}
+      ]
+    }
+  }
+}
