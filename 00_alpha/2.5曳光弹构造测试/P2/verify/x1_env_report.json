@@ -1,0 +1,218 @@
+{
+  "purpose": "X-1 跨环境浮点对比素材（DOC-25 前置素材）",
+  "clause": "P1规格件 v1.2 §1 目标3 ／ §5 步5",
+  "engine_sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+  "fixture": {
+    "lot_id": "X1_SYNTH_ES_001",
+    "instrument_class": "american_option",
+    "exercise_style": "american",
+    "option_type": "put",
+    "spot": 7775.0,
+    "strike": 7775.0,
+    "implied_vol": 0.122,
+    "valuation_date": "2026-08-12",
+    "expiry": "2026-08-14",
+    "risk_free_rate": 0.04,
+    "dividend_yield": 0.0,
+    "multiplier": 50,
+    "quantity": 1,
+    "side": "short"
+  },
+  "fixture_provenance": {
+    "supplied_by": "KY",
+    "supplied_on": "2026-08-12",
+    "nature": "手工钉定常数；量级参照 20260812 实时行情，非探针采集",
+    "isolation": "留于 verify/ 子树；不入 data_manifest；不带外部数据标记",
+    "clause": "P1规格件 v1.2 §5 步5 ＋ 张力①处置(b)",
+    "immutable": "钉定后不得变更——变更即毁 DOC-25 跨环境对比基准"
+  },
+  "environment": {
+    "python_version": "3.10.11",
+    "python_build": [
+      "tags/v3.10.11:7d4cc5a",
+      "Apr  5 2023 00:38:17"
+    ],
+    "python_compiler": "MSC v.1929 64 bit (AMD64)",
+    "implementation": "CPython",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "libc_ver": [
+      "",
+      ""
+    ],
+    "float_info": {
+      "mant_dig": 53,
+      "max_exp": 1024,
+      "min_exp": -1021,
+      "epsilon": 2.220446049250313e-16,
+      "dig": 15,
+      "radix": 2,
+      "rounds": 1
+    },
+    "libm_fingerprints": {
+      "exp(1)": "0x1.5bf0a8b145769p+1",
+      "exp(-0.5)": "0x1.368b2fc6f960ap-1",
+      "log(2)": "0x1.62e42fefa39efp-1",
+      "sqrt(2)": "0x1.6a09e667f3bcdp+0",
+      "pow(1.0000001,500)": "0x1.000346e1b915ap+0",
+      "erf(0.7)": "0x1.5b08c21171645p-1",
+      "expm1(1e-8)": "0x1.5798ee3fdb763p-27"
+    },
+    "libm_fingerprint_digest": "587fbd8f98c8ccdde681f0e0a869c80fc9efd206f5ed3d5c4be423d074f16319"
+  },
+  "result_bitwise": {
+    "lot_id": "X1_SYNTH_ES_001",
+    "instrument_class": "american_option",
+    "exercise_style": "american",
+    "route_id": "american_crr_binomial",
+    "computability_status": "computed_with_open_dimensions",
+    "unstated_dimensions_hit": [
+      "day_count_convention"
+    ],
+    "per_unit": {
+      "value": {
+        "repr": "27.247943493957006",
+        "hex": "0x1.b3f79398dcd23p+4",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "delta": {
+        "repr": "-0.49081376310230534",
+        "hex": "-0x1.f697e213cdeb5p-2",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "gamma": {
+        "repr": "0.00573201514840477",
+        "hex": "0x1.77a7419a425c3p-8",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "vega": {
+        "repr": "229.2405982811605",
+        "hex": "0x1.ca7b2fb2aa1dcp+7",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "theta": {
+        "repr": "-2424.9461527073745",
+        "hex": "-0x1.2f1e46e20ae64p+11",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "rho": {
+        "repr": "-18.04847182317104",
+        "hex": "-0x1.20c68a63f4c10p+4",
+        "is_nan": false,
+        "is_inf": false
+      }
+    },
+    "per_lot": {
+      "value": {
+        "repr": "-1362.3971746978502",
+        "hex": "-0x1.54996b4f6c843p+10",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "delta": {
+        "repr": "24.540688155115266",
+        "hex": "0x1.88a6a89f78dfdp+4",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "gamma": {
+        "repr": "-0.2866007574202385",
+        "hex": "-0x1.257aab4083d80p-2",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "vega": {
+        "repr": "-11462.029914058025",
+        "hex": "-0x1.66303d4394e74p+13",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "theta": {
+        "repr": "121247.30763536872",
+        "hex": "0x1.d99f4ec13107cp+16",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "rho": {
+        "repr": "902.4235911585521",
+        "hex": "0x1.c336383c2e6d9p+9",
+        "is_nan": false,
+        "is_inf": false
+      }
+    },
+    "early_exercise_premium": {
+      "per_unit": {
+        "repr": "0.09716506064986419",
+        "hex": "0x1.8dfcf35ce1600p-4",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "per_lot": {
+        "repr": "-4.858253032493209",
+        "hex": "-0x1.36ed9e2090130p+2",
+        "is_nan": false,
+        "is_inf": false
+      }
+    },
+    "lattice_diagnostics": {
+      "n_exercise_nodes": 54722,
+      "max_exercise_excess": {
+        "repr": "0.003408218431786736",
+        "hex": "0x1.beb8d56780000p-9",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "european_mode_n_exercise_nodes": 0,
+      "european_mode_value": {
+        "repr": "27.150778433307142",
+        "hex": "0x1.b26996a57ff0dp+4",
+        "is_nan": false,
+        "is_inf": false
+      },
+      "crr_steps": 500
+    }
+  },
+  "result_plain": {
+    "lot_id": "X1_SYNTH_ES_001",
+    "instrument_class": "american_option",
+    "exercise_style": "american",
+    "route_id": "american_crr_binomial",
+    "computability_status": "computed_with_open_dimensions",
+    "unstated_dimensions_hit": [
+      "day_count_convention"
+    ],
+    "per_unit": {
+      "value": 27.247943493957006,
+      "delta": -0.49081376310230534,
+      "gamma": 0.00573201514840477,
+      "vega": 229.2405982811605,
+      "theta": -2424.9461527073745,
+      "rho": -18.04847182317104
+    },
+    "per_lot": {
+      "value": -1362.3971746978502,
+      "delta": 24.540688155115266,
+      "gamma": -0.2866007574202385,
+      "vega": -11462.029914058025,
+      "theta": 121247.30763536872,
+      "rho": 902.4235911585521
+    },
+    "early_exercise_premium": {
+      "per_unit": 0.09716506064986419,
+      "per_lot": -4.858253032493209
+    },
+    "lattice_diagnostics": {
+      "n_exercise_nodes": 54722,
+      "max_exercise_excess": 0.003408218431786736,
+      "european_mode_n_exercise_nodes": 0,
+      "european_mode_value": 27.150778433307142,
+      "crr_steps": 500
+    }
+  }
+}

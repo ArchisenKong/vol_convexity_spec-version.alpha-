@@ -1,0 +1,81 @@
+{
+  "opt_no106": {
+    "generic_ticks": "",
+    "waited_s": 3.0,
+    "tick24_impliedVolatility": null,
+    "modelGreeks": {
+      "impliedVol": 0.11942143535225963,
+      "delta": -0.6029983074145742,
+      "gamma": 0.007170049455352372,
+      "vega": 1.7402252272941041,
+      "theta": -11.264284309506365,
+      "optPrice": 29.33771318356048,
+      "undPrice": 7773.5,
+      "pvDividend": 0.0
+    },
+    "bidGreeks": {
+      "impliedVol": null,
+      "delta": null,
+      "gamma": null,
+      "vega": -2.0,
+      "theta": -2.0,
+      "optPrice": null,
+      "undPrice": 7774.25,
+      "pvDividend": 0.0
+    },
+    "raw_sentinel_check": {
+      "modelGreeks": 1.7402252272941041,
+      "bidGreeks": -2.0,
+      "askGreeks": -2.0,
+      "lastGreeks": -2.0
+    }
+  },
+  "opt_106": {
+    "generic_ticks": "106",
+    "waited_s": 1.0,
+    "tick24_impliedVolatility": 0.11936002705789804,
+    "modelGreeks": {
+      "impliedVol": 0.11942143535225963,
+      "delta": -0.5849741034879403,
+      "gamma": 0.007247588020177175,
+      "vega": 1.7586185473965088,
+      "theta": -11.55880397643341,
+      "optPrice": 27.852494444353397,
+      "undPrice": 7773.5,
+      "pvDividend": 0.0
+    },
+    "bidGreeks": {
+      "impliedVol": 0.11805767265092423,
+      "delta": -0.5822882360146411,
+      "gamma": 0.007340098197548938,
+      "vega": 1.758395864067287,
+      "theta": -8.443969749259402,
+      "optPrice": 22.75,
+      "undPrice": 7763.75,
+      "pvDividend": 0.0
+    },
+    "raw_sentinel_check": {
+      "modelGreeks": 1.7586185473965088,
+      "bidGreeks": 1.758395864067287,
+      "askGreeks": 1.7593049047941747,
+      "lastGreeks": -2.0
+    }
+  },
+  "fut_106": {
+    "generic_ticks": "106",
+    "waited_s": 1.0,
+    "tick24_impliedVolatility": 0.11953554370678031,
+    "modelGreeks": null,
+    "bidGreeks": null,
+    "raw_sentinel_check": {
+      "modelGreeks": null,
+      "bidGreeks": null,
+      "askGreeks": null,
+      "lastGreeks": null
+    }
+  },
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_capture_env": "paper",
+  "_phase": "diag",
+  "_captured_at": "2026-08-12T22:31:26"
+}

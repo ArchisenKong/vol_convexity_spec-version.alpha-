@@ -1,0 +1,75 @@
+{
+  "anchor": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+  "measurements": [
+    {
+      "seq": 1,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step1_初装"
+    },
+    {
+      "seq": 2,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step2_pre"
+    },
+    {
+      "seq": 3,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step2_post"
+    },
+    {
+      "seq": 4,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step5_post"
+    },
+    {
+      "seq": 5,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step5_post2"
+    },
+    {
+      "seq": 6,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step2_retry"
+    },
+    {
+      "seq": 7,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step3_post"
+    },
+    {
+      "seq": 8,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step3_clean"
+    },
+    {
+      "seq": 9,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step6_post"
+    },
+    {
+      "seq": 10,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "v13_A11"
+    },
+    {
+      "seq": 11,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step8_final"
+    },
+    {
+      "seq": 12,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step8_sealed"
+    },
+    {
+      "seq": 13,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "diag"
+    },
+    {
+      "seq": 14,
+      "sha256": "d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf",
+      "phase": "step8_sealed"
+    }
+  ]
+}

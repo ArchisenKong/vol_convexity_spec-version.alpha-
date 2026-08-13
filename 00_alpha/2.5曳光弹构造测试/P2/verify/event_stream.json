@@ -1,0 +1,37 @@
+[
+  {
+    "reqId": -1,
+    "code": 2104,
+    "msg": "Market data farm connection is OK:hfarm",
+    "contract": null,
+    "at": "2026-08-12T21:55:27"
+  },
+  {
+    "reqId": -1,
+    "code": 2104,
+    "msg": "Market data farm connection is OK:usfuture",
+    "contract": null,
+    "at": "2026-08-12T21:55:27"
+  },
+  {
+    "reqId": -1,
+    "code": 2106,
+    "msg": "HMDS data farm connection is OK:apachmds",
+    "contract": null,
+    "at": "2026-08-12T21:55:27"
+  },
+  {
+    "reqId": -1,
+    "code": 2158,
+    "msg": "Sec-def data farm connection is OK:secdefhk",
+    "contract": null,
+    "at": "2026-08-12T21:55:27"
+  },
+  {
+    "reqId": 4,
+    "code": 10197,
+    "msg": "No market data during competing live session",
+    "contract": "ESU6",
+    "at": "2026-08-12T21:55:35"
+  }
+]
