@@ -1,1 +1,6 @@
-{}
+{
+  "baseFontSize": 20,
+  "baseFontSizeAction": true,
+  "cssTheme": "Minimal",
+  "theme": "moonstone"
+}
