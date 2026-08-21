@@ -1,0 +1,97 @@
+{
+  "_probe_name": "cloud_upload_fidelity",
+  "_probe_captured_utc": "20260818T151006Z",
+  "_probe_note": "上传回读保真比对；双值并列不单判（A'-16）",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "projectId": 35315786,
+    "files": {
+      "cloud_payload_engine.py": {
+        "present": true,
+        "local_size": 17605,
+        "cloud_size": 17605,
+        "local_sha256": "030c31fe2bb5cd547df08260ce9630593afdaa6e977cf65b6a9efd82035b2c5e",
+        "cloud_sha256": "030c31fe2bb5cd547df08260ce9630593afdaa6e977cf65b6a9efd82035b2c5e",
+        "local_newline": {
+          "CR": 0,
+          "LF": 229
+        },
+        "cloud_newline": {
+          "CR": 0,
+          "LF": 229
+        },
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true
+      },
+      "cloud_payload_gl06.py": {
+        "present": true,
+        "local_size": 16551,
+        "cloud_size": 16551,
+        "local_sha256": "fdcc074df24002b609a8b0bd2b4479d9716c666fd1111ee5aa088e4090e096ce",
+        "cloud_sha256": "fdcc074df24002b609a8b0bd2b4479d9716c666fd1111ee5aa088e4090e096ce",
+        "local_newline": {
+          "CR": 0,
+          "LF": 230
+        },
+        "cloud_newline": {
+          "CR": 0,
+          "LF": 230
+        },
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true
+      },
+      "cloud_payload_x1.py": {
+        "present": true,
+        "local_size": 5060,
+        "cloud_size": 5060,
+        "local_sha256": "eebccfbea2f2d484c4e0e72c2b3771e20c94d90833382402cef619c72cd1f5f9",
+        "cloud_sha256": "eebccfbea2f2d484c4e0e72c2b3771e20c94d90833382402cef619c72cd1f5f9",
+        "local_newline": {
+          "CR": 0,
+          "LF": 76
+        },
+        "cloud_newline": {
+          "CR": 0,
+          "LF": 76
+        },
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true
+      },
+      "cloud_runner_alpha6.py": {
+        "present": true,
+        "local_size": 6229,
+        "cloud_size": 6229,
+        "local_sha256": "594ba0622d3006cb6e1f28b004177c86a68240c4262e897a37e463c1e6c0eb6a",
+        "cloud_sha256": "594ba0622d3006cb6e1f28b004177c86a68240c4262e897a37e463c1e6c0eb6a",
+        "local_newline": {
+          "CR": 0,
+          "LF": 152
+        },
+        "cloud_newline": {
+          "CR": 0,
+          "LF": 152
+        },
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true
+      },
+      "cloud_runner_x1.py": {
+        "present": true,
+        "local_size": 4238,
+        "cloud_size": 4238,
+        "local_sha256": "b26dfbb853bf615ae10b9b8fde819454bd7bdfe2757ca8cfe93d217ae0e297f4",
+        "cloud_sha256": "b26dfbb853bf615ae10b9b8fde819454bd7bdfe2757ca8cfe93d217ae0e297f4",
+        "local_newline": {
+          "CR": 0,
+          "LF": 107
+        },
+        "cloud_newline": {
+          "CR": 0,
+          "LF": 107
+        },
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true
+      }
+    }
+  },
+  "_probe_post_redaction_leak_scan_hits": 10
+}

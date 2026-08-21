@@ -1,0 +1,117 @@
+{
+  "_probe_name": "alpha6_research",
+  "_probe_captured_utc": "20260818T145648Z",
+  "_probe_run_position": "research 内核（α-6-乙）",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "research_read_attempts": [
+    {
+      "attempt": 1,
+      "status": "OK",
+      "elapsed_s": 1.9
+    }
+  ],
+  "kernel": {
+    "name": "python3",
+    "id_len": 36
+  },
+  "nodes_before": [
+    {
+      "kind": "backtest",
+      "id": "BN-1b212dcdcde815afe8432ca9c9daf1f3",
+      "busy": false,
+      "usedBy": "-",
+      "projectName": ""
+    },
+    {
+      "kind": "research",
+      "id": "RN-cfd071182d13803f49be6fa37a5d8b5c",
+      "busy": true,
+      "usedBy": "Archisen Kong",
+      "projectName": "P2PRIME-SHOT2"
+    }
+  ],
+  "nodes_after": [
+    {
+      "kind": "backtest",
+      "id": "BN-1b212dcdcde815afe8432ca9c9daf1f3",
+      "busy": false,
+      "usedBy": "-",
+      "projectName": ""
+    },
+    {
+      "kind": "research",
+      "id": "RN-cfd071182d13803f49be6fa37a5d8b5c",
+      "busy": true,
+      "usedBy": "Archisen Kong",
+      "projectName": "P2PRIME-SHOT2"
+    }
+  ],
+  "execute_reply_ok": true,
+  "kernel_errors": [],
+  "status_sequence": [
+    "busy",
+    "idle"
+  ],
+  "alpha6_result": {
+    "_disclaimer": "本结果为环境可运行性材料；零 L3 判据、零合格主张、不得表述为 GL-06 任何层级之合格判定",
+    "_kernel_stage": "ok",
+    "_probe_marker": "P2PRIME_ALPHA6_RESULT_V1",
+    "byte_exact": true,
+    "byte_exact_normalized": true,
+    "diff": null,
+    "env_fingerprint": {
+      "implementation": "CPython",
+      "libc_ver": [
+        "glibc",
+        "2.35"
+      ],
+      "machine": "x86_64",
+      "platform": "Linux-5.15.0-187-generic-x86_64-with-glibc2.35",
+      "python_version": "3.11.14",
+      "python_version_full": "3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]"
+    },
+    "expected_sha256": "<REDACTED-HEX>",
+    "harness_exit_code": 0,
+    "harness_stderr": "",
+    "harness_stdout": "[harness] wrote /tmp/p2p_alpha6_kkex30yi/harness_output.json: 15 periods, 11 evaluated\n",
+    "newline_profile": {
+      "expected": {
+        "CR": 0,
+        "CRLF": 0,
+        "LF": 149
+      },
+      "produced": {
+        "CR": 0,
+        "CRLF": 0,
+        "LF": 149
+      }
+    },
+    "normalization_operator": "bytes.replace(b'\\r\\n', b'\\n')  —— 仅行尾，不触碰其他字节",
+    "normalized_expected_sha256": "<REDACTED-HEX>",
+    "normalized_produced_sha256": "<REDACTED-HEX>",
+    "produced_sha256": "<REDACTED-HEX>",
+    "restored_files": {
+      "harness.py": {
+        "sha256": "<REDACTED-HEX>",
+        "size": 3710,
+        "src_name": "gl06_harness.py"
+      },
+      "harness_output.json": {
+        "sha256": "<REDACTED-HEX>",
+        "size": 4159,
+        "src_name": "gl06_harness_output.json"
+      },
+      "input_schema.md": {
+        "sha256": "<REDACTED-HEX>",
+        "size": 13748,
+        "src_name": "gl06_input_schema.md"
+      },
+      "ledger_input.json": {
+        "sha256": "<REDACTED-HEX>",
+        "size": 2266,
+        "src_name": "gl06_ledger_input.json"
+      }
+    },
+    "target": "alpha-6 · GL-06 环境内可运行性"
+  }
+}

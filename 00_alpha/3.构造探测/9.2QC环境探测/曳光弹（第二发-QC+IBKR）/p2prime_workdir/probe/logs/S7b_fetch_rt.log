@@ -1,0 +1,25 @@
+=== 取回 runtimeStatistics ===
+  projectId=35315786 backtestId=7f18c4e3087eb24da17e4da8abb75e8a
+  原件落盘: rt_read_raw_20260818T155859Z.json
+  status=Runtime Error completed=True hasInitializeError=True error=2020-01-06 00:00:00 During the algorithm initialization, the following exception has occurred: Value cannot be null. (Parameter &#039;input&#039;) in 
+
+--- 通道开销材料（α-4）---
+  runtimeStatistics 键总数 : 16
+  其中 P2P_* 键数          : 8
+  P2P_* 单值长度 min/max   : 5 / 180
+  P2P_* 载荷总字节         : 952
+  非 P2P 键（QC 自带）      : ['Equity', 'Fees', 'Holdings', 'Net Profit', 'Probabilistic Sharpe Ratio', 'Return', 'Unrealized', 'Volume']
+
+--- RTLIM 单值上限实证 ---
+  写入  100 字符 -> **键不在场**
+  写入  200 字符 -> **键不在场**
+  写入  400 字符 -> **键不在场**
+  写入  800 字符 -> **键不在场**
+  写入 1600 字符 -> **键不在场**
+
+--- 分片重组 ---
+  A2SET    HDR=2/282        实收 2片/  282字符  重组=OK
+  A3LED    HDR=4/660        实收 4片/  660字符  重组=OK
+
+  凭据残留复扫: 零残留
+  落位: D:\02 VolConvexityStrategy\【Strategy】VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC环境探测\曳光弹（第二发-QC+IBKR）\p2prime_workdir\probe\raw

@@ -1,0 +1,82 @@
+{
+  "_run_utc": "2026-08-19T01:50:11Z",
+  "summary": {
+    "PASS": 12,
+    "FAIL": 0,
+    "INDETERMINATE": 0
+  },
+  "results": [
+    {
+      "assert": "A1'",
+      "verdict": "PASS",
+      "detail": "三分目录在场；顶层无第四实体目录",
+      "clause": "85-3 D-1"
+    },
+    {
+      "assert": "A2'",
+      "verdict": "PASS",
+      "detail": "黑名单 89 条零渗透；entity/∪verify/ 内 `_probe_` 命中 0（已排除 D-3 强制字面，排除理由见 BASIS['d3_required_literal']，呈 KD-P2-11）；出口面复扫已执行",
+      "clause": "85-3 D-2；F-15⑨"
+    },
+    {
+      "assert": "A3'",
+      "verdict": "PASS",
+      "detail": "probe/raw 全部 56 件带 _data_source=external_probe_NOT_FOR_ENTITY",
+      "clause": "85-3 D-3"
+    },
+    {
+      "assert": "A4'",
+      "verdict": "PASS",
+      "detail": "entity/ 关键字集命中 0（剥离注释/docstring 后判定）；检测器自排除清单非空且仅限自身（1 条）",
+      "clause": "85-7；任务6 v1.13 F-1"
+    },
+    {
+      "assert": "A5'",
+      "verdict": "PASS",
+      "detail": "engine.py sha256 == 锚值 d88a955e45dddaa5；CR=0（本发零 pull，无云端落盘副本，CRLF 双值面无对象）",
+      "clause": "85-1a；69扩项(i)；A'-16"
+    },
+    {
+      "assert": "A6'",
+      "verdict": "PASS",
+      "detail": "链路运行前后 5 件指纹两次实测相等（双值入日志）",
+      "clause": "M6；69扩项(i)"
+    },
+    {
+      "assert": "A7'",
+      "verdict": "PASS",
+      "detail": "破坏性动作调用面命中 0（判定基面＝剥离注释/docstring 后之代码面）；仅注释/docstring 内之条款禁语提及 4 件，不计入",
+      "clause": "85-3 乙案只读定性；乙-6；A'-14"
+    },
+    {
+      "assert": "A8'",
+      "verdict": "PASS",
+      "detail": "全工作树凭据**值**面命中 0（基面声明见 BASIS['cred_field_name']，呈 KD-P2-11）；遮蔽后正则复查残留 0（长十六进制串全部核为已知哈希或其片段，110 个已知哈希入核）",
+      "clause": "乙-4；E1-18"
+    },
+    {
+      "assert": "A9'",
+      "verdict": "PASS",
+      "detail": "GL-06 四件 sha256 == 《切片记录 v1.1》交付件指纹表对应值；schema 零写入",
+      "clause": "丁-3；F-12 同型"
+    },
+    {
+      "assert": "A10'",
+      "verdict": "PASS",
+      "detail": "记录表覆盖 M1–M7 ＋ α 六面 ＋ X-1；空栏残留 0（空白≠未撞到）",
+      "clause": "85-9 F0 修订；85-10 B10"
+    },
+    {
+      "assert": "A11'",
+      "verdict": "PASS",
+      "detail": "五句检测位（乙-4／乙-5×2／乙-6／丙-3）逐条在场且结果入日志",
+      "clause": "裁决87 落地去向 #5"
+    },
+    {
+      "assert": "A12'",
+      "verdict": "PASS",
+      "detail": "本表 12 条断言逐条带条款指针，无孤项（双向可核）",
+      "clause": "85 §3 第5项 条款消费形态②"
+    }
+  ]
+}

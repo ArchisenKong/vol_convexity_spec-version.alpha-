@@ -1,0 +1,271 @@
+=== E23 · 端点存在性探测（任务书外，执行人追加）===
+时刻（本机 UTC）: Mon Aug 17 14:41:51 UTC 2026
+
+========================================================================
+目标 1 · backtests 完整结果（result 为 None，探兄弟端点）
+========================================================================
+[OK  ] GET  backtests/read
+        顶层键: ['backtest', 'success']
+          backtest: dict, 28 项, 12482 字节
+        注: 基线：库中 backtest_client.get 所用端点
+
+[OK  ] GET  backtests/chart/read
+        顶层键: ['progress', 'status', 'success']
+
+[FAIL] GET  backtests/charts/read
+        归类: 端点不存在
+        原文: Endpoint not found (backtests/charts/read)
+
+[OK  ] GET  backtests/orders/read
+        顶层键: ['progress', 'status', 'success']
+
+[OK  ] GET  backtests/read/orders
+        顶层键: ['length', 'orders', 'success']
+          orders: list, 1 项, 1455 字节
+
+[FAIL] GET  backtests/read/report
+        归类: 其他
+        原文: Report is being generated
+
+[FAIL] GET  backtests/report/read
+        归类: 端点不存在
+        原文: Endpoint not found (backtests/report/read)
+
+[FAIL] GET  backtests/insights/read
+        归类: 端点存在，目标对象未找到
+        原文: Insights not found
+
+[FAIL] GET  backtests/read/insights
+        归类: 端点存在，目标对象未找到
+        原文: Insights not found
+
+[OK  ] GET  backtests/list
+        顶层键: ['backtests', 'count', 'success']
+          backtests: list, 1 项, 765 字节
+
+========================================================================
+目标 1b · backtests/read 加参数，看能否要出 result
+========================================================================
+[OK  ] GET  backtests/read
+        顶层键: ['backtest', 'success']
+          backtest: dict, 28 项, 12482 字节
+        注: 额外参数 {'chart': 'Strategy Equity'}
+
+[OK  ] GET  backtests/read
+        顶层键: ['backtest', 'success']
+          backtest: dict, 28 项, 12482 字节
+        注: 额外参数 {'includeResult': True}
+
+[OK  ] GET  backtests/read
+        顶层键: ['backtest', 'success']
+          backtest: dict, 28 项, 12482 字节
+        注: 额外参数 {'full': True}
+
+[OK  ] GET  backtests/read
+        顶层键: ['backtest', 'success']
+          backtest: dict, 28 项, 12482 字节
+        注: 额外参数 {'charts': True}
+
+========================================================================
+目标 2 · research 触发端点探空
+========================================================================
+!! 以下一律用 projectId=0（无效），只判端点存在性，不作用于真实项目 !!
+
+[FAIL] GET  research/read
+        归类: 其他
+        原文: The requested project does not exist or you do not have the necessary permissions to access it - 0
+
+[FAIL] POST research/create
+        归类: 其他
+        原文: The requested project does not exist or you do not have the necessary permissions to access it - 0
+
+[FAIL] GET  notebook/read
+        归类: 其他
+        原文: Endpoint not longer supported #read/notebookId
+
+[FAIL] POST notebook/create
+        归类: 端点不存在
+        原文: Endpoint not found: create
+
+[FAIL] GET  research/nodes/read
+        归类: 端点不存在
+        原文: Endpoint not found (research/nodes/read)
+
+[FAIL] POST research/start
+        归类: 端点不存在
+        原文: Endpoint not found (research/start)
+
+[FAIL] POST research/stop
+        归类: 端点不存在
+        原文: Endpoint not found (research/stop)
+
+[FAIL] GET  jupyter/read
+        归类: 其他
+        原文: Expecting value: line 1 column 1 (char 0)
+
+[FAIL] POST notebook/start
+        归类: 端点不存在
+        原文: Endpoint not found: start
+
+========================================================================
+目标 2b · 已知存在的端点作对照（确认归类逻辑可靠）
+========================================================================
+[FAIL] GET  projects/read
+        归类: 端点存在，目标对象未找到
+        原文: Project not found PID: 0
+        注: 对照：端点确实存在，projectId=0 无效
+
+[OK  ] GET  nodes/read
+        顶层键: ['backtest', 'research', 'live', 'agent', 'success']
+          backtest: list, 1 项, 339 字节
+          research: list, 1 项, 425 字节
+          live: list, 0 项, 2 字节
+          agent: list, 1 项, 338 字节
+        注: 对照：端点存在且参数有效
+
+--- exit code: 0 ---
+
+=== 追加 1：backtests/read 原始响应的 28 键全貌（对比 pydantic 模型）===
+原始 backtest 字段数: 28
+  note                       str   
+  name                       str   env-probe-02
+  organizationId             str   954877bda8b6760ae398418ce79a5500
+  projectId                  int   35174460
+  completed                  bool  True
+  optimizationId             None
+  backtestId                 str   475935f261165c79d347d6a311143206
+  tradeableDates             int   5
+  researchGuide              dict     3 项       52 字节
+  backtestStart              str   2013-10-07 00:00:00
+  backtestEnd                str   2013-10-11 23:59:59
+  created                    str   2026-08-17 13:01:33
+  snapshotId                 int   35269333
+  status                     str   Completed.
+  error                      None
+  stacktrace                 None
+  progress                   int   1
+  hasInitializeError         bool  False
+  charts                     dict     8 项      346 字节
+  parameterSet               list     0 项        2 字节
+  rollingWindow              dict     4 项     7365 字节
+  runtimeStatistics          dict     8 项      206 字节
+  statistics                 dict    27 项      734 字节
+  totalPerformance           dict     3 项     1824 字节
+  nodeName                   str   Community B-MICRO
+  outOfSampleMaxEndDate      str   2026-05-19T00:00:00Z
+  outOfSampleDays            int   90
+  analysis                   list     3 项     1239 字节
+
+--- pydantic QCBacktest 模型暴露的字段 ---
+['backtestId', 'completed', 'created', 'error', 'name', 'note', 'progress', 'projectId', 'result', 'runtimeStatistics', 'stacktrace', 'statistics', 'status', 'totalPerformance']
+
+--- 原始响应有、模型没有的字段 ---
+['analysis', 'backtestEnd', 'backtestStart', 'charts', 'hasInitializeError', 'nodeName', 'optimizationId', 'organizationId', 'outOfSampleDays', 'outOfSampleMaxEndDate', 'parameterSet', 'researchGuide', 'rollingWindow', 'snapshotId', 'tradeableDates']
+
+=== 追加 2：backtests/read/orders 与 backtests/read/report 复测 ===
+--- backtests/read/orders ---
+length: 1
+[
+  {
+    "type": 0,
+    "id": 1,
+    "contingentId": 0,
+    "brokerId": [
+      "1"
+    ],
+    "symbol": {
+      "value": "SPY",
+      "id": "SPY R735QTJ8XC9X",
+      "permtick": "SPY"
+    },
+    "price": 134.87588452,
+    "priceCurrency": "USD",
+    "time": "2013-10-07T13:31:00Z",
+    "createdTime": "2013-10-07T13:31:00Z",
+    "lastFillTime": "2013-10-07T13:31:00Z",
+    "quantity": 739.0,
+    "status": 3,
+    "tag": "",
+    "properties": {
+      "timeInForce": {}
+    },
+    "securityType": 1,
+    "direction": 0,
+    "value": 99673.27866028,
+    "orderSubmissionData": {
+      "bidPrice": 134.867829824,
+      "askPrice": 134.87588452,
+      "lastPrice": 134.867829824
+    },
+    "isMarketable": true,
+    "priceAdjustmentMode": 1,
+    "events": [
+      {
+        "id": "475935f261165c79d347d6a311143206-1-1",
+        "algorithmId": "475935f261165c79d347d6a311143206",
+        "orderId": 1,
+  
+
+--- backtests/read/report 复测（首轮报 Report is being generated）---
+顶层键: ['report', 'success']
+report 类型: str 长度: 433336
+
+=== 追加 3：charts / researchGuide 内容，与 chart/read 取实际序列 ===
+--- charts（8 项）---
+{
+  "Strategy Equity": {
+    "name": "Strategy Equity"
+  },
+  "Benchmark": {
+    "name": "Benchmark"
+  },
+  "Portfolio Margin": {
+    "name": "Portfolio Margin"
+  },
+  "Assets Sales Volume": {
+    "name": "Assets Sales Volume"
+  },
+  "Drawdown": {
+    "name": "Drawdown"
+  },
+  "Portfolio Turnover": {
+    "name": "Portfolio Turnover"
+  },
+  "Exposure": {
+    "name": "Exposure"
+  },
+  "Capacity": {
+    "name": "Capacity"
+  }
+}
+
+--- researchGuide（网页端 '97 Backtests Remaining' 的来源？）---
+{
+  "minutes": 18,
+  "backtestCount": 3,
+  "parameters": 7
+}
+
+--- analysis（3 项）---
+[{"name": "PortfolioMarginUsageAnalysis", "issue": "The algorithm sometimes only utilizes a small proportion of the margin available.", "sample": "Number of days when the 3-day SMA of the margin usage drops below 50%: 5", "solutions": ["Adjust the strategy logic or position sizing to utilize more margin.", "If the algorithm logic leads to periods of time when the portfolio sits in cash, consider holding a \"risk-free\" asset during these periods."]}, {"name": "PerformanceRelativeToBenchmarkAnalysis", "issue": "The strategy has a lower Sharpe ratio than the benchmark.", "sample": {"backtestShar
+
+--- rollingWindow 顶层键 ---
+['M1_20131011', 'M3_20131011', 'M6_20131011', 'M12_20131011']
+
+--- backtests/chart/read 取 Strategy Equity 实际序列 ---
+[第1次] 顶层键: ['chart', 'success']
+  chart 键: ['name', 'chartType', 'series']
+  series 数: 2
+    Equity: 396 个数据点
+    Return: 6 个数据点
+  序列化字节: 25756
+
+=== 追加 4：research/read 用真实 projectId（只读，无副作用）===
+--- research/read {'projectId': 35174460} ---
+[OK] 顶层键: ['sessionId', 'uri', 'token', 'nodeId', 'success']
+{"sessionId": "<REDACTED-SESSION-ID>", "uri": "https://node22.compute.quantconnect.com/<REDACTED-SESSION-ID>", "token": "<REDACTED-SESSION-TOKEN>", "nodeId": "RN-cfd071182d13803f49be6fa37a5d8b5c", "success": true}
+
+--- research/read {'projectId': 35174460, 'organizationId': '954877bda8b6760ae398418ce79a5500'} ---
+[OK] 顶层键: ['sessionId', 'uri', 'token', 'nodeId', 'success']
+{"sessionId": "<REDACTED-SESSION-ID>", "uri": "https://node22.compute.quantconnect.com/<REDACTED-SESSION-ID>", "token": "<REDACTED-SESSION-TOKEN>", "nodeId": "RN-cfd071182d13803f49be6fa37a5d8b5c", "success": true}
+

@@ -1,0 +1,61 @@
+{
+  "_probe_name": "x1_research",
+  "_probe_captured_utc": "20260818T151135Z",
+  "_probe_run_position": "research 内核（X-1-乙）",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "research_read_attempts": [
+    {
+      "attempt": 1,
+      "status": "OK",
+      "elapsed_s": 1.9
+    }
+  ],
+  "kernel": {
+    "name": "python3",
+    "id_len": 36
+  },
+  "nodes_before": [
+    {
+      "kind": "backtest",
+      "id": "BN-1b212dcdcde815afe8432ca9c9daf1f3",
+      "busy": false,
+      "usedBy": "-",
+      "projectName": ""
+    },
+    {
+      "kind": "research",
+      "id": "RN-cfd071182d13803f49be6fa37a5d8b5c",
+      "busy": true,
+      "usedBy": "Archisen Kong",
+      "projectName": "P2PRIME-SHOT2"
+    }
+  ],
+  "nodes_after": [
+    {
+      "kind": "backtest",
+      "id": "BN-1b212dcdcde815afe8432ca9c9daf1f3",
+      "busy": false,
+      "usedBy": "-",
+      "projectName": ""
+    },
+    {
+      "kind": "research",
+      "id": "RN-cfd071182d13803f49be6fa37a5d8b5c",
+      "busy": true,
+      "usedBy": "Archisen Kong",
+      "projectName": "P2PRIME-SHOT2"
+    }
+  ],
+  "execute_reply_ok": true,
+  "kernel_errors": [
+    {
+      "ename": "SyntaxError",
+      "evalue": "unterminated string literal (detected at line 34) (3196498891.py, line 34)"
+    }
+  ],
+  "status_sequence": [
+    "busy",
+    "idle"
+  ],
+  "x1_result": null
+}

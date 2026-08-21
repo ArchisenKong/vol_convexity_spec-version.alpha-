@@ -1,0 +1,16 @@
+=== P2' α-6-乙 · research 内核运行位 ===
+捕获时刻(UTC): 20260818T144245Z
+projectId = 35315786 (P2PRIME-SHOT2)
+自守: 零 push / 零 delete / 零云端文件写
+
+--- 0. 节点状态（执行前）---
+  [before] backtest  BN-1b212dcdcde815afe8432ca9c9daf1f3      busy=False usedBy='-'
+  [before] research  RN-cfd071182d13803f49be6fa37a5d8b5c      busy=False usedBy='-'
+
+--- 1. research/read 会话分配（逐轮留痕）---
+  [1/4] FAIL 耗时 0.8s  RequestFailedError: Connection not found.
+  [2/4] FAIL 耗时 0.9s  RequestFailedError: Connection not found.
+  [3/4] FAIL 耗时 0.8s  RequestFailedError: Connection not found.
+  [4/4] FAIL 耗时 0.8s  RequestFailedError: Connection not found.
+
+[F2] research 会话分配 4 轮全失败，停该位（作业指令 §9⑤：记 F2 并停该位，另一位继续）

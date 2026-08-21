@@ -1,0 +1,61 @@
+====================================================================================================
+X-1 三位比对素材   甲=第一发本地(Win)  乙=QC research 内核  丙=QC 回测运行时
+====================================================================================================
+
+--- 环境面 ---
+  python       甲 3.10.11                                       
+               乙 3.11.14                                       
+               丙 3.11.14                                         乙丙同=True
+  compiler     甲 MSC v.1929 64 bit (AMD64)                     
+               乙 GCC 11.2.0                                    
+               丙 GCC 11.2.0                                      乙丙同=True
+  platform     甲 Windows-10-10.0.26200-SP0                     
+               乙 Linux-5.15.0-187-generic-x86_64-with-glibc2.35
+               丙 Linux-6.8.0-52-generic-x86_64-with-glibc2.35    乙丙同=False
+  libc         甲 ['', '']                                      
+               乙 ['glibc', '2.35']                             
+               丙 ['glibc', '2.35']                               乙丙同=True
+  libm digest  甲 587fbd8f98c8ccdde681f0e0…                     
+               乙 6494f0068d8f5f1da5da2296…                     
+               丙 6494f0068d8f5f1da5da2296…                       乙丙同=True
+
+  engine_sha 三位同 = True
+
+--- libm 探针（7 条）---
+  erf(0.7)               甲 0x1.5b08c21171645p-1     乙 0x1.5b08c21171646p-1     丙 0x1.5b08c21171646p-1     | 甲乙异(1ULP) 乙丙同
+  exp(-0.5)              甲 0x1.368b2fc6f960ap-1     乙 0x1.368b2fc6f960ap-1     丙 0x1.368b2fc6f960ap-1     | 甲乙同 乙丙同
+  exp(1)                 甲 0x1.5bf0a8b145769p+1     乙 0x1.5bf0a8b145769p+1     丙 0x1.5bf0a8b145769p+1     | 甲乙同 乙丙同
+  expm1(1e-8)            甲 0x1.5798ee3fdb763p-27    乙 0x1.5798ee3fdb764p-27    丙 0x1.5798ee3fdb764p-27    | 甲乙异(1ULP) 乙丙同
+  log(2)                 甲 0x1.62e42fefa39efp-1     乙 0x1.62e42fefa39efp-1     丙 0x1.62e42fefa39efp-1     | 甲乙同 乙丙同
+  pow(1.0000001,500)     甲 0x1.000346e1b915ap+0     乙 0x1.000346e1b915ap+0     丙 0x1.000346e1b915ap+0     | 甲乙同 乙丙同
+  sqrt(2)                甲 0x1.6a09e667f3bcdp+0     乙 0x1.6a09e667f3bcdp+0     丙 0x1.6a09e667f3bcdp+0     | 甲乙同 乙丙同
+  libm digest: 甲乙**异**  乙丙同
+
+--- 引擎逐位输出 per_unit ---
+  delta    甲 -0x1.f697e213cdeb5p-2     
+           乙 -0x1.f697e213cdeb5p-2     
+           丙 -0x1.f697e213cdeb5p-2       甲乙=同 乙丙=同 甲丙=同
+  gamma    甲 0x1.77a7419a425c3p-8      
+           乙 0x1.77a7419a425c3p-8      
+           丙 0x1.77a7419a425c3p-8        甲乙=同 乙丙=同 甲丙=同
+  rho      甲 -0x1.20c68a63f4c10p+4     
+           乙 -0x1.20c68a63f4c10p+4     
+           丙 -0x1.20c68a63f4c10p+4       甲乙=同 乙丙=同 甲丙=同
+  theta    甲 -0x1.2f1e46e20ae64p+11    
+           乙 -0x1.2f1e46e20ae64p+11    
+           丙 -0x1.2f1e46e20ae64p+11      甲乙=同 乙丙=同 甲丙=同
+  value    甲 0x1.b3f79398dcd23p+4      
+           乙 0x1.b3f79398dcd23p+4      
+           丙 0x1.b3f79398dcd23p+4        甲乙=同 乙丙=同 甲丙=同
+  vega     甲 0x1.ca7b2fb2aa1dcp+7      
+           乙 0x1.ca7b2fb2aa027p+7      
+           丙 0x1.ca7b2fb2aa027p+7        甲乙=**异(437ULP)** 乙丙=同 甲丙=**异(437ULP)**
+
+--- 路由与状态 ---
+  route_id                 甲=american_crr_binomial            乙=american_crr_binomial            丙=american_crr_binomial            三位同=True
+  computability_status     甲=computed_with_open_dimensions    乙=computed_with_open_dimensions    丙=computed_with_open_dimensions    三位同=True
+  unstated_dimensions_hit  甲=['day_count_convention']         乙=['day_count_convention']         丙=['day_count_convention']         三位同=True
+
+====================================================================================================
+本件只产比对素材。不判结论、不作合格主张、不作环境可用性判定。DOC-25 兑现点不变更。总体判定归 KD。
+====================================================================================================

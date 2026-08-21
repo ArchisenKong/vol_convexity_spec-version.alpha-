@@ -1,0 +1,175 @@
+=== E2 · lean login ===
+执行方式：由执行人在其自有终端交互式执行（本会话为非交互，无法接收键盘输入）。
+本日志内容由执行人回贴，非本会话直接捕获。
+
+【遮蔽声明】原始报错含 QC user id 与一段带时间戳的派生 hash。依任务书第 6 条与
+CLAUDE.md 第 6 条，凭据不落盘，以下对 UID 与 Hash 做遮蔽，时间戳保留（非凭据）。
+
+=== CMD: lean login ===
+--- stdout / stderr（执行人回贴，UID 与 Hash 已遮蔽）---
+Error: Credentials are invalid. Please ensure your computer clock is correct,
+or try using another terminal, or enter API token manually instead of
+copy-pasting.
+Visit https://www.lean.io/docs/v2/lean-cli for more information
+
+Error: Hash doesn't match UID: <REDACTED-UID> Hash:
+<REDACTED-HASH> Timestamp:
+'1786716475'
+--- exit code: 未提供（执行人回贴中不含退出码）---
+
+=== CMD: lean whoami ===
+--- 未执行 / 结果未提供 ---
+
+=== 现场旁证采集（本会话执行，只读，不读取凭据文件内容）===
+
+=== CMD: date -u ===
+--- stdout ---
+Fri Aug 14 14:09:23 UTC 2026
+--- exit code: 0 ---
+
+=== CMD: date +%s ===
+--- stdout ---
+1786716563
+--- exit code: 0 ---
+
+=== CMD: ls -la ~/.lean ===
+--- stdout ---
+total 23
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 22:04 .
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 21:50 ..
+-rw-r--r-- 1 KYJ 197609 463 Aug 14 22:04 cache
+-rw-r--r-- 1 KYJ 197609  40 Nov 15  2025 config
+-rw-r--r-- 1 KYJ 197609 117 Dec 14  2025 credentials
+--- exit code: 0 ---
+--- 注：credentials 文件内容未读取，仅取元数据 ---
+
+
+================================================================
+=== E2 第三次尝试（执行人在自有终端，token 提示符处实际输入新 token）===
+================================================================
+
+=== CMD: lean login ===
+--- 输出（执行人回贴）---
+Error: Credentials are invalid. Please ensure your computer clock is correct, or try using another terminal, or enter
+API token manually instead of copy-pasting.
+Visit https://www.lean.io/docs/v2/lean-cli for more information
+--- exit code: 1 （$LASTEXITCODE）---
+
+=== CMD: lean whoami ===
+--- 输出（执行人回贴，UID / Hash 遮蔽）---
+Error: Hash doesn't match UID: <REDACTED-UID> Hash: <REDACTED-HASH> Timestamp:
+'1786718696'
+--- exit code: 未提供 ---
+--- 注：login 失败未写盘，whoami 使用的是 ~/.lean/credentials 中 2025-12-14 的存档凭据 ---
+
+=== 现场旁证采集（本会话执行，只读）===
+
+=== CMD: ls -la ~/.lean（第三次尝试后）===
+--- stdout ---
+total 23
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 22:04 .
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 21:50 ..
+-rw-r--r-- 1 KYJ 197609 463 Aug 14 22:04 cache
+-rw-r--r-- 1 KYJ 197609  40 Nov 15  2025 config
+-rw-r--r-- 1 KYJ 197609 117 Dec 14  2025 credentials
+--- exit code: 0 ---
+--- 注：credentials mtime 未变，与「校验通过才写盘」一致 ---
+--- 注：cache 为 UpdateManager 版本检查缓存（container.py:77,170），非认证存储 ---
+
+=== CMD (PowerShell): w32tm /query /status ===
+--- stderr ---
+The following error occurred: The service has not been started. (0x80070426)
+--- exit code: 38 ---
+
+=== CMD: date -u ===
+--- stdout ---
+Fri Aug 14 14:46:36 UTC 2026
+--- exit code: 0 ---
+
+=== CMD: curl -sI --max-time 20 https://www.quantconnect.com/ ===
+--- stdout（仅取 Date 头）---
+Date: Fri, 14 Aug 2026 14:46:29 GMT
+--- exit code: 0 ---
+--- 时钟差：本机较服务端快约 7 秒（含网络往返）---
+
+=== CMD (PowerShell): QC_API 三层环境变量检查 ===
+--- stdout ---
+QC_API (Process) = []
+QC_API (User)    = []
+QC_API (Machine) = []
+--- exit code: 0 ---
+--- 结论：API_BASE_URL 取默认生产地址 https://www.quantconnect.com/api/v2/ ---
+
+=== CMD (PowerShell): 代理环境变量 ===
+--- stdout ---
+HTTP_PROXY  = [http://127.0.0.1:10808]
+HTTPS_PROXY = [http://127.0.0.1:10808]
+ALL_PROXY   = []
+REQUESTS_CA_BUNDLE = []
+--- exit code: 0 ---
+
+=== CMD: netstat -ano | grep 10808 ===
+--- stdout ---
+  TCP    127.0.0.1:10808        0.0.0.0:0              LISTENING       18356
+  TCP    127.0.0.1:10808        127.0.0.1:49361        ESTABLISHED     18356
+  TCP    127.0.0.1:10808        127.0.0.1:49365        ESTABLISHED     18356
+  TCP    127.0.0.1:10808        127.0.0.1:50065        ESTABLISHED     18356
+  TCP    127.0.0.1:10808        127.0.0.1:50255        ESTABLISHED     18356
+--- exit code: 0 ---
+
+=== 尚未取得（本节于第四次尝试后已解决，保留原始记录）===
+服务端真实 HTTP 状态码与响应体。is_authenticated()（api_client.py:105-116）以
+except 吞掉后仅上抛通用文案。需 `lean login --verbose` 方能显形。
+
+
+================================================================
+=== E2 第四次尝试 · 成功 ===
+================================================================
+
+执行人在自有终端执行 `lean login --verbose`，输入的 token 为其此前在对话中
+发送的那一份（记为 token A），**未按凭据纪律重置**。
+
+=== CMD: lean login --verbose ===
+--- 输出（执行人回贴，UID 遮蔽）---
+Your user id and API token are needed to make authenticated requests to the
+QuantConnect API
+You can request these credentials on https://www.quantconnect.com/account
+Both will be saved in C:\Users\KYJ\.lean\credentials
+User id [<REDACTED-UID>]:
+API token [****************************************************************]:
+
+--> GET https://www.quantconnect.com/api/v2/authenticate
+Request response: {"success":true}
+Successfully logged in
+--> GET https://pypi.org/pypi/lean/json
+--- exit code: 0（推定，未回贴；后续 whoami 成功可佐证）---
+
+--- 服务端真实响应（任务书 E2 要求的「错误码与原文」，此处为成功原文）---
+端点：GET https://www.quantconnect.com/api/v2/authenticate
+响应体：{"success":true}
+
+--- 注：token 提示符的默认值以 64 个 * 掩码显示，即 ~/.lean/credentials 中存有
+     等长旧值；本次执行人输入了新值，未接受该默认值 ---
+--- 注：另有一次对 https://pypi.org/pypi/lean/json 的请求，为 UpdateManager
+     的 CLI 版本检查，与认证无关 ---
+
+=== CMD: lean whoami（本会话执行，凭据已存盘，无需交互）===
+--- stdout ---
+You are logged in as Archisen Kong (kongarchisen@outlook.com)
+--- stderr ---
+（空）
+--- exit code: 0 ---
+--- 注：输出为姓名与邮箱（个人信息，非凭据）。**不含任何组织档位 / 订阅等级字段**，
+     与 click.py:27-59 源码一致 ---
+
+=== CMD: ls -la ~/.lean（login 成功后）===
+--- stdout ---
+total 23
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 22:49 .
+drwxr-xr-x 1 KYJ 197609   0 Aug 14 21:50 ..
+-rw-r--r-- 1 KYJ 197609 463 Aug 14 22:49 cache
+-rw-r--r-- 1 KYJ 197609  40 Nov 15  2025 config
+-rw-r--r-- 1 KYJ 197609 117 Aug 14 22:49 credentials
+--- exit code: 0 ---
+--- 注：credentials mtime 由 2025-12-14 变为 2026-08-14 22:49，写盘已发生，
+     与 login.py:71-73「校验通过才写盘」一致。size 仍为 117（未读取内容）---

@@ -1,0 +1,95 @@
+=== CMD: lean create-project "TR2-ENV-PROBE" ===
+--- stdout ---
+Successfully created Python project 'TR2-ENV-PROBE'
+--- stderr ---
+--- exit code: 0 ---
+--- 耗时: 3 秒 ---
+
+=== 生成物清单 ===
+TR2-ENV-PROBE
+TR2-ENV-PROBE/.idea
+TR2-ENV-PROBE/.idea/TR2-ENV-PROBE.iml
+TR2-ENV-PROBE/.idea/misc.xml
+TR2-ENV-PROBE/.idea/modules.xml
+TR2-ENV-PROBE/.idea/workspace.xml
+TR2-ENV-PROBE/.vscode
+TR2-ENV-PROBE/.vscode/launch.json
+TR2-ENV-PROBE/.vscode/settings.json
+TR2-ENV-PROBE/config.json
+TR2-ENV-PROBE/main.py
+TR2-ENV-PROBE/research.ipynb
+
+=== push 前 · TR2-ENV-PROBE/config.json 全文 ===
+{
+    "algorithm-language": "Python",
+    "parameters": {},
+    "description": ""
+}
+
+=== push 前 · sha256 ===
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *TR2-ENV-PROBE/main.py
+9cf34c156dda89b70e969a08809977ac35f40c586dbcb119823a4c4c4921175d *TR2-ENV-PROBE/config.json
+
+=== push 前 · main.py 全文（未作任何修改）===
+# region imports
+from AlgorithmImports import *
+# endregion
+
+class TR2ENVPROBE(QCAlgorithm):
+
+    def initialize(self):
+        # Locally Lean installs free sample data, to download more data please visit https://www.quantconnect.com/docs/v2/lean-cli/datasets/downloading-data
+        self.set_start_date(2013, 10, 7)  # Set Start Date
+        self.set_end_date(2013, 10, 11)  # Set End Date
+        self.set_cash(100000)  # Set Strategy Cash
+        self.add_equity("SPY", Resolution.MINUTE)
+
+    def on_data(self, data: Slice):
+        """on_data event is the primary entry point for your algorithm. Each new data point will be pumped in here.
+            Arguments:
+                data: Slice object keyed by symbol containing the stock data
+        """
+        if not self.portfolio.invested:
+            self.set_holdings("SPY", 1)
+            self.debug("Purchased Stock")
+
+=== CMD: lean cloud push --project "TR2-ENV-PROBE" ===
+--- stdout ---
+[1/1] Pushing 'TR2-ENV-PROBE'
+Successfully created cloud project 'TR2-ENV-PROBE' in organization 
+'954877bda8b6760ae398418ce79a5500'
+Successfully updated name, files, libraries, and code_source_id for 
+'TR2-ENV-PROBE'
+--- stderr ---
+--- exit code: 0 ---
+--- 耗时: 4 秒 ---
+
+=== push 后 · TR2-ENV-PROBE/config.json 全文 ===
+{
+    "algorithm-language": "Python",
+    "parameters": {},
+    "description": "",
+    "cloud-id": 35174460,
+    "organization-id": "954877bda8b6760ae398418ce79a5500"
+}
+
+=== push 后 · sha256 ===
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *TR2-ENV-PROBE/main.py
+bff55b3be40af08450e244d60955d4b551c2ea0ad52d254763b20f6b808df431 *TR2-ENV-PROBE/config.json
+
+=== 云端项目列表核证 ===
+--- CMD: lean cloud status --project "TR2-ENV-PROBE" ---
+Usage: lean cloud status [OPTIONS] PROJECT
+
+Try 'lean cloud status --help' for help or go to the following url for a list 
+of common errors:
+https://www.lean.io/docs/v2/lean-cli/key-concepts/troubleshooting#02-Common-Err
+ors
+
+Error: No such option: --project
+(exit 1)
+
+--- 注：上一条 --project 为执行方命令形式错误，非环境现象。lean cloud status 取位置参数 ---
+=== CMD: lean cloud status "TR2-ENV-PROBE" ===
+Error: No live deployment found for project ID: 35174460
+(exit 1)

@@ -1,0 +1,28 @@
+=== Docker 镜像指纹 · E8 产出 ===
+
+状态：**未获取**
+
+E8 已执行，三条命令全部失败，退出码均为 127。
+
+$ docker pull quantconnect/lean
+bash: docker: command not found                                        [exit 127]
+
+$ docker image inspect quantconnect/lean --format '{{.Id}} {{.RepoDigests}}'
+bash: docker: command not found                                        [exit 127]
+
+$ docker run --rm --entrypoint bash quantconnect/lean -c "python --version"
+bash: docker: command not found                                        [exit 127]
+
+因此以下各项均无值：
+
+  镜像 Id            ：未获取
+  镜像 RepoDigests   ：未获取
+  镜像 tag           ：未获取
+  容器内 Python 版本 ：未获取
+  容器内 libc 版本   ：未获取
+
+阻断原因与 F2-01 同源：本机无 Docker CLI，无 docker daemon。
+详见 probe/logs/E8_bare_container.log 与 probe/notes/摩擦清单.md 的 F2-05。
+
+补充：执行人于 2026-08-14 明确决定本次不安装 Docker，E7 / E8 / E9 本地研究
+三条依赖 Docker 的路径就此保持 F2，不再重试。

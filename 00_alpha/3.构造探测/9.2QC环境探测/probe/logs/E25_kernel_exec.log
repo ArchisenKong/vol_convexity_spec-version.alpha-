@@ -1,0 +1,65 @@
+=== E25 · Research 内核编程执行（任务书外，执行人已授权）===
+时刻（本机 UTC）: Mon Aug 17 14:57:38 UTC 2026
+
+=== CMD: pip install websocket-client ===
+Installing collected packages: websocket-client
+Successfully installed websocket-client-1.9.0
+
+[notice] A new release of pip is available: 23.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+--- exit: 0 ---
+websocket-client �汾: 1.9.0
+
+=== CMD: python ../probe/tools/kernel_exec_probe.py ===
+内核 name=python3 state=idle conns=0
+
+=== 连接内核 WebSocket ===
+[OK] 已连接
+
+=== 已发送 execute_request，收集输出 ===
+
+execute_reply status: ok  execution_count: 8
+
+======================================================================
+stdout（stream）
+======================================================================
+cwd            : /QuantConnect/research-cloud/airlock
+python         : 3.11.14
+payload bytes  : 224
+payload sha256 : <REDACTED-HEX>
+dataframe sum  : 15.0
+
+======================================================================
+execute_result / display_data 的 MIME 类型与体积
+======================================================================
+  [execute_result] text/plain                   59 字节
+  [execute_result] text/html                    785 字节
+
+======================================================================
+汇总
+======================================================================
+{
+  "stream 段数": 1,
+  "execute_result 数": 1,
+  "display_data 数": 0,
+  "error 数": 0,
+  "status 序列": [
+    "busy",
+    "idle"
+  ]
+}
+--- exit code: 0 ---
+
+=== 追加：保真窄口径核验（内核内比对，只回布尔）===
+本地预算 sha256 (前16): 5afd3bb9e534bc62 …  字节: 224
+execute_reply: error
+ERROR SyntaxError unterminated string literal (detected at line 2) (1120445521.py, line 2)
+
+=== 追加 2：保真核验（base64 传输，规避转义。上一轮为执行方 f-string 转义错误）===
+本地: 字节 224  sha256(前16) 5afd3bb9e534bc62 …
+execute_reply: ok
+kernel bytes   : 224
+MATCH_INBOUND  : True
+回传字节      : 240
+回传去掉尾标后 == 原载荷: True
+回传尾标      : |kernel-appended

@@ -1,0 +1,35 @@
+{
+  "_data_source": "synthetic_hand_constructed",
+  "_object_id": "GL-06",
+  "_pin_note": "先钉表后跑数（F-10）：本文件为构造会话首个产出文件，先于harness.py/independent_recompute.py任何执行动作写定；15期人造数据与两槽位取值在跑数前已固定，非跑数后回填。",
+  "slots": {
+    "ratio_threshold": {
+      "numerator": 2,
+      "denominator": 1,
+      "type": "parameter_slot_candidate",
+      "note": "源文字面值'大致两倍'之比较结构（≥）为类一定案；数值2本身为类三候选槽位（结构与取值分离，Step1/Step2既裁），阶段A候选值不外推为规范，Phase B校准。"
+    },
+    "averaging_window_days": {
+      "value": 5,
+      "type": "parameter_slot_candidate",
+      "note": "日均化窗口长度候选值，非校准值。窗口是否存在、长度多少、Theta收入侧是否同步日均化，均为类三候选操作化（见entity/input_schema.md §4③），本根实现候选＝保护成本侧trailing simple average、Theta收入侧取当期值不另日均化。"
+    }
+  },
+  "periods": [
+    {"t": 1,  "theta_income_cents": 2500, "protection_cost_tv_cents": 1000},
+    {"t": 2,  "theta_income_cents": 1500, "protection_cost_tv_cents": 1000},
+    {"t": 3,  "theta_income_cents": 2200, "protection_cost_tv_cents": 1000},
+    {"t": 4,  "theta_income_cents": 1900, "protection_cost_tv_cents": 1000},
+    {"t": 5,  "theta_income_cents": 2000, "protection_cost_tv_cents": 1000},
+    {"t": 6,  "theta_income_cents": 1999, "protection_cost_tv_cents": 1000},
+    {"t": 7,  "theta_income_cents": 2001, "protection_cost_tv_cents": 1000},
+    {"t": 8,  "theta_income_cents": 3000, "protection_cost_tv_cents": 1000},
+    {"t": 9,  "theta_income_cents": 500,  "protection_cost_tv_cents": 1000},
+    {"t": 10, "theta_income_cents": 2000, "protection_cost_tv_cents": 1000},
+    {"t": 11, "theta_income_cents": 2200, "protection_cost_tv_cents": 1400},
+    {"t": 12, "theta_income_cents": 2600, "protection_cost_tv_cents": 1400},
+    {"t": 13, "theta_income_cents": 1800, "protection_cost_tv_cents": 1400},
+    {"t": 14, "theta_income_cents": 2160, "protection_cost_tv_cents": 1400},
+    {"t": 15, "theta_income_cents": 3500, "protection_cost_tv_cents": 1400}
+  ]
+}

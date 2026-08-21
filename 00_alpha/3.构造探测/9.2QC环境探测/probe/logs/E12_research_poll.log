@@ -1,0 +1,44 @@
+=== E12 · Research 网页端编辑回传 · 自动轮询（任务书外，执行人追加）===
+基线 research.ipynb sha256: 5a7c811cb2e422ca942829272b5e27af6615c159ec5024b9dbf6a12e58df121f
+轮询间隔 30 秒，上限 80 轮（约 40 分钟）
+退出条件：云端 research.ipynb 经 pull 落到本地后 sha256 与基线不同
+起始时刻（本机 UTC）: Mon Aug 17 13:07:49 UTC 2026
+
+[轮 1] 13:07:52 pull_exit=0 sha256=ce6470fdf831dc09f2b5a88339eac333fc292b3cee93010ace9b5ccc219426b9
+
+=== 检测到变化，轮询退出 ===
+轮次: 1
+时刻（本机 UTC）: Mon Aug 17 13:07:52 UTC 2026
+新 sha256: ce6470fdf831dc09f2b5a88339eac333fc292b3cee93010ace9b5ccc219426b9
+本轮 pull 输出:
+[1/1] Pulling 'TR2-ENV-PROBE'
+Successfully pulled 'TR2-ENV-PROBE/research.ipynb'
+
+================================================================
+=== E12 第二次判定 · 执行人已在网页端执行 cell 并产生输出 ===
+================================================================
+背景：执行人截图显示网页端 research.ipynb 新增 cell
+      qb = QuantBook() / print("probe-marker-E12")
+      已执行，[1] ✓ 0.3s，输出 probe-marker-E12，kernel Foundation-Py-Default
+时刻（本机 UTC）: Mon Aug 17 13:21:22 UTC 2026
+
+--- pull 前 sha256（上一轮回传版）---
+ce6470fdf831dc09f2b5a88339eac333fc292b3cee93010ace9b5ccc219426b9 *TR2-ENV-PROBE/research.ipynb
+
+=== CMD: lean cloud pull --project "TR2-ENV-PROBE" ===
+[1/1] Pulling 'TR2-ENV-PROBE'
+Successfully pulled 'TR2-ENV-PROBE/research.ipynb'
+(exit 0)
+
+--- pull 后 sha256 与字节数 ---
+dc7807219b8108f297657e38bf218513db81f97fe8435d5889ab38411f325c45 *TR2-ENV-PROBE/research.ipynb
+1312 TR2-ENV-PROBE/research.ipynb
+
+--- 是否含探测标记 ---
+1
+
+--- outputs / execution_count 字段状态 ---
+"execution_count":1
+"execution_count":null
+"outputs":[]
+"outputs":[]
