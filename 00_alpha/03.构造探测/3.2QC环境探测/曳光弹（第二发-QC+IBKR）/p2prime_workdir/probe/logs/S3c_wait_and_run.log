@@ -1,0 +1,19 @@
+  [01] +   2s  node.busy=True   research/read=OK     
+
+[会话到场] 立即触发 α-6-乙
+
+=== P2' α-6-乙 · research 内核运行位 ===
+捕获时刻(UTC): 20260818T145357Z
+projectId = 35315786 (P2PRIME-SHOT2)
+自守: 零 push / 零 delete / 零云端文件写
+
+--- 0. 节点状态（执行前）---
+  [before] backtest  BN-1b212dcdcde815afe8432ca9c9daf1f3      busy=False usedBy='-'
+  [before] research  RN-cfd071182d13803f49be6fa37a5d8b5c      busy=True  usedBy='Archisen Kong'
+
+--- 1. research/read 会话分配（逐轮留痕）---
+  [1/4] OK  耗时 1.8s
+  会话句柄（值已遮蔽）: sessionId len=34, token len=64, nodeId=RN-cfd071182d13803f49be6fa37a5d8b5c
+
+--- 2. 内核发现 ---
+  [F2] 无运行中的内核

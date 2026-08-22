@@ -1,0 +1,1201 @@
+{
+  "runs": [
+    {
+      "seq": 1,
+      "phase": "step1_初装",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest未生成(尚无外部载荷)；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PENDING",
+          "detail": "probe/ 下尚无标记 json（外部载荷未落地）"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=1 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=1 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PENDING",
+          "detail": "harness 尚未生成"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PENDING",
+          "detail": "连接尚未发生（无 connection_log.json）"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PENDING",
+          "detail": "字面量赋值命中=[]；harness 尚未生成"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 6,
+        "FAIL": 0,
+        "PENDING": 4
+      }
+    },
+    {
+      "seq": 2,
+      "phase": "step2_pre",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest未生成(尚无外部载荷)；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PENDING",
+          "detail": "probe/ 下尚无标记 json（外部载荷未落地）"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=2 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PENDING",
+          "detail": "连接尚未发生（无 connection_log.json）"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7162 组装点=8251 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 8,
+        "FAIL": 0,
+        "PENDING": 2
+      }
+    },
+    {
+      "seq": 3,
+      "phase": "step2_post",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=1 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=1 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=3 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7162 组装点=8251 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 4,
+      "phase": "step5_post",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "FAIL",
+          "detail": "manifest哈希数=1 同哈希渗透=[]；标记串文件名命中=[] 内容命中=['verify\\\\x1_env_report.json×1', 'verify\\\\x1_synth.py×2']"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=1 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=4 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7162 组装点=8251 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 9,
+        "FAIL": 1,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 5,
+      "phase": "step5_post2",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=1 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=1 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=5 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7162 组装点=8251 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 6,
+      "phase": "step2_retry",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=1 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=1 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=6 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7621 组装点=8710 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 7,
+      "phase": "step3_post",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=3 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=3 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=7 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=7892 组装点=8981 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 8,
+      "phase": "step3_clean",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=4 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=4 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=8 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=11707 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 9,
+      "phase": "step6_post",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=6 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=7 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=9 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87 锚值=c0c4b93b1e3f4290296bf12ddbe7b14a8ea12e579ab96d466f8276ccbb390a87"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 10,
+      "phase": "v13_A11",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=6 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=7 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=10 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7 锚值=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7"
+        },
+        {
+          "code": "A11",
+          "name": "flex凭据闸",
+          "clause": "KD裁定20260812 X-2凭据补件（§4B）",
+          "status": "PASS",
+          "detail": "受检环境变量=2 值字面量命中=[]；probe_flex.py: require_flex_credentials位置=883 调用点=2490 SystemExit=True → OK"
+        }
+      ],
+      "summary": {
+        "PASS": 11,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 11,
+      "phase": "step8_final",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=10 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=10 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=11 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py', 'probe\\\\probe_flex.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7 锚值=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7"
+        },
+        {
+          "code": "A11",
+          "name": "flex凭据闸",
+          "clause": "KD裁定20260812 X-2凭据补件（§4B）",
+          "status": "PASS",
+          "detail": "受检环境变量=2 值字面量命中=[]；probe_flex.py: require_flex_credentials位置=883 调用点=2490 SystemExit=True → OK"
+        }
+      ],
+      "summary": {
+        "PASS": 11,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 12,
+      "phase": "step8_sealed",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "FAIL",
+          "detail": "manifest哈希数=10 同哈希渗透=[]；标记串文件名命中=[] 内容命中=['verify\\\\friction_record.md×1']"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=10 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=12 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py', 'probe\\\\probe_flex.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7 锚值=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7"
+        },
+        {
+          "code": "A11",
+          "name": "flex凭据闸",
+          "clause": "KD裁定20260812 X-2凭据补件（§4B）",
+          "status": "PASS",
+          "detail": "受检环境变量=2 值字面量命中=[]；probe_flex.py: require_flex_credentials位置=883 调用点=2490 SystemExit=True → OK"
+        }
+      ],
+      "summary": {
+        "PASS": 10,
+        "FAIL": 1,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 13,
+      "phase": "diag",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "FAIL",
+          "detail": "manifest哈希数=10 同哈希渗透=[]；标记串文件名命中=[] 内容命中=['verify\\\\friction_record.md×1']"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=10 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=13 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py', 'probe\\\\probe_flex.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7 锚值=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7"
+        },
+        {
+          "code": "A11",
+          "name": "flex凭据闸",
+          "clause": "KD裁定20260812 X-2凭据补件（§4B）",
+          "status": "FAIL",
+          "detail": "环境变量未注入，值字面量面不可判；probe_flex.py: require_flex_credentials位置=883 调用点=2490 SystemExit=True → OK"
+        }
+      ],
+      "summary": {
+        "PASS": 9,
+        "FAIL": 2,
+        "PENDING": 0
+      }
+    },
+    {
+      "seq": 14,
+      "phase": "step8_sealed",
+      "python": "3.10.11",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "results": [
+        {
+          "code": "A1",
+          "name": "目录三分在场",
+          "clause": "85-3 D-1",
+          "status": "PASS",
+          "detail": "三分在场=['entity', 'probe', 'verify'] 缺=[] 第四实体目录=[]"
+        },
+        {
+          "code": "A2",
+          "name": "黑名单零渗透",
+          "clause": "85-3 D-2＋乙案边界口径",
+          "status": "PASS",
+          "detail": "manifest哈希数=10 同哈希渗透=[]；标记串文件名命中=[] 内容命中=[]"
+        },
+        {
+          "code": "A3",
+          "name": "键名标记在场",
+          "clause": "85-3 D-3",
+          "status": "PASS",
+          "detail": "受检=10 不合格=[]"
+        },
+        {
+          "code": "A4",
+          "name": "forbidden 扫描",
+          "clause": "85-7",
+          "status": "PASS",
+          "detail": "entity/受检文件=2 命中=[]"
+        },
+        {
+          "code": "A5",
+          "name": "引擎逐字复用",
+          "clause": "85-1a＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf 锚值=d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf"
+        },
+        {
+          "code": "A6",
+          "name": "零写入可证(M6)",
+          "clause": "菜单§5.2 M6＋69扩项(i)",
+          "status": "PASS",
+          "detail": "实测序列n=14 相异值=['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf'] 全等锚值=True"
+        },
+        {
+          "code": "A7",
+          "name": "只读纪律",
+          "clause": "85-3 乙案只读能力探查",
+          "status": "PASS",
+          "detail": "受检=['entity\\\\probe_harness.py', 'probe\\\\probe_run.py', 'probe\\\\probe_flex.py'] 命中=[]"
+        },
+        {
+          "code": "A8",
+          "name": "paper账户",
+          "clause": "KD裁定20260811 paper条款",
+          "status": "PASS",
+          "detail": "port=4002(白名单[7497, 4002]) accounts=['DU****742'] 非paper格式=[]"
+        },
+        {
+          "code": "A9",
+          "name": "q/r赋值闸",
+          "clause": "KD裁定20260811 追加-2",
+          "status": "PASS",
+          "detail": "字面量赋值命中=[]；probe\\probe_run.py: require_kd_params位置=10618 组装点=12000 SystemExit=True → OK"
+        },
+        {
+          "code": "A10",
+          "name": "AGENTS.md 在场且同源",
+          "clause": "KD裁定20260811 追加-1",
+          "status": "PASS",
+          "detail": "实测=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7 锚值=ccc753477b66900cd67dd73d830182e092799272f8f68c6b3202d7ec4c5320e7"
+        },
+        {
+          "code": "A11",
+          "name": "flex凭据闸",
+          "clause": "KD裁定20260812 X-2凭据补件（§4B）",
+          "status": "PASS",
+          "detail": "受检环境变量=2 值字面量命中=[]；probe_flex.py: require_flex_credentials位置=883 调用点=2490 SystemExit=True → OK"
+        }
+      ],
+      "summary": {
+        "PASS": 11,
+        "FAIL": 0,
+        "PENDING": 0
+      }
+    }
+  ]
+}

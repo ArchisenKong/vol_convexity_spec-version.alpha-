@@ -1,0 +1,45 @@
+=== P2' 云端项目创建 + entity/ 面上传 ===
+捕获时刻(UTC): 20260818T151006Z
+自守: 零 push / 零 delete / 仅 projects.create x1 + files.create x5
+
+--- 0. 上传前自查（A4'：entity/ 面 QuantConnect 字面命中数应 ==0）---
+  cloud_payload_engine.py       17605 B  sha=030c31fe2bb5cd54  QuantConnect命中=0  CR=0 LF=229
+  cloud_payload_gl06.py         16551 B  sha=fdcc074df24002b6  QuantConnect命中=0  CR=0 LF=230
+  cloud_payload_x1.py            5060 B  sha=eebccfbea2f2d484  QuantConnect命中=0  CR=0 LF=76
+  cloud_runner_alpha6.py         6229 B  sha=594ba0622d3006cb  QuantConnect命中=0  CR=0 LF=152
+  cloud_runner_x1.py             4238 B  sha=b26dfbb853bf615a  QuantConnect命中=0  CR=0 LF=107
+
+--- 1. 建项目前清单枚举（FR-P2-05：不以调用成败推断存在性）---
+  现有项目数 = 1  清单 = ['P2PRIME-SHOT2']
+
+--- 2. 同名项目已在场，**复用不重建**（A'-14：delete 全禁，不得覆盖/重建）---
+  [REUSE] projectId=35315786  name=P2PRIME-SHOT2
+
+--- 3. 上传前项目内现存件盘点 ---
+  QC 自带     research.ipynb                  833 chars
+  QC 自带     main.py                         406 chars
+  本位既传      cloud_payload_engine.py       17374 chars
+  本位既传      cloud_payload_gl06.py         16320 chars
+  本位既传      cloud_runner_alpha6.py         5210 chars
+    [WROTE] cloud_project_state_20260818T151006Z.json
+
+--- 4. files.create/update × 5（仅 entity/ 面，A'-9）---
+  [OK] 1/5 已更新 cloud_payload_engine.py (17374 chars)
+  [OK] 2/5 已更新 cloud_payload_gl06.py (16320 chars)
+  [OK] 3/5 已上传 cloud_payload_x1.py (4824 chars)
+  [OK] 4/5 已更新 cloud_runner_alpha6.py (5210 chars)
+  [OK] 5/5 已上传 cloud_runner_x1.py (3584 chars)
+
+--- 5. 回读保真比对（双值并列：raw / 行尾归一化）---
+  cloud_payload_engine.py      raw=True  norm=True   local  17605B / cloud  17605B  CR: 0->0
+  cloud_payload_gl06.py        raw=True  norm=True   local  16551B / cloud  16551B  CR: 0->0
+  cloud_payload_x1.py          raw=True  norm=True   local   5060B / cloud   5060B  CR: 0->0
+  cloud_runner_alpha6.py       raw=True  norm=True   local   6229B / cloud   6229B  CR: 0->0
+  cloud_runner_x1.py           raw=True  norm=True   local   4238B / cloud   4238B  CR: 0->0
+    [WROTE] cloud_upload_fidelity_20260818T151006Z.json
+
+--- 汇总 ---
+  projectId = 35315786
+  写动作实计: projects.create x1 + files.create x5
+  零 delete / 零 push / 零 object-store 写
+  落位: D:\02 VolConvexityStrategy\【Strategy】VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC环境探测\曳光弹（第二发-QC+IBKR）\p2prime_workdir\probe\raw

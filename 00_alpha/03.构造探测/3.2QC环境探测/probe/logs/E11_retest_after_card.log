@@ -1,0 +1,76 @@
+=== E11 · 信用卡验证后基线重测（任务书外，执行人追加）===
+背景：执行人于 2026-08-15 完成信用卡绑定与验证。E6 当初被拒原文为
+     'Please upgrade to paid account to use the API and other local features.'
+     故重测 CLI 侧云端回测，判断档位闸门是否变化。
+
+=== CMD: lean cloud backtest "TR2-ENV-PROBE" --name "env-probe-02" ===
+--- 触发时刻（本机 UTC）: Mon Aug 17 13:01:25 UTC 2026 ---
+--- stdout ---
+Started compiling project 'TR2-ENV-PROBE'
+Build Request Successful for Project ID: 35174460, with CompileID: 
+67cb538cd640c117d58f462db53e5085-6bfce1f6e41198e9685fe39991f528b0, Lean 
+Version: 2.5.0.0.18004
+Successfully compiled project 'TR2-ENV-PROBE'
+Started backtest named 'env-probe-02' for project 'TR2-ENV-PROBE'
+Backtest url: 
+https://www.quantconnect.com/project/35174460/475935f261165c79d347d6a311143206
+ ---------------------------------------- 100%
++-----------------------------------------------------------------------------+
+| Statistic           | Value            | Statistic           | Value        |
+|---------------------+------------------+---------------------+--------------|
+| Equity              | $101,692.74      | Fees                | -$3.70       |
+| Holdings            | $101,369.72      | Net Profit          | $-3.70       |
+| Probabilistic       | 67.459%          | Return              | 1.69 %       |
+| Sharpe Ratio        |                  |                     |              |
+| Unrealized          | $1,657.03        | Volume              | $99,673.28   |
+|---------------------+------------------+---------------------+--------------|
+| Total Orders        | 1                | Average Win         | 0%           |
+| Average Loss        | 0%               | Compounding Annual  | 271.689%     |
+|                     |                  | Return              |              |
+| Drawdown            | 2.200%           | Expectancy          | 0            |
+| Start Equity        | 100000           | End Equity          | 101692.74    |
+| Net Profit          | 1.693%           | Sharpe Ratio        | 8.858        |
+| Sortino Ratio       | 0                | Probabilistic       | 67.459%      |
+|                     |                  | Sharpe Ratio        |              |
+| Loss Rate           | 0%               | Win Rate            | 0%           |
+| Profit-Loss Ratio   | 0                | Alpha               | -0.004       |
+| Beta                | 0.997            | Annual Standard     | 0.222        |
+|                     |                  | Deviation           |              |
+| Annual Variance     | 0.049            | Information Ratio   | -14.715      |
+| Tracking Error      | 0.001            | Treynor Ratio       | 1.971        |
+| Total Fees          | $3.70            | Estimated Strategy  | $56000000.00 |
+|                     |                  | Capacity            |              |
+| Lowest Capacity     | SPY R735QTJ8XC9X | Portfolio Turnover  | 19.94%       |
+| Asset               |                  |                     |              |
+| Drawdown Recovery   | 3                |                     |              |
++-----------------------------------------------------------------------------+
+Backtest id: 475935f261165c79d347d6a311143206
+Backtest name: env-probe-02
+Backtest url: 
+https://www.quantconnect.com/project/35174460/475935f261165c79d347d6a311143206
+--- stderr ---
+--- exit code: 0 ---
+--- 耗时: 250 秒 ---
+
+=== 结果是否落盘核查 ===
+--- CMD: ls -la TR2-ENV-PROBE ---
+total 13
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:28 .
+drwxr-xr-x 1 KYJ 197609    0 Aug 17 21:01 ..
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:00 .idea
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:00 .vscode
+-rw-r--r-- 1 KYJ 197609  252 Aug 14 23:28 config.json
+-rw-r--r-- 1 KYJ 197609  901 Aug 14 23:00 main.py
+-rw-r--r-- 1 KYJ 197609 1488 Aug 14 23:00 research.ipynb
+
+--- CMD: find . -newermt '2026-08-17 12:55' -type f -not -path './data/*' | sort ---
+./lean.json
+
+--- CMD: find . -maxdepth 2 -type d -not -path './data*' | sort ---
+.
+./TR2-ENV-PROBE
+./TR2-ENV-PROBE/.idea
+./TR2-ENV-PROBE/.vscode
+
+--- CMD: lean config get default-language / 当前 lean 版本 ---
+lean 1.0.228

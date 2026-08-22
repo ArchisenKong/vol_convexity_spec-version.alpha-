@@ -1,0 +1,25 @@
+{
+  "_probe_name": "backtest_compile",
+  "_probe_captured_utc": "20260818T153820Z",
+  "_probe_note": "编译留痕，全量日志",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "compileId": "9154234d53ffd5c4f528c3f6df60cf3d-05f4b4eb0ec15e85d42973b670a0b8ab",
+    "state": "QCCompileState.BuildSuccess",
+    "logs": [
+      "Warning cloud_runner_x1.py Line: 37 Column: 26 - Incompatible types in assignment (expression has type \"list[str]\", target has type \"str\")",
+      "Warning cloud_runner_x1.py Line: 36 Column: 1 - Use of try/catch is discouraged as it can hide errors leading to unpredictable behavior in your strategy.",
+      "Warning cloud_runner_alpha6.py Line: 80 Column: 26 - Incompatible types in assignment (expression has type \"list[str]\", target has type \"str\")",
+      "Warning cloud_runner_alpha6.py Line: 150 Column: 40 - Incompatible types in assignment (expression has type \"str\", target has type \"int\")",
+      "Warning cloud_runner_alpha6.py Line: 42 Column: 1 - Use of try/catch is discouraged as it can hide errors leading to unpredictable behavior in your strategy.",
+      "Warning main.py Line: 46 Column: 9 - \"P2PrimeProbeAlgorithm\" has no attribute \"Debug\"",
+      "Warning main.py Line: 48 Column: 13 - \"P2PrimeProbeAlgorithm\" has no attribute \"Debug\"",
+      "Warning main.py Line: 49 Column: 9 - \"P2PrimeProbeAlgorithm\" has no attribute \"Debug\"",
+      "Warning main.py Line: 57 Column: 13 - \"P2PrimeProbeAlgorithm\" has no attribute \"SetRuntimeStatistic\"",
+      "Warning main.py Line: 59 Column: 17 - \"P2PrimeProbeAlgorithm\" has no attribute \"SetRuntimeStatistic\"",
+      "Warning main.py Line: 63 Column: 17 - \"P2PrimeProbeAlgorithm\" has no attribute \"SetRuntimeStatistic\"",
+      "Warning main.py Line: 90 Column: 9 - \"P2PrimeProbeAlgorithm\" has no attribute \"SetStartDate\"; maybe \"self.set_start_date(2020, 1, 1)\"?",
+      "Build Request Successful for Project ID: 35315786, with CompileID: 9154234d53ffd5c4f528c3f6df60cf3d-05f4b4eb0ec15e85d42973b670a0b8ab, Lean Version: 2.5.0.0.18005"
+    ]
+  }
+}

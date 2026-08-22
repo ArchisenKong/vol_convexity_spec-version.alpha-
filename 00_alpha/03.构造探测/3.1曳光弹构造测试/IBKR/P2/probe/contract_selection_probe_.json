@@ -1,0 +1,246 @@
+{
+  "underlying": {
+    "symbol": "ES",
+    "conId": 649180671,
+    "expiry": "20260918",
+    "multiplier": "50"
+  },
+  "reference_price": 7769.0,
+  "reference_price_source": "last",
+  "atm_rule": "|K-F| 最小；平局取较低 K（KY 20260812 确认）",
+  "option": {
+    "conId": 901320542,
+    "localSymbol": "E2DQ6 P7770",
+    "expiry": "20260813",
+    "strike": 7770.0,
+    "right": "P",
+    "tradingClass": "E2D",
+    "multiplier": "50"
+  },
+  "chain_params": [
+    {
+      "exchange": "CME",
+      "tradingClass": "EW4",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 274,
+      "expirations_head": [
+        "20260828"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "EW3",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 439,
+      "expirations_head": [
+        "20260821"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "EW2",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 394,
+      "expirations_head": [
+        "20260814",
+        "20260911"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "EW1",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 245,
+      "expirations_head": [
+        "20260904"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "ES",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 205,
+      "expirations_head": [
+        "20260918"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E4A",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 269,
+      "expirations_head": [
+        "20260824"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "EW",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 318,
+      "expirations_head": [
+        "20260831"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E2C",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 383,
+      "expirations_head": [
+        "20260812",
+        "20260909"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E3D",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 377,
+      "expirations_head": [
+        "20260820",
+        "20260917"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E1B",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 255,
+      "expirations_head": [
+        "20260901"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E3C",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 379,
+      "expirations_head": [
+        "20260819",
+        "20260916"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E4D",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 255,
+      "expirations_head": [
+        "20260827"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E2B",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 384,
+      "expirations_head": [
+        "20260908"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E3B",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 378,
+      "expirations_head": [
+        "20260818",
+        "20260915"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E4C",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 270,
+      "expirations_head": [
+        "20260826"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E2A",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 383,
+      "expirations_head": [
+        "20260914"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E3A",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 379,
+      "expirations_head": [
+        "20260817"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E4B",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 253,
+      "expirations_head": [
+        "20260825"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E1D",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 242,
+      "expirations_head": [
+        "20260903"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E2D",
+      "multiplier": "50",
+      "n_expirations": 2,
+      "n_strikes": 389,
+      "expirations_head": [
+        "20260813",
+        "20260910"
+      ]
+    },
+    {
+      "exchange": "CME",
+      "tradingClass": "E1C",
+      "multiplier": "50",
+      "n_expirations": 1,
+      "n_strikes": 250,
+      "expirations_head": [
+        "20260902"
+      ]
+    }
+  ],
+  "lot_shape": {
+    "side": "short",
+    "quantity": 1
+  },
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_capture_env": "paper",
+  "_phase": "step2",
+  "_captured_at": "2026-08-12T22:32:27"
+}

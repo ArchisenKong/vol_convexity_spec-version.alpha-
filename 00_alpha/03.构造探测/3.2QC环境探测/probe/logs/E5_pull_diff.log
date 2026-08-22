@@ -1,0 +1,95 @@
+=== E5 · push→pull→diff 核证 ===
+
+=== CMD: lean cloud pull --help （选项核查）===
+Usage: lean cloud pull [OPTIONS]
+
+  Pull projects from QuantConnect to the local drive.
+
+  This command overrides the content of local files with the content of their
+  respective counterparts in the cloud.
+
+  This command will not delete local files for which there is no counterpart
+  in the cloud.
+
+Options:
+  --project TEXT   Name or id of the project to pull (all cloud projects if
+                   not specified)
+  --pull-bootcamp  Pull Boot Camp projects (disabled by default)
+  --encrypt        Pull your cloud files and encrypt them before saving on
+                   your local drive
+  --decrypt        Pull your cloud files and decrypt them before saving on
+                   your local drive
+  --key FILE       Path to the encryption key to use
+  --verbose        Enable debug logging
+  --help           Show this message and exit.
+
+--- 事实记录：--output 选项不存在。lean cloud pull 仅有 --project / --pull-bootcamp
+--- / --encrypt / --decrypt / --key / --verbose。按任务书 3.5 括注，改用
+--- 「先复制本地目录再 pull」的替代核证方式。
+--- help 原文明载：This command overrides the content of local files with the
+--- content of their respective counterparts in the cloud.
+
+=== CMD: mkdir -p ../probe/verify ===
+(exit 0)
+
+=== CMD: cp -r TR2-ENV-PROBE ../probe/verify/TR2-ENV-PROBE-prepull ===
+(exit 0)
+
+=== pull 前快照 sha256（全文件）===
+15de274dcbb9187cf0da51e17f18b33a8fbb5fc9fce35b39fdef4da952aafafb *../probe/verify/TR2-ENV-PROBE-prepull/.idea/TR2-ENV-PROBE.iml
+e6da87e81840dded2196a4e84231c8fcf61408cfadd32c59d9f216aee630a1c7 *../probe/verify/TR2-ENV-PROBE-prepull/.idea/misc.xml
+5e911ed396c505ccd3c9c83d8fc7c8ad06f5998e358db90dd193343245fc2bac *../probe/verify/TR2-ENV-PROBE-prepull/.idea/modules.xml
+55bcb4293158da0dadf53a2523e6e43b1991a7042c47aee81d7a6e853728a97e *../probe/verify/TR2-ENV-PROBE-prepull/.idea/workspace.xml
+f748499762dd4c1bb899e1d789aa7daf96443eb828e8245c5247227f4c62d86b *../probe/verify/TR2-ENV-PROBE-prepull/.vscode/launch.json
+9a8e54f6d367dd78c2516684bae8bf52e3bbdbce094e96d40db3c199ab25816e *../probe/verify/TR2-ENV-PROBE-prepull/.vscode/settings.json
+bff55b3be40af08450e244d60955d4b551c2ea0ad52d254763b20f6b808df431 *../probe/verify/TR2-ENV-PROBE-prepull/config.json
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *../probe/verify/TR2-ENV-PROBE-prepull/main.py
+5a7c811cb2e422ca942829272b5e27af6615c159ec5024b9dbf6a12e58df121f *../probe/verify/TR2-ENV-PROBE-prepull/research.ipynb
+
+=== CMD: lean cloud pull --project "TR2-ENV-PROBE" ===
+--- stdout ---
+[1/1] Pulling 'TR2-ENV-PROBE'
+--- stderr ---
+--- exit code: 0 ---
+--- 耗时: 2 秒 ---
+
+=== pull 落盘位置核查：本地项目目录是否被就地覆盖 ===
+--- CMD: ls -la TR2-ENV-PROBE ---
+total 13
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:04 .
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:00 ..
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:00 .idea
+drwxr-xr-x 1 KYJ 197609    0 Aug 14 23:00 .vscode
+-rw-r--r-- 1 KYJ 197609  224 Aug 14 23:04 config.json
+-rw-r--r-- 1 KYJ 197609  901 Aug 14 23:00 main.py
+-rw-r--r-- 1 KYJ 197609 1488 Aug 14 23:00 research.ipynb
+
+--- CMD: find . -maxdepth 1 -type d （是否另建了目录）---
+.
+./TR2-ENV-PROBE
+./data
+
+=== CMD: diff -r "TR2-ENV-PROBE" ../probe/verify/TR2-ENV-PROBE-prepull ===
+diff -r TR2-ENV-PROBE/config.json ../probe/verify/TR2-ENV-PROBE-prepull/config.json
+6,8c6
+<     "organization-id": "954877bda8b6760ae398418ce79a5500",
+<     "python-venv": 1,
+<     "encrypted": false
+---
+>     "organization-id": "954877bda8b6760ae398418ce79a5500"
+--- diff 退出码: 1 （0=无差异）---
+
+=== CMD: sha256sum TR2-ENV-PROBE/main.py ../probe/verify/TR2-ENV-PROBE-prepull/main.py ===
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *TR2-ENV-PROBE/main.py
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *../probe/verify/TR2-ENV-PROBE-prepull/main.py
+
+=== pull 后全文件 sha256 ===
+15de274dcbb9187cf0da51e17f18b33a8fbb5fc9fce35b39fdef4da952aafafb *TR2-ENV-PROBE/.idea/TR2-ENV-PROBE.iml
+e6da87e81840dded2196a4e84231c8fcf61408cfadd32c59d9f216aee630a1c7 *TR2-ENV-PROBE/.idea/misc.xml
+5e911ed396c505ccd3c9c83d8fc7c8ad06f5998e358db90dd193343245fc2bac *TR2-ENV-PROBE/.idea/modules.xml
+55bcb4293158da0dadf53a2523e6e43b1991a7042c47aee81d7a6e853728a97e *TR2-ENV-PROBE/.idea/workspace.xml
+f748499762dd4c1bb899e1d789aa7daf96443eb828e8245c5247227f4c62d86b *TR2-ENV-PROBE/.vscode/launch.json
+9a8e54f6d367dd78c2516684bae8bf52e3bbdbce094e96d40db3c199ab25816e *TR2-ENV-PROBE/.vscode/settings.json
+78899f6d5244d523b2831853156e29fc3457ef1816dca2084628ac12963f6c0b *TR2-ENV-PROBE/config.json
+ada3d4371abee61c85c67ea4592a0799cc2ef904fbd9fd6aa6adf220c08cbecb *TR2-ENV-PROBE/main.py
+5a7c811cb2e422ca942829272b5e27af6615c159ec5024b9dbf6a12e58df121f *TR2-ENV-PROBE/research.ipynb

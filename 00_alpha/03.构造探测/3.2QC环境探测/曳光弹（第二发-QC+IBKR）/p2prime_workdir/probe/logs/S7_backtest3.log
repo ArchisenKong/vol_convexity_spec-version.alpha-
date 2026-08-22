@@ -1,0 +1,73 @@
+=== P2' 回测位一次性执行 ===
+捕获时刻(UTC): 20260818T155718Z
+自守: 零 push / 零 delete / 上云面＝entity/ 面 ＋ 接口面子集(main.py)
+
+--- 1. 项目定位: projectId=35315786 name=P2PRIME-SHOT2
+
+--- 2. 上云面自查（KD-P2-10 检测位）---
+  [entity   ] cloud_payload_engine.py       17374 chars  QuantConnect命中=0
+  [entity   ] cloud_payload_gl06.py         16320 chars  QuantConnect命中=0
+  [entity   ] cloud_payload_x1.py            4824 chars  QuantConnect命中=0
+  [entity   ] cloud_runner_alpha6.py         6507 chars  QuantConnect命中=0
+  [entity   ] cloud_runner_x1.py             3544 chars  QuantConnect命中=0
+  [interface] main.py                       15426 chars  _P2P_FACE=interface  凭据字面=无
+
+--- 3. 上传（file API；零 push）---
+  [OK] cloud_payload_engine.py      更新 (17374 chars)
+  [OK] cloud_payload_gl06.py        更新 (16320 chars)
+  [OK] cloud_payload_x1.py          更新 (4824 chars)
+  [OK] cloud_runner_alpha6.py       更新 (6507 chars)
+  [OK] cloud_runner_x1.py           更新 (3544 chars)
+  [OK] main.py                      更新 (15426 chars)
+  回读 cloud_payload_engine.py      raw=True norm=True
+  回读 cloud_payload_gl06.py        raw=True norm=True
+  回读 cloud_payload_x1.py          raw=True norm=True
+  回读 cloud_runner_alpha6.py       raw=True norm=True
+  回读 cloud_runner_x1.py           raw=True norm=True
+  回读 main.py                      raw=True norm=True
+    [WROTE] backtest_upload_fidelity_20260818T155718Z.json
+
+--- 4. compiles.create ---
+  [OK] compileId=dab5d7778b3363a0c4d409f930c1c136-511aa001afe30c840cd5204a4146255f state=QCCompileState.InQueue 耗时2.9s
+  编译状态: QCCompileState.BuildSuccess  日志 13 行
+    Warning cloud_runner_x1.py Line: 37 Column: 26 - Incompatible types in assignment (expression has type "list[str]", target has type "str")
+    Warning cloud_runner_x1.py Line: 36 Column: 1 - Use of try/catch is discouraged as it can hide errors leading to unpredictable behavior in your strategy.
+    Warning cloud_runner_alpha6.py Line: 80 Column: 26 - Incompatible types in assignment (expression has type "list[str]", target has type "str")
+    Warning cloud_runner_alpha6.py Line: 150 Column: 40 - Incompatible types in assignment (expression has type "str", target has type "int")
+    Warning cloud_runner_alpha6.py Line: 42 Column: 1 - Use of try/catch is discouraged as it can hide errors leading to unpredictable behavior in your strategy.
+    Warning main.py Line: 46 Column: 9 - "P2PrimeProbeAlgorithm" has no attribute "Debug"
+    Warning main.py Line: 48 Column: 13 - "P2PrimeProbeAlgorithm" has no attribute "Debug"
+    Warning main.py Line: 49 Column: 9 - "P2PrimeProbeAlgorithm" has no attribute "Debug"
+    Warning main.py Line: 57 Column: 13 - "P2PrimeProbeAlgorithm" has no attribute "SetRuntimeStatistic"
+    Warning main.py Line: 59 Column: 17 - "P2PrimeProbeAlgorithm" has no attribute "SetRuntimeStatistic"
+    Warning main.py Line: 63 Column: 17 - "P2PrimeProbeAlgorithm" has no attribute "SetRuntimeStatistic"
+    Warning main.py Line: 90 Column: 9 - "P2PrimeProbeAlgorithm" has no attribute "SetStartDate"; maybe "self.set_start_date(2020, 1, 1)"?
+    Build Request Successful for Project ID: 35315786, with CompileID: dab5d7778b3363a0c4d409f930c1c136-511aa001afe30c840cd5204a4146255f, Lean Version: 2.5.0.0.18005
+    [WROTE] backtest_compile_20260818T155718Z.json
+
+--- 5. backtests.create（配额消耗，不可撤销）---
+  [OK] backtestId=7f18c4e3087eb24da17e4da8abb75e8a name=p2prime-shot2-probe-20260818T155718Z
+
+--- 6. 轮询完成 ---
+  +  28s  completed=False progress=0.0 error=
+  +  46s  completed=True  progress=1.0 error=2020-01-06 00:00:00 During the algorithm initialization, the following exception
+
+--- 7. 产物取回 ---
+  原件落盘: backtest_raw_20260818T155718Z.json
+  completed=True  error=2020-01-06 00:00:00 During the algorithm initialization, the following exception has occurred: Value cannot be null. (Parameter &#039;input&#039;) in CloudDataPermissionManager.cs:line 92 Value cannot
+  stacktrace=Value cannot be null. (Parameter 'input') in CloudDataPermissionManager.cs:line 92 Value cannot be null. (Parameter 'input')
+  backtests/read 顶层键: ['backtest', 'success']
+  researchGuide（配额）: {"minutes": 9, "backtestCount": 3, "parameters": 162}
+  [WARN] backtests/read/log: RequestFailedError: Required parameter start is missing. It must be a valid timestamp.
+  日志原件落盘: backtest_logs_20260818T155718Z.txt (0 行)
+
+--- 8. 探针分片重组 ---
+  ENV              (未取得)
+  A1_I_IMPORT      (未取得)
+  A1_II_OBJSTORE   (未取得)
+  A6_JIA           (未取得)
+  X1_JIA           (未取得)
+  A1_III_ADDDATA   (未取得)
+    [WROTE] backtest_probe_results_20260818T155718Z.json
+
+落位: D:\02 VolConvexityStrategy\【Strategy】VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC环境探测\曳光弹（第二发-QC+IBKR）\p2prime_workdir\probe\raw

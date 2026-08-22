@@ -1,0 +1,1079 @@
+{
+  "account": "DU5894742",
+  "accountSummary": [
+    {
+      "tag": "AccountType",
+      "currency": "",
+      "value": "INDIVIDUAL",
+      "modelCode": ""
+    },
+    {
+      "tag": "Cushion",
+      "currency": "",
+      "value": "0.938329",
+      "modelCode": ""
+    },
+    {
+      "tag": "LookAheadNextChange",
+      "currency": "",
+      "value": "1786564800",
+      "modelCode": ""
+    },
+    {
+      "tag": "AccruedCash",
+      "currency": "USD",
+      "value": "964.96",
+      "modelCode": ""
+    },
+    {
+      "tag": "AvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34",
+      "modelCode": ""
+    },
+    {
+      "tag": "BuyingPower",
+      "currency": "USD",
+      "value": "7122323.02",
+      "modelCode": ""
+    },
+    {
+      "tag": "EquityWithLoanValue",
+      "currency": "USD",
+      "value": "1068348.45",
+      "modelCode": ""
+    },
+    {
+      "tag": "ExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45",
+      "modelCode": ""
+    },
+    {
+      "tag": "FullAvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34",
+      "modelCode": ""
+    },
+    {
+      "tag": "FullExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45",
+      "modelCode": ""
+    },
+    {
+      "tag": "FullInitMarginReq",
+      "currency": "USD",
+      "value": "76176.29",
+      "modelCode": ""
+    },
+    {
+      "tag": "FullMaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17",
+      "modelCode": ""
+    },
+    {
+      "tag": "GrossPositionValue",
+      "currency": "USD",
+      "value": "30589.72",
+      "modelCode": ""
+    },
+    {
+      "tag": "InitMarginReq",
+      "currency": "USD",
+      "value": "76176.29",
+      "modelCode": ""
+    },
+    {
+      "tag": "LookAheadAvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34",
+      "modelCode": ""
+    },
+    {
+      "tag": "LookAheadExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45",
+      "modelCode": ""
+    },
+    {
+      "tag": "LookAheadInitMarginReq",
+      "currency": "USD",
+      "value": "76176.29",
+      "modelCode": ""
+    },
+    {
+      "tag": "LookAheadMaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17",
+      "modelCode": ""
+    },
+    {
+      "tag": "MaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17",
+      "modelCode": ""
+    },
+    {
+      "tag": "NetLiquidation",
+      "currency": "USD",
+      "value": "1138564.59",
+      "modelCode": ""
+    },
+    {
+      "tag": "TotalCashValue",
+      "currency": "USD",
+      "value": "1119713.23",
+      "modelCode": ""
+    }
+  ],
+  "accountValues_keys": [
+    "$LEDGER-AccountOrGroup",
+    "$LEDGER-AccruedCash",
+    "$LEDGER-CashBalance",
+    "$LEDGER-CorporateBondValue",
+    "$LEDGER-Cryptocurrency",
+    "$LEDGER-Currency",
+    "$LEDGER-ExchangeRate",
+    "$LEDGER-FundValue",
+    "$LEDGER-FutureOptionValue",
+    "$LEDGER-FuturesPNL",
+    "$LEDGER-FxCashBalance",
+    "$LEDGER-IssuerOptionValue",
+    "$LEDGER-MoneyMarketFundValue",
+    "$LEDGER-MutualFundValue",
+    "$LEDGER-NetDividend",
+    "$LEDGER-NetLiquidationByCurrency",
+    "$LEDGER-OptionMarketValue",
+    "$LEDGER-RealCurrency",
+    "$LEDGER-RealizedPnL",
+    "$LEDGER-StockMarketValue",
+    "$LEDGER-TBillValue",
+    "$LEDGER-TBondValue",
+    "$LEDGER-TotalCashBalance",
+    "$LEDGER-UnrealizedPnL",
+    "$LEDGER-WarrantValue",
+    "AccountCode",
+    "AccountReady",
+    "AccountType",
+    "AccruedCash",
+    "AccruedCash-C",
+    "AccruedCash-S",
+    "AccruedDividend",
+    "AccruedDividend-C",
+    "AccruedDividend-S",
+    "AvailableFunds",
+    "AvailableFunds-C",
+    "AvailableFunds-S",
+    "Billable",
+    "Billable-C",
+    "Billable-S",
+    "BuyingPower",
+    "ColumnPrio-C",
+    "ColumnPrio-S",
+    "Cushion",
+    "EquityWithLoanValue",
+    "EquityWithLoanValue-C",
+    "EquityWithLoanValue-S",
+    "ExcessLiquidity",
+    "ExcessLiquidity-C",
+    "ExcessLiquidity-S",
+    "FullAvailableFunds",
+    "FullAvailableFunds-C",
+    "FullAvailableFunds-S",
+    "FullExcessLiquidity",
+    "FullExcessLiquidity-C",
+    "FullExcessLiquidity-S",
+    "FullInitMarginReq",
+    "FullInitMarginReq-C",
+    "FullInitMarginReq-S",
+    "FullMaintMarginReq",
+    "FullMaintMarginReq-C",
+    "FullMaintMarginReq-S",
+    "GrossPositionValue",
+    "GrossPositionValue-C",
+    "GrossPositionValue-S",
+    "Guarantee",
+    "Guarantee-C",
+    "Guarantee-S",
+    "IncentiveCoupons",
+    "IncentiveCoupons-C",
+    "IncentiveCoupons-S",
+    "IndianStockHaircut",
+    "IndianStockHaircut-C",
+    "IndianStockHaircut-S",
+    "InitMarginReq",
+    "InitMarginReq-C",
+    "InitMarginReq-S",
+    "Leverage-C",
+    "Leverage-S",
+    "LookAheadAvailableFunds",
+    "LookAheadAvailableFunds-C",
+    "LookAheadAvailableFunds-S",
+    "LookAheadExcessLiquidity",
+    "LookAheadExcessLiquidity-C",
+    "LookAheadExcessLiquidity-S",
+    "LookAheadInitMarginReq",
+    "LookAheadInitMarginReq-C",
+    "LookAheadInitMarginReq-S",
+    "LookAheadMaintMarginReq",
+    "LookAheadMaintMarginReq-C",
+    "LookAheadMaintMarginReq-S",
+    "LookAheadNextChange",
+    "MaintMarginReq",
+    "MaintMarginReq-C",
+    "MaintMarginReq-S",
+    "NLVAndMarginInReview",
+    "NetLiquidation",
+    "NetLiquidation-C",
+    "NetLiquidation-S",
+    "NetLiquidationUncertainty",
+    "PASharesValue",
+    "PASharesValue-C",
+    "PASharesValue-S",
+    "PhysicalCertificateValue",
+    "PhysicalCertificateValue-C",
+    "PhysicalCertificateValue-S",
+    "PostExpirationExcess",
+    "PostExpirationExcess-C",
+    "PostExpirationExcess-S",
+    "PostExpirationMargin",
+    "PostExpirationMargin-C",
+    "PostExpirationMargin-S",
+    "SegmentTitle-C",
+    "SegmentTitle-S",
+    "SettledCashByDate",
+    "SettledCashByDate-C",
+    "SettledCashByDate-S",
+    "TotalCashValue",
+    "TotalCashValue-C",
+    "TotalCashValue-S",
+    "TotalDebitCardPendingCharges",
+    "TotalDebitCardPendingCharges-C",
+    "TotalDebitCardPendingCharges-S",
+    "TradingType-S"
+  ],
+  "accountValues_currencies": [
+    "",
+    "BASE",
+    "USD"
+  ],
+  "accountValues": [
+    {
+      "tag": "$LEDGER-AccountOrGroup",
+      "currency": "BASE",
+      "value": "DU5894742"
+    },
+    {
+      "tag": "$LEDGER-AccountOrGroup",
+      "currency": "USD",
+      "value": "DU5894742"
+    },
+    {
+      "tag": "$LEDGER-AccruedCash",
+      "currency": "BASE",
+      "value": "964.96"
+    },
+    {
+      "tag": "$LEDGER-AccruedCash",
+      "currency": "USD",
+      "value": "964.96"
+    },
+    {
+      "tag": "$LEDGER-CashBalance",
+      "currency": "BASE",
+      "value": "1119713.23"
+    },
+    {
+      "tag": "$LEDGER-CashBalance",
+      "currency": "USD",
+      "value": "1119713.23"
+    },
+    {
+      "tag": "$LEDGER-CorporateBondValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-CorporateBondValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-Currency",
+      "currency": "BASE",
+      "value": "BASE"
+    },
+    {
+      "tag": "$LEDGER-Currency",
+      "currency": "USD",
+      "value": "USD"
+    },
+    {
+      "tag": "$LEDGER-ExchangeRate",
+      "currency": "BASE",
+      "value": "1.00"
+    },
+    {
+      "tag": "$LEDGER-ExchangeRate",
+      "currency": "USD",
+      "value": "1.00"
+    },
+    {
+      "tag": "$LEDGER-FundValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-FundValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-FutureOptionValue",
+      "currency": "BASE",
+      "value": "17886.40"
+    },
+    {
+      "tag": "$LEDGER-FutureOptionValue",
+      "currency": "USD",
+      "value": "17886.40"
+    },
+    {
+      "tag": "$LEDGER-FuturesPNL",
+      "currency": "BASE",
+      "value": "-62.50"
+    },
+    {
+      "tag": "$LEDGER-FuturesPNL",
+      "currency": "USD",
+      "value": "-62.50"
+    },
+    {
+      "tag": "$LEDGER-FxCashBalance",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-FxCashBalance",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-IssuerOptionValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-IssuerOptionValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-MoneyMarketFundValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-MoneyMarketFundValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-MutualFundValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-MutualFundValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-NetDividend",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-NetDividend",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-NetLiquidationByCurrency",
+      "currency": "BASE",
+      "value": "1138564.587"
+    },
+    {
+      "tag": "$LEDGER-NetLiquidationByCurrency",
+      "currency": "USD",
+      "value": "1138564.587"
+    },
+    {
+      "tag": "$LEDGER-OptionMarketValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-OptionMarketValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-RealCurrency",
+      "currency": "BASE",
+      "value": "BASE"
+    },
+    {
+      "tag": "$LEDGER-RealCurrency",
+      "currency": "USD",
+      "value": "USD"
+    },
+    {
+      "tag": "$LEDGER-RealizedPnL",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-RealizedPnL",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-StockMarketValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-StockMarketValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-TBillValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-TBillValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-TBondValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-TBondValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-TotalCashBalance",
+      "currency": "BASE",
+      "value": "1119713.23"
+    },
+    {
+      "tag": "$LEDGER-TotalCashBalance",
+      "currency": "USD",
+      "value": "1119713.23"
+    },
+    {
+      "tag": "$LEDGER-UnrealizedPnL",
+      "currency": "BASE",
+      "value": "-127.12"
+    },
+    {
+      "tag": "$LEDGER-UnrealizedPnL",
+      "currency": "USD",
+      "value": "-127.12"
+    },
+    {
+      "tag": "$LEDGER-WarrantValue",
+      "currency": "BASE",
+      "value": "0.00"
+    },
+    {
+      "tag": "$LEDGER-WarrantValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "AccountCode",
+      "currency": "",
+      "value": "DU5894742"
+    },
+    {
+      "tag": "AccountReady",
+      "currency": "",
+      "value": "true"
+    },
+    {
+      "tag": "AccountType",
+      "currency": "",
+      "value": "INDIVIDUAL"
+    },
+    {
+      "tag": "AccruedCash",
+      "currency": "USD",
+      "value": "964.96"
+    },
+    {
+      "tag": "AccruedCash-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "AccruedCash-S",
+      "currency": "USD",
+      "value": "964.96"
+    },
+    {
+      "tag": "AccruedDividend",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "AccruedDividend-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "AccruedDividend-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "AvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34"
+    },
+    {
+      "tag": "AvailableFunds-C",
+      "currency": "USD",
+      "value": "-6715.93"
+    },
+    {
+      "tag": "AvailableFunds-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "Billable",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Billable-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Billable-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "BuyingPower",
+      "currency": "USD",
+      "value": "7122323.02"
+    },
+    {
+      "tag": "ColumnPrio-C",
+      "currency": "",
+      "value": "2"
+    },
+    {
+      "tag": "ColumnPrio-S",
+      "currency": "",
+      "value": "1"
+    },
+    {
+      "tag": "Cushion",
+      "currency": "",
+      "value": "0.938329"
+    },
+    {
+      "tag": "EquityWithLoanValue",
+      "currency": "USD",
+      "value": "1068348.45"
+    },
+    {
+      "tag": "EquityWithLoanValue-C",
+      "currency": "USD",
+      "value": "209.18"
+    },
+    {
+      "tag": "EquityWithLoanValue-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "ExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45"
+    },
+    {
+      "tag": "ExcessLiquidity-C",
+      "currency": "USD",
+      "value": "209.18"
+    },
+    {
+      "tag": "ExcessLiquidity-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "FullAvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34"
+    },
+    {
+      "tag": "FullAvailableFunds-C",
+      "currency": "USD",
+      "value": "-6715.93"
+    },
+    {
+      "tag": "FullAvailableFunds-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "FullExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45"
+    },
+    {
+      "tag": "FullExcessLiquidity-C",
+      "currency": "USD",
+      "value": "209.18"
+    },
+    {
+      "tag": "FullExcessLiquidity-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "FullInitMarginReq",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "FullInitMarginReq-C",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "FullInitMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "FullMaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "FullMaintMarginReq-C",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "FullMaintMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "GrossPositionValue",
+      "currency": "USD",
+      "value": "30589.72"
+    },
+    {
+      "tag": "GrossPositionValue-C",
+      "currency": "USD",
+      "value": "30589.72"
+    },
+    {
+      "tag": "GrossPositionValue-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Guarantee",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Guarantee-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Guarantee-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IncentiveCoupons",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IncentiveCoupons-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IncentiveCoupons-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IndianStockHaircut",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IndianStockHaircut-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "IndianStockHaircut-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "InitMarginReq",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "InitMarginReq-C",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "InitMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "Leverage-C",
+      "currency": "",
+      "value": "0.03"
+    },
+    {
+      "tag": "Leverage-S",
+      "currency": "",
+      "value": "0.00"
+    },
+    {
+      "tag": "LookAheadAvailableFunds",
+      "currency": "USD",
+      "value": "1061423.34"
+    },
+    {
+      "tag": "LookAheadAvailableFunds-C",
+      "currency": "USD",
+      "value": "-6715.93"
+    },
+    {
+      "tag": "LookAheadAvailableFunds-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "LookAheadExcessLiquidity",
+      "currency": "USD",
+      "value": "1068348.45"
+    },
+    {
+      "tag": "LookAheadExcessLiquidity-C",
+      "currency": "USD",
+      "value": "209.18"
+    },
+    {
+      "tag": "LookAheadExcessLiquidity-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "LookAheadInitMarginReq",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "LookAheadInitMarginReq-C",
+      "currency": "USD",
+      "value": "76176.29"
+    },
+    {
+      "tag": "LookAheadInitMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "LookAheadMaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "LookAheadMaintMarginReq-C",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "LookAheadMaintMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "LookAheadNextChange",
+      "currency": "",
+      "value": "1786564800"
+    },
+    {
+      "tag": "MaintMarginReq",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "MaintMarginReq-C",
+      "currency": "USD",
+      "value": "69251.17"
+    },
+    {
+      "tag": "MaintMarginReq-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "NLVAndMarginInReview",
+      "currency": "",
+      "value": "false"
+    },
+    {
+      "tag": "NetLiquidation",
+      "currency": "USD",
+      "value": "1138564.59"
+    },
+    {
+      "tag": "NetLiquidation-C",
+      "currency": "USD",
+      "value": "69460.36"
+    },
+    {
+      "tag": "NetLiquidation-S",
+      "currency": "USD",
+      "value": "1069104.23"
+    },
+    {
+      "tag": "NetLiquidationUncertainty",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PASharesValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PASharesValue-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PASharesValue-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PhysicalCertificateValue",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PhysicalCertificateValue-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PhysicalCertificateValue-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "PostExpirationExcess",
+      "currency": "USD",
+      "value": "1130188.52"
+    },
+    {
+      "tag": "PostExpirationExcess-C",
+      "currency": "USD",
+      "value": "62049.25"
+    },
+    {
+      "tag": "PostExpirationExcess-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "PostExpirationMargin",
+      "currency": "USD",
+      "value": "13762.76"
+    },
+    {
+      "tag": "PostExpirationMargin-C",
+      "currency": "USD",
+      "value": "13762.76"
+    },
+    {
+      "tag": "PostExpirationMargin-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "SegmentTitle-C",
+      "currency": "",
+      "value": "US Commodities"
+    },
+    {
+      "tag": "SegmentTitle-S",
+      "currency": "",
+      "value": "US Securities"
+    },
+    {
+      "tag": "SettledCashByDate",
+      "currency": "",
+      "value": "20260812:1137713.23;20260813:1119713.23"
+    },
+    {
+      "tag": "SettledCashByDate-C",
+      "currency": "",
+      "value": "20260812:69573.96;20260813:51573.96"
+    },
+    {
+      "tag": "SettledCashByDate-S",
+      "currency": "",
+      "value": "20260812:1068139.27"
+    },
+    {
+      "tag": "TotalCashValue",
+      "currency": "USD",
+      "value": "1119713.23"
+    },
+    {
+      "tag": "TotalCashValue-C",
+      "currency": "USD",
+      "value": "51573.96"
+    },
+    {
+      "tag": "TotalCashValue-S",
+      "currency": "USD",
+      "value": "1068139.27"
+    },
+    {
+      "tag": "TotalDebitCardPendingCharges",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "TotalDebitCardPendingCharges-C",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "TotalDebitCardPendingCharges-S",
+      "currency": "USD",
+      "value": "0.00"
+    },
+    {
+      "tag": "TradingType-S",
+      "currency": "",
+      "value": "PMRGN"
+    },
+    {
+      "tag": "$LEDGER-Cryptocurrency",
+      "currency": "USD",
+      "value": ""
+    },
+    {
+      "tag": "$LEDGER-Cryptocurrency",
+      "currency": "BASE",
+      "value": ""
+    }
+  ],
+  "position_fields": [
+    "account",
+    "contract",
+    "position",
+    "avgCost"
+  ],
+  "portfolio_fields": [
+    "contract",
+    "position",
+    "marketPrice",
+    "marketValue",
+    "averageCost",
+    "unrealizedPNL",
+    "realizedPNL",
+    "account"
+  ],
+  "positions": [
+    {
+      "account": "DU5894742",
+      "conId": 902418366,
+      "localSymbol": "EW2Q6 C7770",
+      "secType": "FOP",
+      "position": -4.0,
+      "avgCost": 1248.59
+    },
+    {
+      "account": "DU5894742",
+      "conId": 797202354,
+      "localSymbol": "ESZ6 P7550",
+      "secType": "FOP",
+      "position": 2.0,
+      "avgCost": 9026.41
+    },
+    {
+      "account": "DU5894742",
+      "conId": 908125771,
+      "localSymbol": "EW2Q6 P7765",
+      "secType": "FOP",
+      "position": -1.0,
+      "avgCost": 1361.09
+    },
+    {
+      "account": "DU5894742",
+      "conId": 826452312,
+      "localSymbol": "ESZ6 C8150",
+      "secType": "FOP",
+      "position": 1.0,
+      "avgCost": 6251.41
+    },
+    {
+      "account": "DU5894742",
+      "conId": 649180671,
+      "localSymbol": "ESU6",
+      "secType": "FUT",
+      "position": 1.0,
+      "avgCost": 388314.74
+    }
+  ],
+  "flex_query": {
+    "attempted": false,
+    "reason": "FlexQuery 需 token 与 queryId 两项凭据，规格件未给定、KY 未提供；按 §4A 第2条不得代填，不猜测、不使用占位值。",
+    "required_params": [
+      "flex_token",
+      "flex_query_id"
+    ]
+  },
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_capture_env": "paper",
+  "_phase": "step6",
+  "_captured_at": "2026-08-12T23:39:40"
+}

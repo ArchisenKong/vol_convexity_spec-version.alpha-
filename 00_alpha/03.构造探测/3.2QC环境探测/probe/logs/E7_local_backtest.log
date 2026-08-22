@@ -1,0 +1,10 @@
+=== E7 · 本地回测 ===
+=== CMD: lean backtest "TR2-ENV-PROBE" ===
+--- stdout ---
+Error: Please make sure Docker is installed and running
+Visit 
+https://www.lean.io/docs/v2/lean-cli/key-concepts/troubleshooting#02-Common-Err
+ors for more information
+--- stderr ---
+--- exit code: 1 ---
+--- 耗时: 2 秒 ---

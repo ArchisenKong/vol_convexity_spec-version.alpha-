@@ -1,0 +1,11 @@
+{
+  "_probe_name": "backtest_probe_results",
+  "_probe_captured_utc": "20260818T155718Z",
+  "_probe_note": "六探测项重组结果",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "projectId": 35315786,
+    "backtestId": "7f18c4e3087eb24da17e4da8abb75e8a",
+    "results": {}
+  }
+}

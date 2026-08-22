@@ -1,0 +1,20 @@
+=== E9 · Research 环境探测（任务书外，执行人追加）===
+
+--- 事实 1：lean cloud 下无 research 子命令 ---
+lean cloud 可用子命令：backtest / live / object-store / optimize / pull / push / status
+即：云端 Research Notebook 未由 lean CLI 暴露，无 CLI 通道可测。
+
+--- 事实 2：本地 research 为 lean research，声明 requires_docker=True ---
+research.py:37  @command(cls=LeanCommand, requires_lean_config=True, requires_docker=True)
+help 原文：Run a Jupyter Lab environment locally using Docker.
+默认镜像：quantconnect/research:latest（DEFAULT_RESEARCH_IMAGE）
+
+=== CMD: lean research "TR2-ENV-PROBE" ===
+--- stdout ---
+Error: Please make sure Docker is installed and running
+Visit 
+https://www.lean.io/docs/v2/lean-cli/key-concepts/troubleshooting#02-Common-Err
+ors for more information
+--- stderr ---
+--- exit code: 1 ---
+--- 耗时: 1 秒 ---

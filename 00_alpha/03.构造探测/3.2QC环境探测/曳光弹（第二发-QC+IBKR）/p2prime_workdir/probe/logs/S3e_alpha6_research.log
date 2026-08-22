@@ -1,0 +1,47 @@
+=== P2' α-6-乙 · research 内核运行位 ===
+捕获时刻(UTC): 20260818T145648Z
+projectId = 35315786 (P2PRIME-SHOT2)
+自守: 零 push / 零 delete / 零云端文件写
+
+--- 0. 节点状态（执行前）---
+  [before] backtest  BN-1b212dcdcde815afe8432ca9c9daf1f3      busy=False usedBy='-'
+  [before] research  RN-cfd071182d13803f49be6fa37a5d8b5c      busy=True  usedBy='Archisen Kong'
+
+--- 1. research/read 会话分配（逐轮留痕）---
+  [1/4] OK  耗时 1.9s
+  会话句柄（值已遮蔽）: sessionId len=34, token len=64, nodeId=RN-cfd071182d13803f49be6fa37a5d8b5c
+
+--- 2. 内核发现 ---
+  无运行中的内核 —— 经 POST /api/kernels 起一个（Jupyter C 类标准接口）
+  kernelspec default = python3
+  POST /api/kernels -> 201
+  [OK] 内核已起（本位创建，副作用已登记）
+  内核 name=python3 state=starting conns=0
+
+--- 3. WebSocket 执行 α-6 runner ---
+  [OK] 已连接内核
+  execute_reply status=ok exec_count=0
+  stdout 落原件: alpha6_research_stdout_20260818T145648Z.txt (1494 字符)
+
+--- 4. 节点状态（执行后）---
+  [after ] backtest  BN-1b212dcdcde815afe8432ca9c9daf1f3      busy=False usedBy='-'
+  [after ] research  RN-cfd071182d13803f49be6fa37a5d8b5c      busy=True  usedBy='Archisen Kong'
+
+======================================================================
+=== α-6-乙 结果（双值并列，KD-P2-06 已采纳）===
+======================================================================
+  运行位环境指纹:
+    python   : 3.11.14 CPython
+    platform : Linux-5.15.0-187-generic-x86_64-with-glibc2.35
+    libc_ver : ['glibc', '2.35']
+  harness exit code : 0
+  harness stdout    : [harness] wrote /tmp/p2p_alpha6_kkex30yi/harness_output.json: 15 periods, 11 evaluated
+
+  byte_exact            : True
+  byte_exact_normalized : True
+  newline_profile       : {"expected": {"CR": 0, "CRLF": 0, "LF": 149}, "produced": {"CR": 0, "CRLF": 0, "LF": 149}}
+  produced   sha256     : <REDACTED-HEX>
+  normalized sha256     : <REDACTED-HEX>
+  expected   sha256     : <REDACTED-HEX>
+
+落位: D:\02 VolConvexityStrategy\【Strategy】VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC环境探测\曳光弹（第二发-QC+IBKR）\p2prime_workdir\probe\raw

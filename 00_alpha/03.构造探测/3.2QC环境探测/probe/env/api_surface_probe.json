@@ -1,0 +1,402 @@
+{
+  "organization": {
+    "id": "954877bda8b6760ae398418ce79a5500",
+    "name": "Archisen Kong",
+    "seats": 1,
+    "type": "free",
+    "credit": {
+      "movements": [],
+      "balance": 0.0
+    },
+    "products": [
+      {
+        "name": "Backtest Node",
+        "items": [
+          {
+            "productId": 30,
+            "name": "B-MICRO",
+            "quantity": 1,
+            "unitPrice": 0.0,
+            "total": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Research Node",
+        "items": [
+          {
+            "productId": 29,
+            "name": "R-MICRO",
+            "quantity": 1,
+            "unitPrice": 0.0,
+            "total": 0.0
+          }
+        ]
+      },
+      {
+        "name": "Agent Node",
+        "items": [
+          {
+            "productId": 428,
+            "name": "A-MICRO",
+            "quantity": 1,
+            "unitPrice": 0.0,
+            "total": 0.0
+          }
+        ]
+      }
+    ],
+    "data": {
+      "signedTime": null,
+      "current": false
+    },
+    "members": [
+      {
+        "id": 355369,
+        "name": "Archisen Kong",
+        "isAdmin": true,
+        "email": "kongarchisen@outlook.com"
+      }
+    ]
+  },
+  "account": {
+    "organizationId": "954877bda8b6760ae398418ce79a5500",
+    "card": "<REDACTED>",
+    "creditBalance": 0.0
+  },
+  "user": {
+    "name": "Archisen Kong",
+    "profile": "default.jpg",
+    "badge": null
+  },
+  "nodes": {
+    "backtest": [
+      {
+        "id": "BN-1b212dcdcde815afe8432ca9c9daf1f3",
+        "name": "Community B-MICRO",
+        "projectName": "",
+        "description": "1 CPU @ 3.0GHz, 7.8GB Ram",
+        "usedBy": "-",
+        "sku": "B-MICRO",
+        "busy": false,
+        "price": {
+          "monthly": 0,
+          "yearly": 0
+        },
+        "speed": 3.0,
+        "cpu": 1,
+        "ram": 7.8,
+        "assets": 100,
+        "host": null
+      }
+    ],
+    "research": [
+      {
+        "id": "RN-cfd071182d13803f49be6fa37a5d8b5c",
+        "name": "Community R-MICRO",
+        "projectName": "TR2-ENV-PROBE",
+        "description": "1 CPU @ 2.4GHz, 2GB Ram",
+        "usedBy": "Archisen Kong",
+        "sku": "R-MICRO",
+        "busy": true,
+        "price": {
+          "monthly": 0,
+          "yearly": 0
+        },
+        "speed": 2.4,
+        "cpu": 1,
+        "ram": 2.0,
+        "assets": 100,
+        "host": null
+      }
+    ],
+    "live": []
+  },
+  "project_files": [
+    {
+      "name": "research.ipynb",
+      "content": "{\"cells\":[{\"cell_type\":\"markdown\",\"metadata\":{},\"source\":[\"![QuantConnect Logo](https://cdn.quantconnect.com/web/i/icon.png)\\n\",\"<hr>\"]},{\"cell_type\":\"code\",\"execution_count\":1,\"metadata\":{},\"outputs\":[],\"source\":[\"qb = QuantBook()\\n\",\"print(\\\"probe-marker-E12\\\")\"]},{\"cell_type\":\"code\",\"execution_count\":3,\"metadata\":{},\"outputs\":[],\"source\":[\"import pandas as pd\\n\",\"qb = QuantBook()\\n\",\"df = pd.DataFrame({\\\"a\\\": range(20), \\\"b\\\": [x*1.5 for x in range(20)]})\\n\",\"display(df)\\n\",\"df.plot()\"]},{\"cell_type\":\"code\",\"execution_count\":null,\"metadata\":{},\"outputs\":[],\"source\":[\"# QuantBook Analysis Tool \\n\",\"# For more information see [https://www.quantconnect.com/docs/v2/our-platform/research/getting-started]\\n\",\"qb = QuantBook()\\n\",\"spy = qb.add_equity(\\\"SPY\\\")\\n\",\"# Locally Lean installs free sample data, to download more data please visit https://www.quantconnect.com/docs/v2/lean-cli/datasets/downloading-data \\n\",\"qb.set_start_date(2013, 10, 11)\\n\",\"history = qb.history(qb.securities.keys(), 360, Resolution.DAILY)\\n\",\"\\n\",\"# Indicator Analysis\\n\",\"bbdf = qb.indicator(BollingerBands(30, 2), spy.symbol, 360, Resolution.DAILY)\\n\",\"bbdf.drop('standarddeviation', axis=1).plot()\"]}],\"metadata\":{\"kernelspec\":{\"display_name\":\"Foundation-Py-Default\",\"language\":\"python\",\"name\":\"python3\"},\"language_info\":{\"codemirror_mode\":{\"name\":\"ipython\",\"version\":3},\"file_extension\":\".py\",\"mimetype\":\"text/x-python\",\"name\":\"python\",\"nbconvert_exporter\":\"python\",\"pygments_lexer\":\"ipython3\",\"version\":\"3.11.14\"}},\"nbformat\":4,\"nbformat_minor\":2}",
+      "modified": "2026-08-17 13:35:37",
+      "isLibrary": false
+    },
+    {
+      "name": "main.py",
+      "content": "# region imports\nfrom AlgorithmImports import *\n# endregion\n\nclass TR2ENVPROBE(QCAlgorithm):\n\n    def initialize(self):\n        # Locally Lean installs free sample data, to download more data please visit https://www.quantconnect.com/docs/v2/lean-cli/datasets/downloading-data\n        self.set_start_date(2013, 10, 7)  # Set Start Date\n        self.set_end_date(2013, 10, 11)  # Set End Date\n        self.set_cash(100000)  # Set Strategy Cash\n        self.add_equity(\"SPY\", Resolution.MINUTE)\n\n    def on_data(self, data: Slice):\n        \"\"\"on_data event is the primary entry point for your algorithm. Each new data point will be pumped in here.\n            Arguments:\n                data: Slice object keyed by symbol containing the stock data\n        \"\"\"\n        if not self.portfolio.invested:\n            self.set_holdings(\"SPY\", 1)\n            self.debug(\"Purchased Stock\")\n",
+      "modified": "2026-08-17 13:35:19",
+      "isLibrary": false
+    }
+  ],
+  "lean_environments": [
+    {
+      "id": 1,
+      "name": "Foundation Default",
+      "path": null,
+      "description": "Default core foundation for LEAN baking in the most of the popular libraries for quantitative analysis.",
+      "public": true
+    },
+    {
+      "id": 6,
+      "name": "Foundation Autogluon",
+      "path": "/Foundation-Autogluon",
+      "description": "Foundation including the Autogluon package for LLM training.",
+      "public": true
+    },
+    {
+      "id": 7,
+      "name": "Foundation Legacy",
+      "path": "/Foundation-Legacy",
+      "description": "A backwards compatability environment for libraries with outdated dependencies",
+      "public": true
+    }
+  ],
+  "backtest_475935f2": {
+    "backtestId": "475935f261165c79d347d6a311143206",
+    "projectId": 35174460,
+    "status": "Completed.",
+    "name": "env-probe-02",
+    "note": "",
+    "created": "2026-08-17 13:01:33",
+    "completed": true,
+    "progress": 1.0,
+    "result": null,
+    "error": null,
+    "stacktrace": null,
+    "runtimeStatistics": {
+      "Equity": "$101,692.74",
+      "Fees": "-$3.70",
+      "Holdings": "$101,369.72",
+      "Net Profit": "$-3.70",
+      "Probabilistic Sharpe Ratio": "67.459%",
+      "Return": "1.69 %",
+      "Unrealized": "$1,657.03",
+      "Volume": "$99,673.28"
+    },
+    "statistics": {
+      "Total Orders": "1",
+      "Average Win": "0%",
+      "Average Loss": "0%",
+      "Compounding Annual Return": "271.689%",
+      "Drawdown": "2.200%",
+      "Expectancy": "0",
+      "Start Equity": "100000",
+      "End Equity": "101692.74",
+      "Net Profit": "1.693%",
+      "Sharpe Ratio": "8.858",
+      "Sortino Ratio": "0",
+      "Probabilistic Sharpe Ratio": "67.459%",
+      "Loss Rate": "0%",
+      "Win Rate": "0%",
+      "Profit-Loss Ratio": "0",
+      "Alpha": "-0.004",
+      "Beta": "0.997",
+      "Annual Standard Deviation": "0.222",
+      "Annual Variance": "0.049",
+      "Information Ratio": "-14.715",
+      "Tracking Error": "0.001",
+      "Treynor Ratio": "1.971",
+      "Total Fees": "$3.70",
+      "Estimated Strategy Capacity": "$56000000.00",
+      "Lowest Capacity Asset": "SPY R735QTJ8XC9X",
+      "Portfolio Turnover": "19.94%",
+      "Drawdown Recovery": "3"
+    },
+    "totalPerformance": {
+      "tradeStatistics": {
+        "startDateTime": null,
+        "endDateTime": null,
+        "totalNumberOfTrades": 0,
+        "numberOfWinningTrades": 0,
+        "numberOfLosingTrades": 0,
+        "totalProfitLoss": "0",
+        "totalProfit": "0",
+        "totalLoss": "0",
+        "largestProfit": "0",
+        "largestLoss": "0",
+        "averageProfitLoss": "0",
+        "averageProfit": "0",
+        "averageLoss": "0",
+        "averageTradeDuration": "00:00:00",
+        "averageWinningTradeDuration": "00:00:00",
+        "averageLosingTradeDuration": "00:00:00",
+        "medianTradeDuration": "00:00:00",
+        "medianWinningTradeDuration": "00:00:00",
+        "medianLosingTradeDuration": "00:00:00",
+        "maxConsecutiveWinningTrades": 0,
+        "maxConsecutiveLosingTrades": 0,
+        "profitLossRatio": "0",
+        "winLossRatio": "0",
+        "winRate": "0",
+        "lossRate": "0",
+        "averageMAE": "0",
+        "averageMFE": "0",
+        "largestMAE": "0",
+        "largestMFE": "0",
+        "maximumClosedTradeDrawdown": "0",
+        "maximumIntraTradeDrawdown": "0",
+        "profitLossStandardDeviation": "0",
+        "profitLossDownsideDeviation": "0",
+        "profitFactor": "0",
+        "sharpeRatio": "0",
+        "sortinoRatio": "0",
+        "profitToMaxDrawdownRatio": "0",
+        "maximumEndTradeDrawdown": "0",
+        "averageEndTradeDrawdown": "0",
+        "maximumDrawdownDuration": "00:00:00",
+        "totalFees": "0"
+      },
+      "portfolioStatistics": {
+        "averageWinRate": "0",
+        "averageLossRate": "0",
+        "profitLossRatio": "0",
+        "winRate": "0",
+        "lossRate": "0",
+        "expectancy": "0",
+        "startEquity": "100000",
+        "endEquity": "101692.7448",
+        "compoundingAnnualReturn": "2.7169",
+        "drawdown": "0.022",
+        "totalNetProfit": "0.0169",
+        "sharpeRatio": "8.8580",
+        "probabilisticSharpeRatio": "0.6746",
+        "sortinoRatio": "0",
+        "alpha": "-0.0042",
+        "beta": "0.9967",
+        "annualStandardDeviation": "0.2218",
+        "annualVariance": "0.0492",
+        "informationRatio": "-14.7151",
+        "trackingError": "0.0007",
+        "treynorRatio": "1.9713",
+        "portfolioTurnover": "0.1994",
+        "valueAtRisk99": "-0.028",
+        "valueAtRisk95": "-0.019",
+        "drawdownRecovery": "3"
+      },
+      "closedTrades": []
+    }
+  },
+  "backtest_7cb12c4c": {
+    "backtestId": "7cb12c4cd8b12f34094a3835336b3ebc",
+    "projectId": 35174460,
+    "status": "Completed.",
+    "name": "Smooth Light Brown Anguilline",
+    "note": "",
+    "created": "2026-08-17 13:14:04",
+    "completed": true,
+    "progress": 1.0,
+    "result": null,
+    "error": null,
+    "stacktrace": null,
+    "runtimeStatistics": {
+      "Equity": "$101,692.74",
+      "Fees": "-$3.70",
+      "Holdings": "$101,369.72",
+      "Net Profit": "$-3.70",
+      "Probabilistic Sharpe Ratio": "67.459%",
+      "Return": "1.69 %",
+      "Unrealized": "$1,657.03",
+      "Volume": "$99,673.28"
+    },
+    "statistics": {
+      "Total Orders": "1",
+      "Average Win": "0%",
+      "Average Loss": "0%",
+      "Compounding Annual Return": "271.689%",
+      "Drawdown": "2.200%",
+      "Expectancy": "0",
+      "Start Equity": "100000",
+      "End Equity": "101692.74",
+      "Net Profit": "1.693%",
+      "Sharpe Ratio": "8.858",
+      "Sortino Ratio": "0",
+      "Probabilistic Sharpe Ratio": "67.459%",
+      "Loss Rate": "0%",
+      "Win Rate": "0%",
+      "Profit-Loss Ratio": "0",
+      "Alpha": "-0.004",
+      "Beta": "0.997",
+      "Annual Standard Deviation": "0.222",
+      "Annual Variance": "0.049",
+      "Information Ratio": "-14.715",
+      "Tracking Error": "0.001",
+      "Treynor Ratio": "1.971",
+      "Total Fees": "$3.70",
+      "Estimated Strategy Capacity": "$56000000.00",
+      "Lowest Capacity Asset": "SPY R735QTJ8XC9X",
+      "Portfolio Turnover": "19.94%",
+      "Drawdown Recovery": "3"
+    },
+    "totalPerformance": {
+      "tradeStatistics": {
+        "startDateTime": null,
+        "endDateTime": null,
+        "totalNumberOfTrades": 0,
+        "numberOfWinningTrades": 0,
+        "numberOfLosingTrades": 0,
+        "totalProfitLoss": "0",
+        "totalProfit": "0",
+        "totalLoss": "0",
+        "largestProfit": "0",
+        "largestLoss": "0",
+        "averageProfitLoss": "0",
+        "averageProfit": "0",
+        "averageLoss": "0",
+        "averageTradeDuration": "00:00:00",
+        "averageWinningTradeDuration": "00:00:00",
+        "averageLosingTradeDuration": "00:00:00",
+        "medianTradeDuration": "00:00:00",
+        "medianWinningTradeDuration": "00:00:00",
+        "medianLosingTradeDuration": "00:00:00",
+        "maxConsecutiveWinningTrades": 0,
+        "maxConsecutiveLosingTrades": 0,
+        "profitLossRatio": "0",
+        "winLossRatio": "0",
+        "winRate": "0",
+        "lossRate": "0",
+        "averageMAE": "0",
+        "averageMFE": "0",
+        "largestMAE": "0",
+        "largestMFE": "0",
+        "maximumClosedTradeDrawdown": "0",
+        "maximumIntraTradeDrawdown": "0",
+        "profitLossStandardDeviation": "0",
+        "profitLossDownsideDeviation": "0",
+        "profitFactor": "0",
+        "sharpeRatio": "0",
+        "sortinoRatio": "0",
+        "profitToMaxDrawdownRatio": "0",
+        "maximumEndTradeDrawdown": "0",
+        "averageEndTradeDrawdown": "0",
+        "maximumDrawdownDuration": "00:00:00",
+        "totalFees": "0"
+      },
+      "portfolioStatistics": {
+        "averageWinRate": "0",
+        "averageLossRate": "0",
+        "profitLossRatio": "0",
+        "winRate": "0",
+        "lossRate": "0",
+        "expectancy": "0",
+        "startEquity": "100000",
+        "endEquity": "101692.7448",
+        "compoundingAnnualReturn": "2.7169",
+        "drawdown": "0.022",
+        "totalNetProfit": "0.0169",
+        "sharpeRatio": "8.8580",
+        "probabilisticSharpeRatio": "0.6746",
+        "sortinoRatio": "0",
+        "alpha": "-0.0042",
+        "beta": "0.9967",
+        "annualStandardDeviation": "0.2218",
+        "annualVariance": "0.0492",
+        "informationRatio": "-14.7151",
+        "trackingError": "0.0007",
+        "treynorRatio": "1.9713",
+        "portfolioTurnover": "0.1994",
+        "valueAtRisk99": "-0.028",
+        "valueAtRisk95": "-0.019",
+        "drawdownRecovery": "3"
+      },
+      "closedTrades": []
+    }
+  }
+}

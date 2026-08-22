@@ -1,0 +1,10 @@
+{
+  "dividend_yield": 0.0,
+  "risk_free_rate": 0.04,
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_kd_supplied": true,
+  "_date": "2026-08-12",
+  "_basis": "q=0：期货标的本身不派发股息，无分红收益率。r=0.04：20260812 一年期美债收益率。待KD复核——本值未解决§1登记之待答项（期货标的下 Black-76 q=r 等价 vs q=0 两种读法之取舍），仅为链路贯通所需之临时赋值。",
+  "_pending_kd_review": true,
+  "_transcription_note": "值与依据均由 KY 给定（20260812），执行侧仅作原样转录，未代填、未改写。KY 授权语＝「照抄」。"
+}

@@ -1,0 +1,11 @@
+=== P2' X-1 载体件构建 · 本地无损性自证 ===
+  x1_synth.py           6227 B  sha256=4ebef1110cc49db88dd393b1b60e45294b2e00abdcefaa2bd8b83f6577edd8fa
+       来源: x1_synth.py（verify/ 面，逐字节搬运，零改写）
+
+  -> cloud_payload_x1.py  (4824 chars) 上限 32000：在线内
+
+=== 无损性自证 ===
+  x1_synth.py        还原    6227 B  逐字节相等
+
+无损性自证: PASS
+A4' 自查: QuantConnect 字面命中 0

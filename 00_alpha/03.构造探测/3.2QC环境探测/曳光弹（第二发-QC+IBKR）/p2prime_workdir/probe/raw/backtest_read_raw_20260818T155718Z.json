@@ -1,0 +1,167 @@
+{
+  "_probe_name": "backtest_read_raw_20260818T155718Z",
+  "_probe_wrapped_post_hoc": true,
+  "_probe_wrap_note": "本件原为直接落盘之外部环境响应原件，未带 D-3 标记；封包前补包装，原载荷逐字保留于 _probe_payload",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "backtest": {
+      "note": null,
+      "name": "p2prime-shot2-probe-20260818T155718Z",
+      "organizationId": "954877bda8b6760ae398418ce79a5500",
+      "projectId": 35315786,
+      "completed": true,
+      "optimizationId": null,
+      "backtestId": "7f18c4e3087eb24da17e4da8abb75e8a",
+      "tradeableDates": 0,
+      "researchGuide": {
+        "minutes": 9,
+        "backtestCount": 3,
+        "parameters": 162
+      },
+      "backtestStart": "2026-08-18 15:57:36",
+      "backtestEnd": "2026-08-18 15:57:36",
+      "created": "2026-08-18 15:57:36",
+      "snapshotId": 35319331,
+      "status": "Runtime Error",
+      "error": "2020-01-06 00:00:00 During the algorithm initialization, the following exception has occurred: Value cannot be null. (Parameter &#039;input&#039;) in CloudDataPermissionManager.cs:line 92 Value cannot be null. (Parameter &#039;input&#039;)",
+      "stacktrace": "Value cannot be null. (Parameter 'input') in CloudDataPermissionManager.cs:line 92 Value cannot be null. (Parameter 'input')",
+      "progress": 1,
+      "hasInitializeError": true,
+      "charts": {
+        "Strategy Equity": {
+          "name": "Strategy Equity"
+        },
+        "Benchmark": {
+          "name": "Benchmark"
+        },
+        "Portfolio Margin": {
+          "name": "Portfolio Margin"
+        },
+        "Assets Sales Volume": {
+          "name": "Assets Sales Volume"
+        }
+      },
+      "parameterSet": [],
+      "rollingWindow": null,
+      "runtimeStatistics": {
+        "Equity": "$100,000.00",
+        "Fees": "-$0.00",
+        "Holdings": "$0.00",
+        "Net Profit": "$0.00",
+        "P2P_A2SET_000": "{\"result\":{\"P2PATH1\":{\"add\":\"ok\",\"rows\":4,\"symbol\":\"P2PATH1.P2PSyntheticData\"},\"P2PATH2\":{\"add\":\"ok\",\"rows\":4,\"symbol\":\"P2PATH2.P2PSyntheticData\"},\"P2PATH3\":{\"add\":\"ok\",\"rows\":4,\"s",
+        "P2P_A2SET_001": "ymbol\":\"P2PATH3.P2PSyntheticData\"},\"deterministic\":true,\"n_paths\":3,\"source\":\"自造确定性序列\"},\"status\":\"ok\"}",
+        "P2P_A2SET_HDR": "2/282",
+        "P2P_A3LED_000": "{\"result\":{\"_disclaimer\":\"占位表达，非判据；零阈值、零分桶法、零路径生成器规格\",\"if_cash\":{\"iface\":\"present\",\"value\":100000.0},\"if_cashbook\":{\"iface\":\"present\",\"value\":1},\"if_holdings\":{\"iface\":\"present\",\"v",
+        "P2P_A3LED_001": "alue\":3},\"if_totalfees\":{\"iface\":\"present\",\"value\":0.0},\"if_totalportfolio\":{\"iface\":\"present\",\"value\":100000.0},\"if_transactions\":{\"iface\":\"present\",\"value\":0},\"q_coverage_placeho",
+        "P2P_A3LED_002": "lder\":{\"iface\":\"present\",\"value\":0.0},\"q_identity_presence_placeholder\":{\"iface\":\"present\",\"value\":3},\"q_lefttail_ramp_placeholder\":{\"iface\":\"present\",\"value\":0},\"q_netfeed_placeho",
+        "P2P_A3LED_003": "lder\":{\"iface\":\"present\",\"value\":100000.0},\"q_righttail_gap_placeholder\":{\"iface\":\"present\",\"value\":0.0}},\"status\":\"ok\"}",
+        "P2P_A3LED_HDR": "4/660",
+        "Probabilistic Sharpe Ratio": "0%",
+        "Return": "0.00 %",
+        "Unrealized": "$0.00",
+        "Volume": "$0.00"
+      },
+      "statistics": {},
+      "totalPerformance": {
+        "tradeStatistics": {
+          "startDateTime": null,
+          "endDateTime": null,
+          "totalNumberOfTrades": 0,
+          "numberOfWinningTrades": 0,
+          "numberOfLosingTrades": 0,
+          "totalProfitLoss": "0",
+          "totalProfit": "0",
+          "totalLoss": "0",
+          "largestProfit": "0",
+          "largestLoss": "0",
+          "averageProfitLoss": "0",
+          "averageProfit": "0",
+          "averageLoss": "0",
+          "averageTradeDuration": "00:00:00",
+          "averageWinningTradeDuration": "00:00:00",
+          "averageLosingTradeDuration": "00:00:00",
+          "medianTradeDuration": "00:00:00",
+          "medianWinningTradeDuration": "00:00:00",
+          "medianLosingTradeDuration": "00:00:00",
+          "maxConsecutiveWinningTrades": 0,
+          "maxConsecutiveLosingTrades": 0,
+          "profitLossRatio": "0",
+          "winLossRatio": "0",
+          "winRate": "0",
+          "lossRate": "0",
+          "averageMAE": "0",
+          "averageMFE": "0",
+          "largestMAE": "0",
+          "largestMFE": "0",
+          "maximumClosedTradeDrawdown": "0",
+          "maximumIntraTradeDrawdown": "0",
+          "profitLossStandardDeviation": "0",
+          "profitLossDownsideDeviation": "0",
+          "profitFactor": "0",
+          "sharpeRatio": "0",
+          "sortinoRatio": "0",
+          "profitToMaxDrawdownRatio": "0",
+          "maximumEndTradeDrawdown": "0",
+          "averageEndTradeDrawdown": "0",
+          "maximumDrawdownDuration": "00:00:00",
+          "totalFees": "0"
+        },
+        "portfolioStatistics": {
+          "averageWinRate": "0",
+          "averageLossRate": "0",
+          "profitLossRatio": "0",
+          "winRate": "0",
+          "lossRate": "0",
+          "expectancy": "0",
+          "startEquity": "0",
+          "endEquity": "0",
+          "compoundingAnnualReturn": "0",
+          "drawdown": "0",
+          "totalNetProfit": "0",
+          "sharpeRatio": "0",
+          "probabilisticSharpeRatio": "0",
+          "sortinoRatio": "0",
+          "alpha": "0",
+          "beta": "0",
+          "annualStandardDeviation": "0",
+          "annualVariance": "0",
+          "informationRatio": "0",
+          "trackingError": "0",
+          "treynorRatio": "0",
+          "portfolioTurnover": "0",
+          "valueAtRisk99": "0",
+          "valueAtRisk95": "0",
+          "drawdownRecovery": "0"
+        },
+        "closedTrades": []
+      },
+      "nodeName": "Community B-MICRO",
+      "outOfSampleMaxEndDate": "2026-05-20T00:00:00Z",
+      "outOfSampleDays": 90,
+      "analysis": [
+        {
+          "name": "PortfolioValueIsNotPositiveAnalysis",
+          "issue": "The portfolio equity dropped to zero or below.",
+          "sample": true,
+          "solutions": [
+            "Add extended market hours or reduce the data resolution to potentially reduce the impact of gaps between bars.",
+            "Reduce position sizes.",
+            "If you disabled margin calls, re-enable them. Margin calls may reduce your holdings enough to avoid the error.",
+            "Investigate if it's a data issue with one of the portfolio holdings that's cause the portfolio value to drop to <= 0."
+          ]
+        },
+        {
+          "name": "StatisticalSignificanceOfDailyReturnsAnalysis",
+          "issue": "The distribution of the strategy's daily returns in excess of the benchmark's daily returns has a p-value above 0.05. Therefore, we fail to reject the null hypothesis that the mean of this distribution is above zero.",
+          "sample": {
+            "pValue": 0.5
+          },
+          "solutions": [
+            "Try adjusting the trading rules and/or the universe to get a strategy that outperforms the benchmark."
+          ]
+        }
+      ]
+    },
+    "success": true
+  }
+}

@@ -1,0 +1,29 @@
+=== 取回 runtimeStatistics ===
+  projectId=35315786 backtestId=a0013dfac99cda0307c6661f6bce5d88
+  原件落盘: rt_read_raw_20260818T153955Z.json
+  status=Completed. completed=True hasInitializeError=False error=
+
+--- 通道开销材料（α-4）---
+  runtimeStatistics 键总数 : 32
+  其中 P2P_* 键数          : 24
+  P2P_* 单值长度 min/max   : 1 / 1600
+  P2P_* 载荷总字节         : 4955
+  非 P2P 键（QC 自带）      : ['Equity', 'Fees', 'Holdings', 'Net Profit', 'Probabilistic Sharpe Ratio', 'Return', 'Unrealized', 'Volume']
+
+--- RTLIM 单值上限实证 ---
+  写入  100 字符 -> 回读  100 字符  完整
+  写入  200 字符 -> 回读  200 字符  完整
+  写入  400 字符 -> 回读  400 字符  完整
+  写入  800 字符 -> 回读  800 字符  完整
+  写入 1600 字符 -> 回读 1600 字符  完整
+
+--- 分片重组 ---
+  A3D      HDR=2/185        实收 2片/  185字符  重组=OK
+  A6C      HDR=3/371        实收 3片/  371字符  重组=OK
+  ENVC     HDR=2/181        实收 2片/  181字符  重组=OK
+  LIMPROBE HDR=None         实收 4片/ 1500字符  重组=**失败**
+  RTLIM    HDR=1/102        实收 1片/  102字符  重组=OK
+  X1C      HDR=6/991        实收 6片/  991字符  重组=OK
+
+  凭据残留复扫: 零残留
+  落位: D:\02 VolConvexityStrategy\【Strategy】VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC环境探测\曳光弹（第二发-QC+IBKR）\p2prime_workdir\probe\raw

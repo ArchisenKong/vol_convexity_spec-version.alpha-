@@ -1,0 +1,21 @@
+{
+  "_probe_name": "cloud_project_created",
+  "_probe_captured_utc": "20260818T142235Z",
+  "_probe_note": "本发云端项目创建留痕；qc_auto_files 为 QC 建项目时自带，非本位上传",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "projectId": 35315786,
+    "name": "P2PRIME-SHOT2",
+    "qc_auto_files": [
+      {
+        "name": "main.py",
+        "chars": 406
+      },
+      {
+        "name": "research.ipynb",
+        "chars": 1286
+      }
+    ]
+  },
+  "_probe_post_redaction_leak_scan_hits": 0
+}

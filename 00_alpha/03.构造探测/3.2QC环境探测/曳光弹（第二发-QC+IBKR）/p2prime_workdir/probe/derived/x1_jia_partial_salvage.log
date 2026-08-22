@@ -1,0 +1,20 @@
+残片重组: 5 片 / 2000 字符（期望 20 片 / 7883 字符）
+
+=== 可救出之字段（正则抽取，非完整 JSON）===
+  engine_sha256            ['d88a955e45dddaa5a11f02c9237cb5e178bdfca6335a670ecdf21414dca682cf']
+  libm_fingerprint_digest  ['6494f0068d8f5f1da5da22964d9f842d8672358436eca3b72ea9e1f6580bf789']
+  platform                 ['Linux-6.8.0-52-generic-x86_64-with-glibc2.35', 'Linux-6.8.0-52-generic-x86_64-with-glibc2.35']
+  python_compiler          ['GCC 11.2.0']
+  python_version           ['3.11.14', '3.11.14']
+  processor                ['x86_64']
+  exec_mode                ['subprocess']
+
+  libm 探针逐条:
+    erf(0.7)               0x1.5b08c21171646p-1
+    exp(-0.5)              0x1.368b2fc6f960ap-1
+    exp(1)                 0x1.5bf0a8b145769p+1
+    log(2)                 0x1.62e42fefa39efp-1
+    pow(1.0000001,500)     0x1.000346e1b915ap+0
+    sqrt(2)                0x1.6a09e667f3bcdp+0
+
+  per_unit 逐位输出: **未落入残片（被 10KB 截断）**

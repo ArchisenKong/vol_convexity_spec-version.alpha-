@@ -1,0 +1,47 @@
+{
+  "_probe_name": "backtest_upload_fidelity",
+  "_probe_captured_utc": "20260818T155718Z",
+  "_probe_note": "上传回读保真（双值并列）",
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_probe_payload": {
+    "projectId": 35315786,
+    "files": {
+      "cloud_payload_engine.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "030c31fe2bb5cd547df08260ce9630593afdaa6e977cf65b6a9efd82035b2c5e",
+        "cloud_sha256": "030c31fe2bb5cd547df08260ce9630593afdaa6e977cf65b6a9efd82035b2c5e"
+      },
+      "cloud_payload_gl06.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "fdcc074df24002b609a8b0bd2b4479d9716c666fd1111ee5aa088e4090e096ce",
+        "cloud_sha256": "fdcc074df24002b609a8b0bd2b4479d9716c666fd1111ee5aa088e4090e096ce"
+      },
+      "cloud_payload_x1.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "eebccfbea2f2d484c4e0e72c2b3771e20c94d90833382402cef619c72cd1f5f9",
+        "cloud_sha256": "eebccfbea2f2d484c4e0e72c2b3771e20c94d90833382402cef619c72cd1f5f9"
+      },
+      "cloud_runner_alpha6.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "0ff284d78671ce76a8bb6e8af947366684e8d8cc87cc8c4d830754812b0943c1",
+        "cloud_sha256": "0ff284d78671ce76a8bb6e8af947366684e8d8cc87cc8c4d830754812b0943c1"
+      },
+      "cloud_runner_x1.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "238e61e065eae6137e83a33ba87360cfc68466ac15c5aab37158e8eb8509ecc7",
+        "cloud_sha256": "238e61e065eae6137e83a33ba87360cfc68466ac15c5aab37158e8eb8509ecc7"
+      },
+      "main.py": {
+        "byte_exact_raw": true,
+        "byte_exact_normalized": true,
+        "local_sha256": "aca59e098f6624f83cfeabe86d4d264cec5879165cf09d6385865b92d31db146",
+        "cloud_sha256": "aca59e098f6624f83cfeabe86d4d264cec5879165cf09d6385865b92d31db146"
+      }
+    }
+  }
+}

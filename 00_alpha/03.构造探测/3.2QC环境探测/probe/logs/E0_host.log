@@ -1,0 +1,71 @@
+=== CMD: cmd //c ver ===
+--- stdout ---
+
+Microsoft Windows [Version 10.0.26200.8875]
+--- stderr ---
+--- exit code: 0 ---
+
+=== CMD: python --version ===
+--- stdout ---
+Python 3.10.11
+--- stderr ---
+--- exit code: 0 ---
+
+=== CMD: python -c import sys;print(sys.executable) ===
+--- stdout ---
+C:\Users\KYJ\AppData\Local\Programs\Python\Python310\python.exe
+--- stderr ---
+--- exit code: 0 ---
+
+=== CMD: pip --version ===
+--- stdout ---
+pip 23.0.1 from C:\Users\KYJ\AppData\Local\Programs\Python\Python310\lib\site-packages\pip (python 3.10)
+--- stderr ---
+--- exit code: 0 ---
+
+=== CMD: docker --version ===
+--- stdout ---
+--- stderr ---
+environment: line 23: docker: command not found
+--- exit code: 127 ---
+
+=== CMD: docker info ===
+--- stdout ---
+--- stderr ---
+environment: line 22: docker: command not found
+--- exit code: 127 ---
+
+=== CMD: where.exe docker ===
+--- stdout ---
+--- stderr ---
+INFO: Could not find files for the given pattern(s).
+--- exit code: 1 ---
+
+=== CMD: df -h /d /c ===
+--- stdout ---
+Filesystem      Size  Used Avail Use% Mounted on
+D:              702G  283G  419G  41% /d
+C:              250G  155G   96G  62% /c
+--- stderr ---
+--- exit code: 0 ---
+
+--- ls docker desktop paths ---
+ls: cannot access '/c/Program Files/Docker': No such file or directory
+/c/ProgramData/DockerDesktop
+=== CMD: ls -la /c/ProgramData/DockerDesktop ===
+total 40
+drwxr-xr-x 1 KYJ 197609    0 May  6 21:39 .
+drwxr-xr-x 1 KYJ 197609    0 May  5 21:09 ..
+-rw-r--r-- 1 KYJ 197609 2076 Nov 14  2025 install-cli-log-admin.0.txt
+-rw-r--r-- 1 KYJ 197609 4579 May  6 21:39 install-cli-log-admin.txt
+-rw-r--r-- 1 KYJ 197609 4166 Nov 14  2025 install-log-admin.0.txt
+-rw-r--r-- 1 KYJ 197609 1036 May  6 21:39 install-log-admin.1.txt
+-rw-r--r-- 1 KYJ 197609 3262 May  6 21:39 install-log-admin.txt
+
+=== CMD: ls -d /c/Users/KYJ/AppData/Local/Docker /c/Program Files/Docker Desktop ===
+/c/Users/KYJ/AppData/Local/Docker
+ls: cannot access '/c/Program Files/Docker Desktop': No such file or directory
+=== CMD (PowerShell): Get-Command docker ===
+ERROR: The term 'docker' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+=== CMD (PowerShell): Get-Service *docker* ===
+(no matching service)

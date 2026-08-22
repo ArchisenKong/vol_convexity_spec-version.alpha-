@@ -1,0 +1,36 @@
+=== E15 · Research 大体积输出是否回传（任务书外，执行人追加）===
+时刻（本机 UTC）: Mon Aug 17 13:33:40 UTC 2026
+背景：执行人报告已在网页端 Research 新增 cell 并执行，产生 DataFrame 表格与 matplotlib 图输出
+
+--- pull 前 sha256 / 字节数（E12 基线）---
+dc7807219b8108f297657e38bf218513db81f97fe8435d5889ab38411f325c45 *TR2-ENV-PROBE/research.ipynb
+1312 TR2-ENV-PROBE/research.ipynb
+
+=== CMD: lean cloud pull --project "TR2-ENV-PROBE" ===
+[1/1] Pulling 'TR2-ENV-PROBE'
+Successfully pulled 'TR2-ENV-PROBE/research.ipynb'
+(exit 0)
+
+--- pull 后 sha256 / 字节数 ---
+57abf49f9d6e1d9e87f33ed4c553c7c972993c6ba3470bd9d878ffdd4d196163 *TR2-ENV-PROBE/research.ipynb
+1544 TR2-ENV-PROBE/research.ipynb
+
+--- outputs 字段全部实例 ---
+"outputs":[]
+"outputs":[]
+"outputs":[]
+
+--- execution_count 字段全部实例 ---
+"execution_count":1
+"execution_count":null
+"execution_count":null
+
+--- 输出类特征字符串命中计数 ---
+  image/png : 0
+  text/html : 0
+  dataframe : 1
+  DataFrame : 1
+  display_data : 0
+  execute_result : 0
+  stream : 0
+  base64 : 0

@@ -1,0 +1,16 @@
+=== 原件字段面盘点（F1-18：pydantic 丢字段，故直取裸 API）===
+  backtest 顶层键 (28): ['analysis', 'backtestEnd', 'backtestId', 'backtestStart', 'charts', 'completed', 'created', 'error', 'hasInitializeError', 'name', 'nodeName', 'note', 'optimizationId', 'organizationId', 'outOfSampleDays', 'outOfSampleMaxEndDate', 'parameterSet', 'progress', 'projectId', 'researchGuide', 'rollingWindow', 'runtimeStatistics', 'snapshotId', 'stacktrace', 'statistics', 'status', 'totalPerformance', 'tradeableDates']
+
+[FAIL] backtests/read/log {'start': 0, 'end': 99999999}
+       RequestFailedError: Required parameter query is missing.
+
+[FAIL] backtests/read/log {'start': 0}
+       RequestFailedError: Required parameter end is missing. It must be a valid timestamp.
+
+[FAIL] backtests/read/log {'start': 0, 'format': 'json'}
+       RequestFailedError: Required parameter end is missing. It must be a valid timestamp.
+
+[OK  ] backtests/read/logs {'start': 0}
+       键: ['backtest', 'success']
+
+=== 日志原件落盘: backtest_logs_full_20260818T153037Z.txt (0 行) ===

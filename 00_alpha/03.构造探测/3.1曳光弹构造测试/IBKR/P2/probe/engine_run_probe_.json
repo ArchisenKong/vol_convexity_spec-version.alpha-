@@ -1,0 +1,63 @@
+{
+  "lot": {
+    "lot_id": "P2_ES_FOP_001",
+    "instrument_class": "american_option",
+    "exercise_style": "american",
+    "option_type": "put",
+    "spot": 7767.75,
+    "strike": 7770.0,
+    "implied_vol": 0.12129167525537059,
+    "valuation_date": "2026-08-12",
+    "expiry": "2026-08-13",
+    "risk_free_rate": 0.04,
+    "dividend_yield": 0.0,
+    "multiplier": 50,
+    "quantity": 1,
+    "side": "short"
+  },
+  "result": {
+    "lot_id": "P2_ES_FOP_001",
+    "instrument_class": "american_option",
+    "exercise_style": "american",
+    "route_id": "american_crr_binomial",
+    "computability_status": "computed_with_open_dimensions",
+    "unstated_dimensions_hit": [
+      "day_count_convention"
+    ],
+    "per_unit": {
+      "value": 20.440666070483793,
+      "delta": -0.5116431147277636,
+      "gamma": 0.008133758876300128,
+      "vega": 162.13525184197763,
+      "theta": -3450.2622901284494,
+      "rho": -9.470648053593322
+    },
+    "per_lot": {
+      "value": -1022.0333035241897,
+      "delta": 25.58215573638818,
+      "gamma": -0.4066879438150064,
+      "vega": -8106.762592098882,
+      "theta": 172513.11450642248,
+      "rho": 473.5324026796661
+    },
+    "early_exercise_premium": {
+      "per_unit": 0.048061131722054284,
+      "per_lot": -2.403056586102714
+    },
+    "lattice_diagnostics": {
+      "n_exercise_nodes": 54514,
+      "max_exercise_excess": 0.0017030135125537527,
+      "european_mode_n_exercise_nodes": 0,
+      "european_mode_value": 20.39260493876174,
+      "crr_steps": 500
+    }
+  },
+  "kd_params_basis": "q=0：期货标的本身不派发股息，无分红收益率。r=0.04：20260812 一年期美债收益率。待KD复核——本值未解决§1登记之待答项（期货标的下 Black-76 q=r 等价 vs q=0 两种读法之取舍），仅为链路贯通所需之临时赋值。",
+  "kd_params_pending_review": true,
+  "ib_model_optPrice": 23.1965739539869,
+  "residual_engine_minus_ib": -2.755907883503106,
+  "_data_source": "external_probe_NOT_FOR_ENTITY",
+  "_capture_env": "paper",
+  "_phase": "step4",
+  "_captured_at": "2026-08-12T22:49:08"
+}

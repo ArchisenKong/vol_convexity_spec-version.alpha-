@@ -1,0 +1,12 @@
+=== E6 · 云端回测触发与结果读取 ===
+=== CMD: lean cloud backtest "TR2-ENV-PROBE" --name "env-probe-01" ===
+--- 触发时刻（本机 UTC）: Fri Aug 14 15:07:08 UTC 2026 ---
+Started compiling project 'TR2-ENV-PROBE'
+Build Request Successful for Project ID: 35174460, with CompileID: 
+35c977ee71b3b3d7aea586f172f9eebc-6bfce1f6e41198e9685fe39991f528b0, Lean 
+Version: 2.5.0.0.18000
+Successfully compiled project 'TR2-ENV-PROBE'
+Error: Please upgrade to paid account to use the API and other local features.
+--- exit code: 1 ---
+--- 耗时: 5 秒 ---
+--- 结束时刻（本机 UTC）: Fri Aug 14 15:07:13 UTC 2026 ---

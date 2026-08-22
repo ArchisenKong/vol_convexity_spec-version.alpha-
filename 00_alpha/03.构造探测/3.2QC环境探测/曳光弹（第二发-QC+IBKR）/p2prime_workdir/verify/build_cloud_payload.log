@@ -1,0 +1,28 @@
+=== P2' 云端载体格式变换 · 本地无损性自证 ===
+零网络、零外部接触。
+
+=== 载体组: engine ===
+  engine.py                    29085 B  ext=.py    白名单=是   锚值=一致
+  -> cloud_payload_engine.py  (17605 B / 17374 chars, ext=.py 在白名单) 上限 32000：在线内
+
+=== 载体组: gl06 ===
+  gl06_input_schema.md         13748 B  ext=.md    白名单=否   锚值=一致
+  gl06_ledger_input.json        2266 B  ext=.json  白名单=否   锚值=一致
+  gl06_harness.py               3710 B  ext=.py    白名单=是   锚值=一致
+  gl06_harness_output.json      4159 B  ext=.json  白名单=否   锚值=一致
+  -> cloud_payload_gl06.py  (16551 B / 16320 chars, ext=.py 在白名单) 上限 32000：在线内
+
+==================================================================
+=== 无损性自证（还原 vs 原件，逐字节）===
+==================================================================
+  engine.py                  [engine]  还原   29085 B  逐字节相等
+  gl06_input_schema.md       [gl06]  还原   13748 B  逐字节相等
+  gl06_ledger_input.json     [gl06]  还原    2266 B  逐字节相等
+  gl06_harness.py            [gl06]  还原    3710 B  逐字节相等
+  gl06_harness_output.json   [gl06]  还原    4159 B  逐字节相等
+
+无损性自证: ALL PASS —— 变换可逆，云端可还原原件字节
+
+=== A4' 自查：生成件内 QuantConnect 字面命中数 ===
+  cloud_payload_engine.py        命中 0
+  cloud_payload_gl06.py          命中 0

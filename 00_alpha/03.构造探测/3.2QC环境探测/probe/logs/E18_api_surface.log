@@ -1,0 +1,115 @@
+=== E18 Â· lean åº“ API é¢æ¢æµ‹ï¼ˆä»»åŠ¡ä¹¦å¤–ï¼Œæ‰§è¡Œäººè¿½åŠ ï¼‰===
+æ—¶åˆ»ï¼ˆæœ¬æœº UTCï¼‰: Mon Aug 17 13:52:04 UTC 2026
+=== CMD: python ../probe/tools/api_surface_probe.py ï¼ˆcwd=qc-workspaceï¼‰===
+--- stdout ---
+=== E18 ¡¤ lean ¿â API ÃæÌ½²â ===
+lean ¿âÂ·¾¶: lean.container
+PROJECT_ID = 35174460
+ORG_ID     = 954877bda8b6760ae398418ce79a5500
+
+======================================================================
+=== organization_client.get(ORG_ID) ¡ª ²éµµÎ»/¶©ÔÄ
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    id
+    name
+    seats
+    type
+    credit
+    products
+    data
+    members
+
+======================================================================
+=== account_client.get_organization(ORG_ID) ¡ª ²éÕË»§
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    organizationId
+    card
+    creditBalance
+
+======================================================================
+=== user_client.get_info(ORG_ID) ¡ª ²éÓÃ»§
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    name
+    profile
+    badge
+
+======================================================================
+=== node_client.get_all(ORG_ID) ¡ª ²é½Úµã/Åä¶î
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    backtest
+    research
+    live
+
+======================================================================
+=== file_client.get_all(35174460) ¡ª ¶ÁÔÆ¶ËÏîÄ¿ÎÄ¼ş
+======================================================================
+[OK] ·µ»Ø list£¬2 Ïî
+--- ¶¥²ã¼ü ---
+    name
+    content
+    modified
+    isLibrary
+
+======================================================================
+=== lean_client.environments() ¡ª ²é¿ÉÓÃ LEAN »·¾³
+======================================================================
+[OK] ·µ»Ø list£¬3 Ïî
+--- ¶¥²ã¼ü ---
+    id
+    name
+    path
+    description
+    public
+
+======================================================================
+=== backtest_client.get(35174460, 475935f2...) ¡ª E11 CLI ´¥·¢ env-probe-02
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    backtestId
+    projectId
+    status
+    name
+    note
+    created
+    completed
+    progress
+    result
+    error
+    stacktrace
+    runtimeStatistics
+    statistics
+    totalPerformance
+
+======================================================================
+=== backtest_client.get(35174460, 7cb12c4c...) ¡ª E13 ÍøÒ³¶Ë´¥·¢ Smooth Light Brown Anguilline
+======================================================================
+[OK] ·µ»Øµ¥¶ÔÏó
+--- ¶¥²ã¼ü ---
+    backtestId
+    projectId
+    status
+    name
+    note
+    created
+    completed
+    progress
+    result
+    error
+    stacktrace
+    runtimeStatistics
+    statistics
+    totalPerformance
+
+
+=== È«Á¿½á¹ûÒÑĞ´Èë: D:\02 VolConvexityStrategy\¡¾Strategy¡¿VolConvesity\vol_convexity_spec(version.alpha)\00_alpha\9.QC»·¾³Ì½²â\probe\env\api_surface_probe.json ===
+--- stderr ---
+--- exit code: 0 ---
