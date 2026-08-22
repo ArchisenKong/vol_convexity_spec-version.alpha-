@@ -1,6 +1,0 @@
-probe-marker-E14
-line2-ascii-only
-line3-中文与全角符号：测试　保真
-line4-special: {"json":true} [1,2,3] <tag/> & % $ # @ ! ~ ` ^
-line5-trailing-spaces-here
-line6-long: 0123456789012345678901234567890123456789012345678901234567890123456789

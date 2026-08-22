@@ -1,7 +1,0 @@
-=== data_manifest.json 生成 ===
-  条目数   : 94
-  总字节   : 374375
-  vendor   : 9.QC环境探测/qc-workspace/data/（清单件 sha=72e72423fe385322）
-  kd_params: 无对象
-  排除面   : 2 条（显式登记）
-  落位     : probe/data_manifest.json
